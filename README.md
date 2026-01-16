@@ -29,7 +29,15 @@ See [docs/README.md](docs/README.md) for a detailed description of classes, prop
 If you use BFO in your work, please cite as follows:
 
 ```bibtex
-
+@software{bfo2026,
+  author       = {Brolesi, F. F.},
+  title        = {{Brazilian Financial Ontology (BFO): Uma Ontologia Formal do Sistema Financeiro Brasileiro}},
+  year         = {2026},
+  publisher    = {GitHub},
+  url          = {https://github.com/brolesi/bfo},
+  version      = {1.0.0},
+  note         = {Ontologia OWL/RDF alinhada com FIBO e integrada ao Open Finance Brasil e BCB}
+}
 ```
 
 ## License
