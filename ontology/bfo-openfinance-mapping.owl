@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Brazilian Financial Ontology (BFO)
+    Módulo: Mapeamento Open Finance Brasil
+    
+    Este módulo define os alinhamentos entre a BFO e os schemas
+    do Open Finance Brasil (Fase 1-4).
+    
+    Referência: https://openfinancebrasil.atlassian.net/wiki/spaces/OF/
+-->
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:bfo="https://ontology.brasil.gov.br/bfo#"
+         xmlns:ofb="https://openfinancebrasil.org.br/schema/">
+
+    <owl:Ontology rdf:about="https://ontology.brasil.gov.br/bfo/mappings/openfinance">
+        <rdfs:label xml:lang="pt-BR">BFO - Mapeamento Open Finance Brasil</rdfs:label>
+        <dcterms:description xml:lang="pt-BR">
+            Mapeamento semântico entre a Brazilian Financial Ontology e os 
+            schemas de dados do Open Finance Brasil.
+        </dcterms:description>
+        <owl:imports rdf:resource="https://ontology.brasil.gov.br/bfo#"/>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+
+    <!-- ==========================================
+         FASE 2: DADOS CADASTRAIS E TRANSACIONAIS
+         ========================================== -->
+
+    <!-- Consentimento -->
+    <owl:Class rdf:about="&ofb;Consent">
+        <rdfs:label xml:lang="pt-BR">Consentimento</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Autorização concedida pelo cliente para compartilhamento 
+            de seus dados no âmbito do Open Finance.
+        </skos:definition>
+    </owl:Class>
+
+    <!-- Clientes -->
+    <owl:Class rdf:about="&ofb;NaturalPerson">
+        <owl:equivalentClass rdf:resource="&bfo;PessoaFisica"/>
+        <rdfs:label xml:lang="pt-BR">Pessoa Natural</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;BusinessEntity">
+        <owl:equivalentClass rdf:resource="&bfo;PessoaJuridica"/>
+        <rdfs:label xml:lang="pt-BR">Pessoa Jurídica</rdfs:label>
+    </owl:Class>
+
+    <!-- Contas -->
+    <owl:Class rdf:about="&ofb;Account">
+        <owl:equivalentClass rdf:resource="&bfo;Conta"/>
+        <rdfs:label xml:lang="pt-BR">Conta</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;CheckingAccount">
+        <owl:equivalentClass rdf:resource="&bfo;ContaCorrente"/>
+        <rdfs:label xml:lang="pt-BR">Conta de Depósito à Vista</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;SavingsAccount">
+        <owl:equivalentClass rdf:resource="&bfo;ContaPoupanca"/>
+        <rdfs:label xml:lang="pt-BR">Conta de Poupança</rdfs:label>
+    </owl:Class>
+
+    <!-- Crédito -->
+    <owl:Class rdf:about="&ofb;PersonalLoan">
+        <owl:equivalentClass rdf:resource="&bfo;EmprestimoPessoal"/>
+        <rdfs:label xml:lang="pt-BR">Empréstimo Pessoal</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;RealEstateLoan">
+        <owl:equivalentClass rdf:resource="&bfo;FinanciamentoImobiliario"/>
+        <rdfs:label xml:lang="pt-BR">Financiamento Imobiliário</rdfs:label>
+    </owl:Class>
+
+    <!-- ==========================================
+         FASE 3: INICIAÇÃO DE PAGAMENTO
+         ========================================== -->
+
+    <owl:Class rdf:about="&ofb;PaymentInitiation">
+        <rdfs:subClassOf rdf:resource="&bfo;OperacaoPagamento"/>
+        <rdfs:label xml:lang="pt-BR">Iniciação de Pagamento</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;PIXPayment">
+        <rdfs:subClassOf rdf:resource="&bfo;PIX"/>
+        <rdfs:label xml:lang="pt-BR">Pagamento PIX</rdfs:label>
+    </owl:Class>
+
+    <!-- ==========================================
+         FASE 4: INVESTIMENTOS
+         ========================================== -->
+
+    <owl:Class rdf:about="&ofb;FixedIncomeInvestment">
+        <owl:equivalentClass rdf:resource="&bfo;InstrumentoRendaFixa"/>
+        <rdfs:label xml:lang="pt-BR">Investimento em Renda Fixa</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;VariableIncomeInvestment">
+        <owl:equivalentClass rdf:resource="&bfo;InstrumentoRendaVariavel"/>
+        <rdfs:label xml:lang="pt-BR">Investimento em Renda Variável</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;TreasuryTitles">
+        <owl:equivalentClass rdf:resource="&bfo;TituloPublicoFederal"/>
+        <rdfs:label xml:lang="pt-BR">Títulos do Tesouro</rdfs:label>
+    </owl:Class>
+
+</rdf:RDF>

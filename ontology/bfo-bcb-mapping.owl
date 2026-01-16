@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Brazilian Financial Ontology (BFO)
+    Módulo: Mapeamento Banco Central do Brasil
+    
+    Este módulo define os alinhamentos entre a BFO e os schemas
+    de dados abertos do Banco Central do Brasil.
+    
+    Referência: https://dadosabertos.bcb.gov.br/
+-->
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:bfo="https://ontology.brasil.gov.br/bfo#"
+         xmlns:bcb="https://dadosabertos.bcb.gov.br/schema/">
+
+    <owl:Ontology rdf:about="https://ontology.brasil.gov.br/bfo/mappings/bcb">
+        <rdfs:label xml:lang="pt-BR">BFO - Mapeamento BCB</rdfs:label>
+        <dcterms:description xml:lang="pt-BR">
+            Mapeamento semântico entre a Brazilian Financial Ontology e os 
+            schemas de dados abertos do Banco Central do Brasil.
+        </dcterms:description>
+        <owl:imports rdf:resource="https://ontology.brasil.gov.br/bfo#"/>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+
+    <!-- ==========================================
+         SÉRIES TEMPORAIS BCB - SGS
+         Sistema Gerenciador de Séries Temporais
+         ========================================== -->
+
+    <owl:Class rdf:about="&bcb;SerieTemporal">
+        <rdfs:label xml:lang="pt-BR">Série Temporal BCB</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Série de dados econômicos mantida pelo Sistema Gerenciador 
+            de Séries Temporais do Banco Central.
+        </skos:definition>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="&bcb;codigoSerie">
+        <rdfs:domain rdf:resource="&bcb;SerieTemporal"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:label xml:lang="pt-BR">Código da Série</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Identificador numérico único da série no SGS.
+        </skos:definition>
+    </owl:DatatypeProperty>
+
+    <!-- Mapeamento de Indicadores -->
+    <owl:NamedIndividual rdf:about="&bcb;Serie4189">
+        <rdf:type rdf:resource="&bcb;SerieTemporal"/>
+        <rdfs:label>Taxa Selic - Meta</rdfs:label>
+        <bcb:codigoSerie rdf:datatype="&xsd;integer">4189</bcb:codigoSerie>
+        <owl:sameAs rdf:resource="&bfo;TaxaSelic"/>
+        <rdfs:seeAlso rdf:resource="https://dadosabertos.bcb.gov.br/dataset/4189-taxa-de-juros---selic"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bcb;Serie4391">
+        <rdf:type rdf:resource="&bcb;SerieTemporal"/>
+        <rdfs:label>Taxa CDI</rdfs:label>
+        <bcb:codigoSerie rdf:datatype="&xsd;integer">4391</bcb:codigoSerie>
+        <owl:sameAs rdf:resource="&bfo;CDI"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bcb;Serie433">
+        <rdf:type rdf:resource="&bcb;SerieTemporal"/>
+        <rdfs:label>IPCA - Variação Mensal</rdfs:label>
+        <bcb:codigoSerie rdf:datatype="&xsd;integer">433</bcb:codigoSerie>
+        <owl:sameAs rdf:resource="&bfo;IPCA"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bcb;Serie189">
+        <rdf:type rdf:resource="&bcb;SerieTemporal"/>
+        <rdfs:label>IGP-M - Variação Mensal</rdfs:label>
+        <bcb:codigoSerie rdf:datatype="&xsd;integer">189</bcb:codigoSerie>
+        <owl:sameAs rdf:resource="&bfo;IGPM"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bcb;Serie226">
+        <rdf:type rdf:resource="&bcb;SerieTemporal"/>
+        <rdfs:label>Taxa Referencial (TR)</rdfs:label>
+        <bcb:codigoSerie rdf:datatype="&xsd;integer">226</bcb:codigoSerie>
+        <owl:sameAs rdf:resource="&bfo;TR"/>
+    </owl:NamedIndividual>
+
+    <!-- ==========================================
+         IF.DATA - DADOS DE INSTITUIÇÕES FINANCEIRAS
+         ========================================== -->
+
+    <owl:Class rdf:about="&bcb;InstituicaoIF">
+        <owl:equivalentClass rdf:resource="&bfo;InstituicaoFinanceiraBrasileira"/>
+        <rdfs:label xml:lang="pt-BR">Instituição Financeira (IF.data)</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Registro de instituição financeira no sistema IF.data do BCB.
+        </skos:definition>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="&bcb;codigoIFData">
+        <rdfs:domain rdf:resource="&bcb;InstituicaoIF"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:label xml:lang="pt-BR">Código IF.data</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <!-- Segmentação -->
+    <owl:DatatypeProperty rdf:about="&bcb;segmentoPrudencial">
+        <rdfs:domain rdf:resource="&bcb;InstituicaoIF"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:label xml:lang="pt-BR">Segmento Prudencial</rdfs:label>
+        <rdfs:comment xml:lang="pt-BR">Valores: S1, S2, S3, S4, S5</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&bfo;segmentoPrudencial"/>
+    </owl:DatatypeProperty>
+
+    <!-- ==========================================
+         SCR - SISTEMA DE INFORMAÇÕES DE CRÉDITO
+         ========================================== -->
+
+    <owl:Class rdf:about="&bcb;OperacaoSCR">
+        <rdfs:subClassOf rdf:resource="&bfo;OperacaoCredito"/>
+        <rdfs:label xml:lang="pt-BR">Operação de Crédito (SCR)</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Operação de crédito registrada no Sistema de Informações 
+            de Crédito do Banco Central.
+        </skos:definition>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="&bcb;modalidadeSCR">
+        <rdfs:domain rdf:resource="&bcb;OperacaoSCR"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:label xml:lang="pt-BR">Modalidade SCR</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Código da modalidade de crédito conforme tabela do SCR.
+        </skos:definition>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&bcb;classificacaoRiscoSCR">
+        <rdfs:domain rdf:resource="&bcb;OperacaoSCR"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:label xml:lang="pt-BR">Classificação de Risco (SCR)</rdfs:label>
+        <rdfs:comment xml:lang="pt-BR">Valores: AA, A, B, C, D, E, F, G, H</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&bfo;classificacaoRisco"/>
+    </owl:DatatypeProperty>
+
+    <!-- ==========================================
+         ESTATÍSTICAS MONETÁRIAS E DE CRÉDITO
+         ========================================== -->
+
+    <owl:Class rdf:about="&bcb;EstatisticaCredito">
+        <rdfs:label xml:lang="pt-BR">Estatística de Crédito</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Dados estatísticos agregados sobre operações de crédito 
+            do Sistema Financeiro Nacional.
+        </skos:definition>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="&bcb;saldoCarteira">
+        <rdfs:domain rdf:resource="&bcb;EstatisticaCredito"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:label xml:lang="pt-BR">Saldo da Carteira</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&bfo;valorBRL"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&bcb;taxaMediaJuros">
+        <rdfs:domain rdf:resource="&bcb;EstatisticaCredito"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:label xml:lang="pt-BR">Taxa Média de Juros</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&bfo;taxaJuros"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&bcb;inadimplencia">
+        <rdfs:domain rdf:resource="&bcb;EstatisticaCredito"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:label xml:lang="pt-BR">Taxa de Inadimplência</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <!-- ==========================================
+         PIX - ESTATÍSTICAS E TRANSAÇÕES
+         ========================================== -->
+
+    <owl:Class rdf:about="&bcb;EstatisticaPIX">
+        <rdfs:label xml:lang="pt-BR">Estatística PIX</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Dados estatísticos do arranjo de pagamentos instantâneos PIX.
+        </skos:definition>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="&bcb;quantidadeTransacoesPIX">
+        <rdfs:domain rdf:resource="&bcb;EstatisticaPIX"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:label xml:lang="pt-BR">Quantidade de Transações PIX</rdfs:label>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&bcb;valorTotalPIX">
+        <rdfs:domain rdf:resource="&bcb;EstatisticaPIX"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:label xml:lang="pt-BR">Valor Total Transacionado PIX</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&bfo;valorBRL"/>
+    </owl:DatatypeProperty>
+
+    <!-- ==========================================
+         DICT - DIRETÓRIO DE IDENTIFICADORES
+         ========================================== -->
+
+    <owl:Class rdf:about="&bcb;ChaveDICT">
+        <rdfs:label xml:lang="pt-BR">Chave DICT</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Chave de endereçamento registrada no Diretório de 
+            Identificadores de Contas Transacionais (DICT).
+        </skos:definition>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="&bcb;tipoChave">
+        <rdfs:domain rdf:resource="&bcb;ChaveDICT"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:label xml:lang="pt-BR">Tipo de Chave</rdfs:label>
+        <rdfs:comment xml:lang="pt-BR">
+            Valores: CPF, CNPJ, EMAIL, PHONE, EVP (chave aleatória)
+        </rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="&bcb;valorChave">
+        <rdfs:domain rdf:resource="&bcb;ChaveDICT"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:label xml:lang="pt-BR">Valor da Chave</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&bfo;chavePIX"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF>
