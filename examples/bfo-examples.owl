@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY bfo "https://ontology.brasil.gov.br/bfo#">
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
 <!--
     Brazilian Financial Ontology (BFO)
     Arquivo de Exemplo - Instâncias
@@ -8,10 +12,10 @@
 -->
 
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:bfo="https://ontology.brasil.gov.br/bfo#">
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:bfo="https://ontology.brasil.gov.br/bfo#">
 
     <!-- ==========================================
          EXEMPLO 1: INSTITUIÇÃO FINANCEIRA
@@ -21,8 +25,8 @@
         <rdfs:label>Banco Exemplo S.A.</rdfs:label>
         <bfo:cnpj>12345678000199</bfo:cnpj>
         <bfo:codigoISPB>12345678</bfo:codigoISPB>
-        <bfo:segmentoPrudencial rdf:resource="&bfo;SegmentoS3"/>
-        <bfo:reguladoPor rdf:resource="&bfo;BancoCentralDoBrasil"/>
+        <bfo:segmentoPrudencial rdf:resource="&bfo;SegmentoS3" />
+        <bfo:reguladoPor rdf:resource="&bfo;BancoCentralDoBrasil" />
     </bfo:BancoMultiplo>
 
     <!-- ==========================================
@@ -32,7 +36,7 @@
     <bfo:PessoaFisica rdf:about="https://example.org/clientes/cliente-001">
         <rdfs:label>João da Silva</rdfs:label>
         <bfo:cpf>12345678901</bfo:cpf>
-        <bfo:classificacaoInvestidor rdf:resource="&bfo;InvestidorQualificado"/>
+        <bfo:classificacaoInvestidor rdf:resource="&bfo;InvestidorQualificado" />
     </bfo:PessoaFisica>
 
     <!-- ==========================================
@@ -41,7 +45,7 @@
 
     <bfo:ContaCorrente rdf:about="https://example.org/contas/cc-001">
         <rdfs:label>Conta Corrente 12345-6</rdfs:label>
-        <bfo:contaMantidaPor rdf:resource="https://example.org/clientes/cliente-001"/>
+        <bfo:contaMantidaPor rdf:resource="https://example.org/clientes/cliente-001" />
         <bfo:chavePIX>joao.silva@email.com</bfo:chavePIX>
     </bfo:ContaCorrente>
 
@@ -53,8 +57,8 @@
     <bfo:CDB rdf:about="https://example.org/instrumentos/cdb-banco-exemplo-2026">
         <rdfs:label>CDB Banco Exemplo 120% CDI</rdfs:label>
         <bfo:codigoISIN>BRBEXECDB001</bfo:codigoISIN>
-        <bfo:emitidoPor rdf:resource="https://example.org/bancos/banco-exemplo"/>
-        <bfo:indexadoPor rdf:resource="&bfo;CDI"/>
+        <bfo:emitidoPor rdf:resource="https://example.org/bancos/banco-exemplo" />
+        <bfo:indexadoPor rdf:resource="&bfo;CDI" />
         <bfo:dataVencimento rdf:datatype="&xsd;date">2027-01-15</bfo:dataVencimento>
         <bfo:taxaJuros rdf:datatype="&xsd;decimal">1.20</bfo:taxaJuros>
         <rdfs:comment>Taxa: 120% do CDI</rdfs:comment>
@@ -64,13 +68,14 @@
     <!-- A Operação de Aplicação -->
     <bfo:Aplicacao rdf:about="https://example.org/operacoes/op-001">
         <rdfs:label>Aplicação CDB - João Silva</rdfs:label>
-        <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001"/>
-        <bfo:envolveinstrumento rdf:resource="https://example.org/instrumentos/cdb-banco-exemplo-2026"/>
+        <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001" />
+        <bfo:envolveinstrumento
+            rdf:resource="https://example.org/instrumentos/cdb-banco-exemplo-2026" />
         <bfo:valorBRL rdf:datatype="&xsd;decimal">50000.00</bfo:valorBRL>
         <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-01-15T10:30:00-03:00</bfo:dataOperacao>
         <bfo:dataLiquidacao rdf:datatype="&xsd;date">2026-01-15</bfo:dataLiquidacao>
-        <bfo:incideTributo rdf:resource="&bfo;IR_RendaFixa"/>
-        <bfo:incideTributo rdf:resource="&bfo;IOF"/>
+        <bfo:incideTributo rdf:resource="&bfo;IR_RendaFixa" />
+        <bfo:incideTributo rdf:resource="&bfo;IOF" />
     </bfo:Aplicacao>
 
     <!-- ==========================================
@@ -80,7 +85,7 @@
     <bfo:TesouroIPCA rdf:about="https://example.org/instrumentos/ntnb-2035">
         <rdfs:label>Tesouro IPCA+ 2035</rdfs:label>
         <bfo:codigoISIN>BRSTNCLTN7A3</bfo:codigoISIN>
-        <bfo:indexadoPor rdf:resource="&bfo;IPCA"/>
+        <bfo:indexadoPor rdf:resource="&bfo;IPCA" />
         <bfo:dataVencimento rdf:datatype="&xsd;date">2035-05-15</bfo:dataVencimento>
         <bfo:taxaJuros rdf:datatype="&xsd;decimal">0.0650</bfo:taxaJuros>
         <rdfs:comment>Taxa: IPCA + 6,50% a.a.</rdfs:comment>
@@ -88,8 +93,8 @@
 
     <bfo:Aplicacao rdf:about="https://example.org/operacoes/op-002">
         <rdfs:label>Compra Tesouro IPCA+ 2035</rdfs:label>
-        <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001"/>
-        <bfo:envolveinstrumento rdf:resource="https://example.org/instrumentos/ntnb-2035"/>
+        <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001" />
+        <bfo:envolveinstrumento rdf:resource="https://example.org/instrumentos/ntnb-2035" />
         <bfo:valorBRL rdf:datatype="&xsd;decimal">25000.00</bfo:valorBRL>
         <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-01-15T14:00:00-03:00</bfo:dataOperacao>
     </bfo:Aplicacao>
@@ -134,7 +139,7 @@
         <bfo:valorBRL rdf:datatype="&xsd;decimal">30000.00</bfo:valorBRL>
         <bfo:taxaJuros rdf:datatype="&xsd;decimal">0.0180</bfo:taxaJuros>
         <rdfs:comment>Taxa: 1,80% a.m.</rdfs:comment>
-        <bfo:classificacaoRisco rdf:resource="&bfo;RiscoA"/>
+        <bfo:classificacaoRisco rdf:resource="&bfo;RiscoA" />
         <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-01-10T09:00:00-03:00</bfo:dataOperacao>
     </bfo:CreditoConsignado>
 
@@ -144,7 +149,7 @@
 
     <bfo:PIX rdf:about="https://example.org/operacoes/pix-001">
         <rdfs:label>PIX para Fornecedor ABC</rdfs:label>
-        <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001"/>
+        <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001" />
         <bfo:valorBRL rdf:datatype="&xsd;decimal">1500.00</bfo:valorBRL>
         <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-01-15T16:45:00-03:00</bfo:dataOperacao>
         <bfo:dataLiquidacao rdf:datatype="&xsd;date">2026-01-15</bfo:dataLiquidacao>
@@ -157,7 +162,7 @@
     <bfo:DebentureIncentivada rdf:about="https://example.org/instrumentos/deb-infra-001">
         <rdfs:label>Debênture Infraestrutura Energia S.A. 2030</rdfs:label>
         <bfo:codigoISIN>BRENERDBS001</bfo:codigoISIN>
-        <bfo:indexadoPor rdf:resource="&bfo;IPCA"/>
+        <bfo:indexadoPor rdf:resource="&bfo;IPCA" />
         <bfo:dataVencimento rdf:datatype="&xsd;date">2030-06-15</bfo:dataVencimento>
         <bfo:taxaJuros rdf:datatype="&xsd;decimal">0.0550</bfo:taxaJuros>
         <rdfs:comment>Taxa: IPCA + 5,50% a.a. - Isento de IR para PF</rdfs:comment>
