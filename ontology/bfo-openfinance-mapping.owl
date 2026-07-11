@@ -30,7 +30,7 @@
             schemas de dados do Open Finance Brasil.
         </dcterms:description>
         <owl:imports rdf:resource="https://ontology.brasil.gov.br/bfo#" />
-        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <owl:versionInfo>1.1.0</owl:versionInfo>
     </owl:Ontology>
 
     <!-- ==========================================
@@ -39,6 +39,7 @@
 
     <!-- Consentimento -->
     <owl:Class rdf:about="&ofb;Consent">
+        <owl:equivalentClass rdf:resource="&bfo;Consentimento" />
         <rdfs:label xml:lang="pt-BR">Consentimento</rdfs:label>
         <skos:definition xml:lang="pt-BR">
             Autorização concedida pelo cliente para compartilhamento
@@ -84,6 +85,17 @@
         <rdfs:label xml:lang="pt-BR">Financiamento Imobiliário</rdfs:label>
     </owl:Class>
 
+    <owl:Class rdf:about="&ofb;VehicleLoan">
+        <owl:equivalentClass rdf:resource="&bfo;FinanciamentoVeicular" />
+        <rdfs:label xml:lang="pt-BR">Financiamento de Veículos</rdfs:label>
+    </owl:Class>
+
+    <!-- Cartão de Crédito -->
+    <owl:Class rdf:about="&ofb;CreditCardTransaction">
+        <owl:equivalentClass rdf:resource="&bfo;OperacaoCartaoCredito" />
+        <rdfs:label xml:lang="pt-BR">Transação de Cartão de Crédito</rdfs:label>
+    </owl:Class>
+
     <!-- ==========================================
          FASE 3: INICIAÇÃO DE PAGAMENTO
          ========================================== -->
@@ -115,6 +127,29 @@
     <owl:Class rdf:about="&ofb;TreasuryTitles">
         <owl:equivalentClass rdf:resource="&bfo;TituloPublicoFederal" />
         <rdfs:label xml:lang="pt-BR">Títulos do Tesouro</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;InvestmentFund">
+        <owl:equivalentClass rdf:resource="&bfo;FundoDeInvestimento" />
+        <rdfs:label xml:lang="pt-BR">Fundo de Investimento</rdfs:label>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;BankFixedIncome">
+        <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
+        <rdfs:label xml:lang="pt-BR">Renda Fixa Bancária</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Produtos de renda fixa emitidos por instituições bancárias
+            (CDB, RDB, LCI, LCA) na API de investimentos do Open Finance.
+        </skos:definition>
+    </owl:Class>
+
+    <owl:Class rdf:about="&ofb;CreditFixedIncome">
+        <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
+        <rdfs:label xml:lang="pt-BR">Renda Fixa de Crédito</rdfs:label>
+        <skos:definition xml:lang="pt-BR">
+            Produtos de renda fixa não bancários (debêntures, CRI, CRA)
+            na API de investimentos do Open Finance.
+        </skos:definition>
     </owl:Class>
 
 </rdf:RDF>

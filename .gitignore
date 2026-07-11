@@ -1,0 +1,14 @@
+# Protégé backup/temp files
+*.owl~
+catalog-v001.xml.bak
+.protege/
+
+# Third-party reference ontology kept locally (not part of the BFO distribution)
+/bfo.owl
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor
+*.swp

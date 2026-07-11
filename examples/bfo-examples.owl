@@ -69,7 +69,7 @@
     <bfo:Aplicacao rdf:about="https://example.org/operacoes/op-001">
         <rdfs:label>Aplicação CDB - João Silva</rdfs:label>
         <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001" />
-        <bfo:envolveinstrumento
+        <bfo:envolveInstrumento
             rdf:resource="https://example.org/instrumentos/cdb-banco-exemplo-2026" />
         <bfo:valorBRL rdf:datatype="&xsd;decimal">50000.00</bfo:valorBRL>
         <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-01-15T10:30:00-03:00</bfo:dataOperacao>
@@ -94,7 +94,7 @@
     <bfo:Aplicacao rdf:about="https://example.org/operacoes/op-002">
         <rdfs:label>Compra Tesouro IPCA+ 2035</rdfs:label>
         <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001" />
-        <bfo:envolveinstrumento rdf:resource="https://example.org/instrumentos/ntnb-2035" />
+        <bfo:envolveInstrumento rdf:resource="https://example.org/instrumentos/ntnb-2035" />
         <bfo:valorBRL rdf:datatype="&xsd;decimal">25000.00</bfo:valorBRL>
         <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-01-15T14:00:00-03:00</bfo:dataOperacao>
     </bfo:Aplicacao>
@@ -143,6 +143,22 @@
         <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-01-10T09:00:00-03:00</bfo:dataOperacao>
     </bfo:CreditoConsignado>
 
+    <!-- Financiamento veicular com garantia de alienação fiduciária -->
+    <bfo:AlienacaoFiduciaria rdf:about="https://example.org/garantias/garantia-001">
+        <rdfs:label>Alienação Fiduciária - Veículo Placa ABC1D23</rdfs:label>
+    </bfo:AlienacaoFiduciaria>
+
+    <bfo:FinanciamentoVeicular rdf:about="https://example.org/operacoes/credito-002">
+        <rdfs:label>Financiamento Veicular - João da Silva</rdfs:label>
+        <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001" />
+        <bfo:valorBRL rdf:datatype="&xsd;decimal">80000.00</bfo:valorBRL>
+        <bfo:taxaJuros rdf:datatype="&xsd;decimal">0.0135</bfo:taxaJuros>
+        <rdfs:comment>Taxa: 1,35% a.m. - 48 parcelas</rdfs:comment>
+        <bfo:garantidaPor rdf:resource="https://example.org/garantias/garantia-001" />
+        <bfo:classificacaoRisco rdf:resource="&bfo;RiscoA" />
+        <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-02-03T11:00:00-03:00</bfo:dataOperacao>
+    </bfo:FinanciamentoVeicular>
+
     <!-- ==========================================
          EXEMPLO 9: TRANSAÇÃO PIX
          ========================================== -->
@@ -169,5 +185,29 @@
         <bfo:isentoIRPF rdf:datatype="&xsd;boolean">true</bfo:isentoIRPF>
         <bfo:coberturaFGC rdf:datatype="&xsd;boolean">false</bfo:coberturaFGC>
     </bfo:DebentureIncentivada>
+
+    <!-- ==========================================
+         EXEMPLO 11: FUNDO DE INVESTIMENTO (CVM 175)
+         ========================================== -->
+
+    <bfo:FundoMultimercado rdf:about="https://example.org/instrumentos/fundo-mm-001">
+        <rdfs:label>Fundo Exemplo Multimercado FIC FIM</rdfs:label>
+        <bfo:cnpj>23456789000155</bfo:cnpj>
+        <bfo:administradoPor rdf:resource="https://example.org/bancos/banco-exemplo" />
+        <rdfs:comment>Fundo constituído sob o regime da Resolução CVM 175/2022</rdfs:comment>
+    </bfo:FundoMultimercado>
+
+    <!-- ==========================================
+         EXEMPLO 12: CONSENTIMENTO OPEN FINANCE
+         ========================================== -->
+
+    <bfo:Consentimento rdf:about="https://example.org/consentimentos/consent-001">
+        <rdfs:label>Consentimento - Compartilhamento de Dados de Conta</rdfs:label>
+        <bfo:consentimentoConcedidoPor rdf:resource="https://example.org/clientes/cliente-001" />
+        <bfo:consentimentoConcedidoA rdf:resource="https://example.org/bancos/banco-exemplo" />
+        <bfo:statusConsentimento rdf:resource="&bfo;ConsentimentoAutorizado" />
+        <bfo:dataConsentimento rdf:datatype="&xsd;dateTime">2026-03-01T08:15:00-03:00</bfo:dataConsentimento>
+        <bfo:dataExpiracaoConsentimento rdf:datatype="&xsd;dateTime">2027-03-01T08:15:00-03:00</bfo:dataExpiracaoConsentimento>
+    </bfo:Consentimento>
 
 </rdf:RDF>

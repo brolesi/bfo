@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <!-- Resolução local dos módulos da BFO para uso no Protégé -->
+    <uri name="https://ontology.brasil.gov.br/bfo#" uri="bfo-core.owl"/>
+    <uri name="https://ontology.brasil.gov.br/bfo" uri="bfo-core.owl"/>
+    <uri name="https://ontology.brasil.gov.br/bfo/mappings/openfinance" uri="bfo-openfinance-mapping.owl"/>
+    <uri name="https://ontology.brasil.gov.br/bfo/mappings/bcb" uri="bfo-bcb-mapping.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+</catalog>

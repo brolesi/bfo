@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this ontology, please cite it as below."
+title: "Brazilian Financial Ontology (BFO): Uma Ontologia Formal do Sistema Financeiro Brasileiro"
+type: software
+authors:
+  - family-names: "Brolesi"
+    given-names: "Fabio Fogliarini"
+version: 1.1.0
+date-released: 2026-07-11
+url: "https://github.com/brolesi/bfo"
+license: CC-BY-4.0
+keywords:
+  - ontology
+  - OWL
+  - RDF
+  - FIBO
+  - Open Finance Brasil
+  - Banco Central do Brasil
+  - financial system
+  - semantic web
+abstract: >-
+  Formal OWL/RDF ontology of the Brazilian financial system, aligned with
+  FIBO (Financial Industry Business Ontology) and integrated with Open
+  Finance Brasil standards and Central Bank of Brazil (BCB) open data
+  schemas.
