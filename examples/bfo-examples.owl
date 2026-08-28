@@ -59,7 +59,7 @@
         <bfo:codigoISIN>BRBEXECDB001</bfo:codigoISIN>
         <bfo:emitidoPor rdf:resource="https://example.org/bancos/banco-exemplo" />
         <bfo:indexadoPor rdf:resource="&bfo;CDI" />
-        <bfo:dataVencimento rdf:datatype="&xsd;date">2027-01-15</bfo:dataVencimento>
+        <bfo:dataVencimento rdf:datatype="&xsd;dateTime">2027-01-15T00:00:00-03:00</bfo:dataVencimento>
         <bfo:taxaJuros rdf:datatype="&xsd;decimal">1.20</bfo:taxaJuros>
         <rdfs:comment>Taxa: 120% do CDI</rdfs:comment>
         <bfo:coberturaFGC rdf:datatype="&xsd;boolean">true</bfo:coberturaFGC>
@@ -73,7 +73,7 @@
             rdf:resource="https://example.org/instrumentos/cdb-banco-exemplo-2026" />
         <bfo:valorBRL rdf:datatype="&xsd;decimal">50000.00</bfo:valorBRL>
         <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-01-15T10:30:00-03:00</bfo:dataOperacao>
-        <bfo:dataLiquidacao rdf:datatype="&xsd;date">2026-01-15</bfo:dataLiquidacao>
+        <bfo:dataLiquidacao rdf:datatype="&xsd;dateTime">2026-01-15T00:00:00-03:00</bfo:dataLiquidacao>
         <bfo:incideTributo rdf:resource="&bfo;IR_RendaFixa" />
         <bfo:incideTributo rdf:resource="&bfo;IOF" />
     </bfo:Aplicacao>
@@ -86,7 +86,7 @@
         <rdfs:label>Tesouro IPCA+ 2035</rdfs:label>
         <bfo:codigoISIN>BRSTNCLTN7A3</bfo:codigoISIN>
         <bfo:indexadoPor rdf:resource="&bfo;IPCA" />
-        <bfo:dataVencimento rdf:datatype="&xsd;date">2035-05-15</bfo:dataVencimento>
+        <bfo:dataVencimento rdf:datatype="&xsd;dateTime">2035-05-15T00:00:00-03:00</bfo:dataVencimento>
         <bfo:taxaJuros rdf:datatype="&xsd;decimal">0.0650</bfo:taxaJuros>
         <rdfs:comment>Taxa: IPCA + 6,50% a.a.</rdfs:comment>
     </bfo:TesouroIPCA>
@@ -168,7 +168,7 @@
         <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001" />
         <bfo:valorBRL rdf:datatype="&xsd;decimal">1500.00</bfo:valorBRL>
         <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-01-15T16:45:00-03:00</bfo:dataOperacao>
-        <bfo:dataLiquidacao rdf:datatype="&xsd;date">2026-01-15</bfo:dataLiquidacao>
+        <bfo:dataLiquidacao rdf:datatype="&xsd;dateTime">2026-01-15T00:00:00-03:00</bfo:dataLiquidacao>
     </bfo:PIX>
 
     <!-- ==========================================
@@ -179,7 +179,7 @@
         <rdfs:label>Debênture Infraestrutura Energia S.A. 2030</rdfs:label>
         <bfo:codigoISIN>BRENERDBS001</bfo:codigoISIN>
         <bfo:indexadoPor rdf:resource="&bfo;IPCA" />
-        <bfo:dataVencimento rdf:datatype="&xsd;date">2030-06-15</bfo:dataVencimento>
+        <bfo:dataVencimento rdf:datatype="&xsd;dateTime">2030-06-15T00:00:00-03:00</bfo:dataVencimento>
         <bfo:taxaJuros rdf:datatype="&xsd;decimal">0.0550</bfo:taxaJuros>
         <rdfs:comment>Taxa: IPCA + 5,50% a.a. - Isento de IR para PF</rdfs:comment>
         <bfo:isentoIRPF rdf:datatype="&xsd;boolean">true</bfo:isentoIRPF>

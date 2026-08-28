@@ -220,8 +220,8 @@ bfo:taxaJuros         → xsd:decimal
 
 # Datas
 bfo:dataOperacao      → xsd:dateTime
-bfo:dataVencimento    → xsd:date
-bfo:dataLiquidacao    → xsd:date
+bfo:dataVencimento    → xsd:dateTime
+bfo:dataLiquidacao    → xsd:dateTime
 bfo:dataConsentimento → xsd:dateTime
 
 # Booleanos

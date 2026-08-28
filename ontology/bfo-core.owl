@@ -1830,7 +1830,7 @@
 
     <owl:DatatypeProperty rdf:about="&bfo;dataLiquidacao">
         <rdfs:domain rdf:resource="&bfo;OperacaoFinanceira" />
-        <rdfs:range rdf:resource="&xsd;date" />
+        <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">Data de Liquidação</rdfs:label>
         <skos:definition xml:lang="pt-BR">
             Data em que a operação financeira é efetivamente liquidada, com a transferência definitiva dos recursos.
@@ -1839,7 +1839,7 @@
 
     <owl:DatatypeProperty rdf:about="&bfo;dataVencimento">
         <rdfs:domain rdf:resource="&bfo;InstrumentoRendaFixa" />
-        <rdfs:range rdf:resource="&xsd;date" />
+        <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">Data de Vencimento</rdfs:label>
         <skos:definition xml:lang="pt-BR">
             Data de vencimento do instrumento de renda fixa, em que o principal se torna exigível.
