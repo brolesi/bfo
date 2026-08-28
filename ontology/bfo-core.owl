@@ -64,16 +64,8 @@
         <rdfs:label xml:lang="pt-BR">Brazilian Financial Ontology (BFO)</rdfs:label>
         <rdfs:label xml:lang="en">Brazilian Financial Ontology (BFO)</rdfs:label>
         <dcterms:title xml:lang="pt-BR">Ontologia Financeira Brasileira</dcterms:title>
-        <dcterms:description xml:lang="pt-BR">
-            Ontologia formal do sistema financeiro brasileiro, alinhada com FIBO
-            (Financial Industry Business Ontology) e integrada com os padrões do
-            Open Finance Brasil e esquemas do Banco Central do Brasil.
-        </dcterms:description>
-        <dcterms:description xml:lang="en">
-            Formal ontology of the Brazilian financial system, aligned with FIBO
-            (Financial Industry Business Ontology) and integrated with Open
-            Finance Brasil standards and Central Bank of Brazil (BCB) schemas.
-        </dcterms:description>
+        <dcterms:description xml:lang="pt-BR">Ontologia formal do sistema financeiro brasileiro, alinhada com FIBO (Financial Industry Business Ontology) e integrada com os padrões do Open Finance Brasil e esquemas do Banco Central do Brasil.</dcterms:description>
+        <dcterms:description xml:lang="en">Formal ontology of the Brazilian financial system, aligned with FIBO (Financial Industry Business Ontology) and integrated with Open Finance Brasil standards and Central Bank of Brazil (BCB) schemas.</dcterms:description>
         <dcterms:creator>Fabio Fogliarini Brolesi</dcterms:creator>
         <dcterms:created rdf:datatype="&xsd;date">2026-01-15</dcterms:created>
         <dcterms:modified rdf:datatype="&xsd;date">2026-08-27</dcterms:modified>
@@ -94,10 +86,7 @@
         <rdfs:subClassOf rdf:resource="&cmns-rga;RegulatoryAgency" />
         <rdfs:label xml:lang="pt-BR">Órgão Regulador Brasileiro</rdfs:label>
         <rdfs:label xml:lang="en">Brazilian Regulatory Body</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Entidade governamental brasileira responsável pela regulação e
-            supervisão do sistema financeiro nacional.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Entidade governamental brasileira responsável pela regulação e supervisão do sistema financeiro nacional.</skos:definition>
     </owl:Class>
 
     <!-- Banco Central do Brasil -->
@@ -109,10 +98,7 @@
         <bfo:codigoISPB>00000000</bfo:codigoISPB>
         <bfo:cnpj>00038166000105</bfo:cnpj>
         <rdfs:seeAlso rdf:resource="https://www.bcb.gov.br" />
-        <skos:definition xml:lang="pt-BR">
-            Autarquia federal vinculada ao Ministério da Fazenda, responsável
-            pela política monetária, cambial e regulação do sistema financeiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Autarquia federal vinculada ao Ministério da Fazenda, responsável pela política monetária, cambial e regulação do sistema financeiro.</skos:definition>
     </owl:NamedIndividual>
 
     <!-- Comissão de Valores Mobiliários -->
@@ -122,10 +108,7 @@
         <skos:altLabel>CVM</skos:altLabel>
         <bfo:cnpj>29507878000194</bfo:cnpj>
         <rdfs:seeAlso rdf:resource="https://www.cvm.gov.br" />
-        <skos:definition xml:lang="pt-BR">
-            Autarquia vinculada ao Ministério da Fazenda responsável pela
-            regulamentação e fiscalização do mercado de valores mobiliários.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Autarquia vinculada ao Ministério da Fazenda responsável pela regulamentação e fiscalização do mercado de valores mobiliários.</skos:definition>
     </owl:NamedIndividual>
 
     <!-- SUSEP -->
@@ -133,10 +116,7 @@
         <rdf:type rdf:resource="&bfo;OrgaoReguladorBrasileiro" />
         <rdfs:label xml:lang="pt-BR">Superintendência de Seguros Privados</rdfs:label>
         <skos:altLabel>SUSEP</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Autarquia responsável pelo controle e fiscalização dos mercados
-            de seguro, previdência privada aberta e capitalização.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Autarquia responsável pelo controle e fiscalização dos mercados de seguro, previdência privada aberta e capitalização.</skos:definition>
     </owl:NamedIndividual>
 
     <!-- PREVIC -->
@@ -144,10 +124,7 @@
         <rdf:type rdf:resource="&bfo;OrgaoReguladorBrasileiro" />
         <rdfs:label xml:lang="pt-BR">Superintendência Nacional de Previdência Complementar</rdfs:label>
         <skos:altLabel>PREVIC</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Autarquia responsável pela fiscalização das entidades fechadas
-            de previdência complementar (fundos de pensão).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Autarquia responsável pela fiscalização das entidades fechadas de previdência complementar (fundos de pensão).</skos:definition>
     </owl:NamedIndividual>
 
     <!-- ==========================================
@@ -160,10 +137,7 @@
         <rdfs:subClassOf rdf:resource="&fibo-fbc-pas-fpas;FinancialServiceProvider" />
         <rdfs:label xml:lang="pt-BR">Instituição Financeira Brasileira</rdfs:label>
         <rdfs:label xml:lang="en">Brazilian Financial Institution</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Pessoa jurídica autorizada pelo Banco Central do Brasil a operar
-            no Sistema Financeiro Nacional.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Pessoa jurídica autorizada pelo Banco Central do Brasil a operar no Sistema Financeiro Nacional.</skos:definition>
     </owl:Class>
 
     <!-- Banco Comercial -->
@@ -182,10 +156,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <skos:definition xml:lang="pt-BR">
-            Instituição financeira autorizada a captar depósitos à vista e
-            realizar operações de crédito de curto e médio prazo.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instituição financeira autorizada a captar depósitos à vista e realizar operações de crédito de curto e médio prazo.</skos:definition>
         <!-- Mapeamento Open Finance Brasil -->
         <owl:equivalentClass rdf:resource="&ofb;BancoComercial" />
     </owl:Class>
@@ -195,26 +166,15 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-fct-fse;InvestmentBank" />
         <rdfs:label xml:lang="pt-BR">Banco de Investimento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instituição especializada em operações de participação ou
-            financiamento de médio e longo prazo para capital de giro
-            ou ativo permanente de empresas.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instituição especializada em operações de participação ou financiamento de médio e longo prazo para capital de giro ou ativo permanente de empresas.</skos:definition>
     </owl:Class>
 
     <!-- Banco Múltiplo -->
     <owl:Class rdf:about="&bfo;BancoMultiplo">
         <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:label xml:lang="pt-BR">Banco Múltiplo</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instituição financeira que opera com pelo menos duas carteiras,
-            sendo uma obrigatoriamente comercial ou de investimento.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Deve possuir ao menos duas das seguintes carteiras: comercial,
-            investimento, crédito imobiliário, crédito/financiamento/investimento,
-            arrendamento mercantil.
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Instituição financeira que opera com pelo menos duas carteiras, sendo uma obrigatoriamente comercial ou de investimento.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Deve possuir ao menos duas das seguintes carteiras: comercial, investimento, crédito imobiliário, crédito/financiamento/investimento, arrendamento mercantil.</rdfs:comment>
     </owl:Class>
 
     <!-- Cooperativa de Crédito -->
@@ -222,11 +182,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-fct-fse;CreditUnion" />
         <rdfs:label xml:lang="pt-BR">Cooperativa de Crédito</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instituição financeira constituída sob a forma de sociedade
-            cooperativa, destinada a prestar serviços financeiros aos
-            associados.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instituição financeira constituída sob a forma de sociedade cooperativa, destinada a prestar serviços financeiros aos associados.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;CooperativaCredito" />
     </owl:Class>
 
@@ -235,14 +191,8 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:label xml:lang="pt-BR">Instituição de Pagamento</rdfs:label>
         <skos:altLabel>IP</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Pessoa jurídica que executa serviços de pagamento, incluindo
-            emissores de moeda eletrônica, iniciadores de pagamento e
-            credenciadores.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Regulamentada pela Lei 12.865/2013 e Circular BCB 3.885/2018.
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Pessoa jurídica que executa serviços de pagamento, incluindo emissores de moeda eletrônica, iniciadores de pagamento e credenciadores.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Regulamentada pela Lei 12.865/2013 e Circular BCB 3.885/2018.</rdfs:comment>
     </owl:Class>
 
     <!-- Corretora de Títulos e Valores Mobiliários -->
@@ -251,11 +201,7 @@
         <rdfs:subClassOf rdf:resource="&fibo-fbc-pas-fpas;BrokerDealer" />
         <rdfs:label xml:lang="pt-BR">Corretora de Títulos e Valores Mobiliários</rdfs:label>
         <skos:altLabel>CTVM</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Sociedade autorizada a operar em bolsas de valores e mercados
-            de balcão organizados, intermediando a compra e venda de
-            valores mobiliários.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Sociedade autorizada a operar em bolsas de valores e mercados de balcão organizados, intermediando a compra e venda de valores mobiliários.</skos:definition>
     </owl:Class>
 
     <!-- Distribuidora de Títulos e Valores Mobiliários -->
@@ -263,10 +209,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:label xml:lang="pt-BR">Distribuidora de Títulos e Valores Mobiliários</rdfs:label>
         <skos:altLabel>DTVM</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Sociedade autorizada a intermediar a distribuição de títulos
-            e valores mobiliários no mercado.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Sociedade autorizada a intermediar a distribuição de títulos e valores mobiliários no mercado.</skos:definition>
     </owl:Class>
 
     <!-- Sociedade de Crédito Direto (fintech de crédito) -->
@@ -274,15 +217,8 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:label xml:lang="pt-BR">Sociedade de Crédito Direto</rdfs:label>
         <skos:altLabel>SCD</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Instituição financeira que realiza operações de empréstimo e
-            financiamento exclusivamente por meio de plataforma eletrônica,
-            com capital próprio.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Criada pela Resolução CMN 4.656/2018; consolidada pela
-            Resolução CMN 5.050/2022.
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Instituição financeira que realiza operações de empréstimo e financiamento exclusivamente por meio de plataforma eletrônica, com capital próprio.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Criada pela Resolução CMN 4.656/2018; consolidada pela Resolução CMN 5.050/2022.</rdfs:comment>
     </owl:Class>
 
     <!-- Sociedade de Empréstimo entre Pessoas (P2P lending) -->
@@ -290,14 +226,8 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:label xml:lang="pt-BR">Sociedade de Empréstimo entre Pessoas</rdfs:label>
         <skos:altLabel>SEP</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Instituição financeira que intermedeia operações de empréstimo
-            e financiamento entre pessoas (peer-to-peer lending) por meio
-            de plataforma eletrônica.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Criada pela Resolução CMN 4.656/2018.
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Instituição financeira que intermedeia operações de empréstimo e financiamento entre pessoas (peer-to-peer lending) por meio de plataforma eletrônica.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Criada pela Resolução CMN 4.656/2018.</rdfs:comment>
     </owl:Class>
 
     <!-- Prestadora de Serviços de Ativos Virtuais (VASP) -->
@@ -306,14 +236,8 @@
         <rdfs:label xml:lang="pt-BR">Prestadora de Serviços de Ativos Virtuais</rdfs:label>
         <skos:altLabel>PSAV</skos:altLabel>
         <skos:altLabel>VASP</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Pessoa jurídica que executa, em nome de terceiros, serviços de
-            troca, transferência, custódia ou administração de ativos
-            virtuais, conforme a Lei 14.478/2022 (Marco Legal dos Criptoativos).
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Supervisionada pelo Banco Central do Brasil (Decreto 11.563/2023).
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Pessoa jurídica que executa, em nome de terceiros, serviços de troca, transferência, custódia ou administração de ativos virtuais, conforme a Lei 14.478/2022 (Marco Legal dos Criptoativos).</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Supervisionada pelo Banco Central do Brasil (Decreto 11.563/2023).</rdfs:comment>
     </owl:Class>
 
     <!-- Infraestruturas do Mercado Financeiro e entidades de suporte -->
@@ -321,15 +245,8 @@
         <rdfs:label xml:lang="pt-BR">Infraestrutura do Mercado Financeiro</rdfs:label>
         <rdfs:label xml:lang="en">Financial Market Infrastructure</rdfs:label>
         <skos:altLabel>FMI</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Sistema multilateral que provê serviços de negociação,
-            compensação, liquidação, registro ou depósito centralizado
-            de ativos e operações financeiras.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Alinhada aos Principles for Financial Market Infrastructures
-            (PFMI) do CPMI-IOSCO.
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Sistema multilateral que provê serviços de negociação, compensação, liquidação, registro ou depósito centralizado de ativos e operações financeiras.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Alinhada aos Principles for Financial Market Infrastructures (PFMI) do CPMI-IOSCO.</rdfs:comment>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;B3">
@@ -337,11 +254,7 @@
         <rdfs:label xml:lang="pt-BR">B3 - Brasil, Bolsa, Balcão</rdfs:label>
         <skos:altLabel>B3</skos:altLabel>
         <bfo:cnpj>09346601000125</bfo:cnpj>
-        <skos:definition xml:lang="pt-BR">
-            Bolsa de valores brasileira e infraestrutura de mercado que opera
-            negociação, pós-negociação, depósito centralizado e registro de
-            ativos financeiros.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Bolsa de valores brasileira e infraestrutura de mercado que opera negociação, pós-negociação, depósito centralizado e registro de ativos financeiros.</skos:definition>
         <rdfs:seeAlso rdf:resource="https://www.b3.com.br" />
     </owl:NamedIndividual>
 
@@ -350,10 +263,7 @@
         <rdfs:label xml:lang="pt-BR">Secretaria do Tesouro Nacional</rdfs:label>
         <skos:altLabel>STN</skos:altLabel>
         <skos:altLabel>Tesouro Nacional</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Órgão do Ministério da Fazenda responsável pela administração
-            da dívida pública federal e emissor dos títulos públicos federais.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Órgão do Ministério da Fazenda responsável pela administração da dívida pública federal e emissor dos títulos públicos federais.</skos:definition>
         <rdfs:seeAlso rdf:resource="https://www.gov.br/tesouronacional" />
     </owl:NamedIndividual>
 
@@ -361,80 +271,53 @@
         <rdf:type rdf:resource="&bfo;PessoaJuridica" />
         <rdfs:label xml:lang="pt-BR">Fundo Garantidor de Créditos</rdfs:label>
         <skos:altLabel>FGC</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Associação civil sem fins lucrativos que administra o mecanismo
-            de garantia de depósitos do sistema financeiro brasileiro,
-            com cobertura ordinária de até R$ 250.000 por CPF/CNPJ por
-            conglomerado.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Associação civil sem fins lucrativos que administra o mecanismo de garantia de depósitos do sistema financeiro brasileiro, com cobertura ordinária de até R$ 250.000 por CPF/CNPJ por conglomerado.</skos:definition>
         <rdfs:seeAlso rdf:resource="https://www.fgc.org.br" />
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;ANBIMA">
         <rdf:type rdf:resource="&bfo;PessoaJuridica" />
-        <rdfs:label xml:lang="pt-BR">
-            Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais
-        </rdfs:label>
+        <rdfs:label xml:lang="pt-BR">Associação Brasileira das Entidades dos Mercados Financeiro e de Capitais</rdfs:label>
         <skos:altLabel>ANBIMA</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Entidade autorreguladora dos mercados financeiro e de capitais
-            brasileiros, responsável por códigos de melhores práticas e
-            pela classificação de fundos de investimento.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Entidade autorreguladora dos mercados financeiro e de capitais brasileiros, responsável por códigos de melhores práticas e pela classificação de fundos de investimento.</skos:definition>
         <rdfs:seeAlso rdf:resource="https://www.anbima.com.br" />
     </owl:NamedIndividual>
 
     <!-- Segmentação Prudencial BCB (S1-S5) -->
     <owl:Class rdf:about="&bfo;SegmentacaoPrudencial">
         <rdfs:label xml:lang="pt-BR">Segmentação Prudencial</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Classificação das instituições financeiras em segmentos (S1 a S5)
-            conforme porte, atividade internacional e perfil de risco,
-            definida pela Resolução BCB 4.553/2017.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Classificação das instituições financeiras em segmentos (S1 a S5) conforme porte, atividade internacional e perfil de risco, definida pela Resolução BCB 4.553/2017.</skos:definition>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;SegmentoS1">
         <rdf:type rdf:resource="&bfo;SegmentacaoPrudencial" />
         <rdfs:label>S1</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instituições de porte igual ou superior a 10% do PIB ou com
-            atividade internacional relevante.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instituições de porte igual ou superior a 10% do PIB ou com atividade internacional relevante.</skos:definition>
         <bfo:exposicaoMinima rdf:datatype="&xsd;decimal">0.10</bfo:exposicaoMinima>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;SegmentoS2">
         <rdf:type rdf:resource="&bfo;SegmentacaoPrudencial" />
         <rdfs:label>S2</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instituições de porte entre 1% e 10% do PIB.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instituições de porte entre 1% e 10% do PIB.</skos:definition>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;SegmentoS3">
         <rdf:type rdf:resource="&bfo;SegmentacaoPrudencial" />
         <rdfs:label>S3</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instituições de porte entre 0,1% e 1% do PIB.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instituições de porte entre 0,1% e 1% do PIB.</skos:definition>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;SegmentoS4">
         <rdf:type rdf:resource="&bfo;SegmentacaoPrudencial" />
         <rdfs:label>S4</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instituições de porte inferior a 0,1% do PIB.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instituições de porte inferior a 0,1% do PIB.</skos:definition>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;SegmentoS5">
         <rdf:type rdf:resource="&bfo;SegmentacaoPrudencial" />
         <rdfs:label>S5</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instituições de porte inferior a 0,1% do PIB e perfil de
-            risco simplificado.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instituições de porte inferior a 0,1% do PIB e perfil de risco simplificado.</skos:definition>
     </owl:NamedIndividual>
 
     <!-- ==========================================
@@ -446,10 +329,7 @@
     <owl:Class rdf:about="&bfo;Pessoa">
         <rdfs:subClassOf rdf:resource="&cmns-pts;Party" />
         <rdfs:label xml:lang="pt-BR">Pessoa</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Entidade capaz de ser titular de direitos e obrigações no
-            sistema financeiro brasileiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Entidade capaz de ser titular de direitos e obrigações no sistema financeiro brasileiro.</skos:definition>
     </owl:Class>
 
     <!-- Pessoa Física -->
@@ -458,9 +338,7 @@
         <rdfs:subClassOf rdf:resource="&fibo-be-le-lp;LegallyCompetentNaturalPerson" />
         <rdfs:label xml:lang="pt-BR">Pessoa Física</rdfs:label>
         <rdfs:label xml:lang="en">Natural Person</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Indivíduo natural identificado pelo CPF no sistema brasileiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Indivíduo natural identificado pelo CPF no sistema brasileiro.</skos:definition>
         <!-- Mapeamento Open Finance Brasil -->
         <owl:equivalentClass rdf:resource="&ofb;NaturalPerson" />
     </owl:Class>
@@ -471,48 +349,34 @@
         <rdfs:subClassOf rdf:resource="&cmns-org;LegalEntity" />
         <rdfs:label xml:lang="pt-BR">Pessoa Jurídica</rdfs:label>
         <rdfs:label xml:lang="en">Legal Entity</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Entidade com personalidade jurídica própria, identificada
-            pelo CNPJ no sistema brasileiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Entidade com personalidade jurídica própria, identificada pelo CNPJ no sistema brasileiro.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;BusinessEntity" />
     </owl:Class>
 
     <!-- Classificação de Investidor CVM -->
     <owl:Class rdf:about="&bfo;ClassificacaoInvestidor">
         <rdfs:label xml:lang="pt-BR">Classificação de Investidor</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Categorização de investidores conforme a Resolução CVM 30/2021.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Categorização de investidores conforme a Resolução CVM 30/2021.</skos:definition>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;InvestidorProfissional">
         <rdf:type rdf:resource="&bfo;ClassificacaoInvestidor" />
         <rdfs:label xml:lang="pt-BR">Investidor Profissional</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Investidor com aplicações financeiras superiores a R$ 10 milhões
-            ou certificação técnica aprovada pela CVM.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Investidor com aplicações financeiras superiores a R$ 10 milhões ou certificação técnica aprovada pela CVM.</skos:definition>
         <bfo:valorMinimoAplicacoes rdf:datatype="&xsd;decimal">10000000</bfo:valorMinimoAplicacoes>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;InvestidorQualificado">
         <rdf:type rdf:resource="&bfo;ClassificacaoInvestidor" />
         <rdfs:label xml:lang="pt-BR">Investidor Qualificado</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Investidor com aplicações financeiras superiores a R$ 1 milhão
-            ou certificação técnica aprovada pela CVM.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Investidor com aplicações financeiras superiores a R$ 1 milhão ou certificação técnica aprovada pela CVM.</skos:definition>
         <bfo:valorMinimoAplicacoes rdf:datatype="&xsd;decimal">1000000</bfo:valorMinimoAplicacoes>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;InvestidorVarejo">
         <rdf:type rdf:resource="&bfo;ClassificacaoInvestidor" />
         <rdfs:label xml:lang="pt-BR">Investidor de Varejo</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Investidor que não se enquadra nas categorias de profissional
-            ou qualificado.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Investidor que não se enquadra nas categorias de profissional ou qualificado.</skos:definition>
     </owl:NamedIndividual>
 
     <!-- ==========================================
@@ -524,9 +388,7 @@
     <owl:Class rdf:about="&bfo;InstrumentoFinanceiro">
         <rdfs:subClassOf rdf:resource="&fibo-fbc-fi-fi;FinancialInstrument" />
         <rdfs:label xml:lang="pt-BR">Instrumento Financeiro</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Ativo financeiro negociável no mercado brasileiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Ativo financeiro negociável no mercado brasileiro.</skos:definition>
     </owl:Class>
 
     <!-- ========== RENDA FIXA ========== -->
@@ -535,9 +397,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-fi-fi;DebtInstrument" />
         <rdfs:label xml:lang="pt-BR">Instrumento de Renda Fixa</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Título de dívida com fluxo de pagamentos predefinido.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título de dívida com fluxo de pagamentos predefinido.</skos:definition>
     </owl:Class>
 
     <!-- Títulos Públicos Federais (Tesouro Direto) -->
@@ -545,9 +405,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoRendaFixa" />
         <rdfs:subClassOf rdf:resource="&fibo-sec-dbt-bnd;SovereignDebtInstrument" />
         <rdfs:label xml:lang="pt-BR">Título Público Federal</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Título de dívida emitido pelo Tesouro Nacional.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título de dívida emitido pelo Tesouro Nacional.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;emitidoPor" />
@@ -560,9 +418,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;TituloPublicoFederal" />
         <rdfs:label xml:lang="pt-BR">Tesouro Selic</rdfs:label>
         <skos:altLabel>LFT</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Título pós-fixado indexado à taxa Selic.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título pós-fixado indexado à taxa Selic.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;indexadoPor" />
@@ -581,10 +437,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;TituloPublicoFederal" />
         <rdfs:label xml:lang="pt-BR">Tesouro IPCA+</rdfs:label>
         <skos:altLabel>NTN-B</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Título híbrido com rentabilidade atrelada ao IPCA mais
-            uma taxa prefixada.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título híbrido com rentabilidade atrelada ao IPCA mais uma taxa prefixada.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;indexadoPor" />
@@ -603,9 +456,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;TituloPublicoFederal" />
         <rdfs:label xml:lang="pt-BR">Tesouro Prefixado</rdfs:label>
         <skos:altLabel>LTN</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Título com rentabilidade definida no momento da compra.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título com rentabilidade definida no momento da compra.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;tipoRemuneracao" />
@@ -618,9 +469,7 @@
     <owl:Class rdf:about="&bfo;TituloPrivadoRendaFixa">
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoRendaFixa" />
         <rdfs:label xml:lang="pt-BR">Título Privado de Renda Fixa</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Título de renda fixa emitido por instituição privada, em oposição aos títulos públicos federais emitidos pelo Tesouro Nacional.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título de renda fixa emitido por instituição privada, em oposição aos títulos públicos federais emitidos pelo Tesouro Nacional.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;CDB">
@@ -628,29 +477,21 @@
         <rdfs:subClassOf rdf:resource="&fibo-fbc-pas-caa;CertificateOfDeposit" />
         <rdfs:label xml:lang="pt-BR">Certificado de Depósito Bancário</rdfs:label>
         <skos:altLabel>CDB</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Título de renda fixa emitido por bancos para captação de recursos.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título de renda fixa emitido por bancos para captação de recursos.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;coberturaFGC" />
                 <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="pt-BR">
-            Cobertura ordinária do FGC limitada a R$ 250.000 por CPF/CNPJ
-            por conglomerado financeiro.
-        </rdfs:comment>
+        <rdfs:comment xml:lang="pt-BR">Cobertura ordinária do FGC limitada a R$ 250.000 por CPF/CNPJ por conglomerado financeiro.</rdfs:comment>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;LCI">
         <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
         <rdfs:label xml:lang="pt-BR">Letra de Crédito Imobiliário</rdfs:label>
         <skos:altLabel>LCI</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Título lastreado em créditos imobiliários, isento de IR para
-            pessoa física.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título lastreado em créditos imobiliários, isento de IR para pessoa física.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;isentoIRPF" />
@@ -669,10 +510,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
         <rdfs:label xml:lang="pt-BR">Letra de Crédito do Agronegócio</rdfs:label>
         <skos:altLabel>LCA</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Título lastreado em créditos do agronegócio, isento de IR
-            para pessoa física.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título lastreado em créditos do agronegócio, isento de IR para pessoa física.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;isentoIRPF" />
@@ -691,10 +529,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
         <rdfs:subClassOf rdf:resource="&fibo-sec-dbt-bnd;CorporateBond" />
         <rdfs:label xml:lang="pt-BR">Debênture</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Título de dívida de médio e longo prazo emitido por
-            sociedades anônimas.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título de dívida de médio e longo prazo emitido por sociedades anônimas.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;coberturaFGC" />
@@ -706,10 +541,7 @@
     <owl:Class rdf:about="&bfo;DebentureIncentivada">
         <rdfs:subClassOf rdf:resource="&bfo;Debenture" />
         <rdfs:label xml:lang="pt-BR">Debênture Incentivada</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Debênture emitida para financiar projetos de infraestrutura,
-            com isenção de IR para pessoa física.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Debênture emitida para financiar projetos de infraestrutura, com isenção de IR para pessoa física.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;isentoIRPF" />
@@ -723,9 +555,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
         <rdfs:label xml:lang="pt-BR">Certificado de Recebíveis Imobiliários</rdfs:label>
         <skos:altLabel>CRI</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Título de securitização lastreado em créditos imobiliários.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título de securitização lastreado em créditos imobiliários.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;isentoIRPF" />
@@ -738,9 +568,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
         <rdfs:label xml:lang="pt-BR">Certificado de Recebíveis do Agronegócio</rdfs:label>
         <skos:altLabel>CRA</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Título de securitização lastreado em créditos do agronegócio.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título de securitização lastreado em créditos do agronegócio.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;isentoIRPF" />
@@ -755,9 +583,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-fi-fi;EquityInstrument" />
         <rdfs:label xml:lang="pt-BR">Instrumento de Renda Variável</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Título cujo retorno não é conhecido no momento da aplicação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Título cujo retorno não é conhecido no momento da aplicação.</skos:definition>
     </owl:Class>
 
     <!-- Ações -->
@@ -765,9 +591,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoRendaVariavel" />
         <rdfs:subClassOf rdf:resource="&fibo-sec-eq-eq;Share" />
         <rdfs:label xml:lang="pt-BR">Ação</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Fração do capital social de uma sociedade anônima.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Fração do capital social de uma sociedade anônima.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;AcaoOrdinaria">
@@ -775,9 +599,7 @@
         <rdfs:subClassOf rdf:resource="&fibo-sec-eq-eq;CommonShare" />
         <rdfs:label xml:lang="pt-BR">Ação Ordinária</rdfs:label>
         <skos:altLabel>ON</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Ação que confere direito a voto nas assembleias da companhia.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Ação que confere direito a voto nas assembleias da companhia.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;direitoVoto" />
@@ -791,10 +613,7 @@
         <rdfs:subClassOf rdf:resource="&fibo-sec-eq-eq;PreferredShare" />
         <rdfs:label xml:lang="pt-BR">Ação Preferencial</rdfs:label>
         <skos:altLabel>PN</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Ação com preferência na distribuição de dividendos,
-            geralmente sem direito a voto.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Ação com preferência na distribuição de dividendos, geralmente sem direito a voto.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;preferenciaDistribuicao" />
@@ -806,10 +625,7 @@
     <owl:Class rdf:about="&bfo;Unit">
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoRendaVariavel" />
         <rdfs:label xml:lang="pt-BR">Unit</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Certificado de depósito de ações que agrupa diferentes
-            classes de ações de uma mesma empresa.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Certificado de depósito de ações que agrupa diferentes classes de ações de uma mesma empresa.</skos:definition>
     </owl:Class>
 
     <!-- BDR -->
@@ -818,10 +634,7 @@
         <rdfs:subClassOf rdf:resource="&fibo-sec-eq-dr;DepositaryReceipt" />
         <rdfs:label xml:lang="pt-BR">Brazilian Depositary Receipt</rdfs:label>
         <skos:altLabel>BDR</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Certificado representativo de valores mobiliários de
-            emissão de companhia estrangeira.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Certificado representativo de valores mobiliários de emissão de companhia estrangeira.</skos:definition>
     </owl:Class>
 
     <!-- ETF -->
@@ -831,10 +644,7 @@
         <rdfs:subClassOf rdf:resource="&fibo-sec-fund-fund;ExchangeTradedFund" />
         <rdfs:label xml:lang="pt-BR">Exchange Traded Fund</rdfs:label>
         <skos:altLabel>ETF</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Fundo de investimento negociado em bolsa que replica
-            um índice de referência.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Fundo de investimento negociado em bolsa que replica um índice de referência.</skos:definition>
     </owl:Class>
 
     <!-- Fundo Imobiliário -->
@@ -843,20 +653,14 @@
         <rdfs:subClassOf rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:label xml:lang="pt-BR">Fundo de Investimento Imobiliário</rdfs:label>
         <skos:altLabel>FII</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Fundo de investimento destinado à aplicação em
-            empreendimentos imobiliários.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Fundo de investimento destinado à aplicação em empreendimentos imobiliários.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&bfo;isentoIRPF_Rendimentos" />
                 <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="pt-BR">
-            Rendimentos isentos de IR para PF desde que o fundo tenha
-            mais de 50 cotistas e cotas negociadas em bolsa.
-        </rdfs:comment>
+        <rdfs:comment xml:lang="pt-BR">Rendimentos isentos de IR para PF desde que o fundo tenha mais de 50 cotistas e cotas negociadas em bolsa.</rdfs:comment>
     </owl:Class>
 
     <!-- ========== FUNDOS DE INVESTIMENTO (Resolução CVM 175/2022) ========== -->
@@ -866,71 +670,46 @@
         <rdfs:subClassOf rdf:resource="&fibo-sec-sec-pls;CollectiveInvestmentVehicle" />
         <rdfs:label xml:lang="pt-BR">Fundo de Investimento</rdfs:label>
         <rdfs:label xml:lang="en">Investment Fund</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Comunhão de recursos, constituída sob a forma de condomínio
-            de natureza especial, destinada à aplicação em ativos
-            financeiros.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Regime atual definido pela Resolução CVM 175/2022, que
-            substituiu as Instruções CVM 555 e 578.
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Comunhão de recursos, constituída sob a forma de condomínio de natureza especial, destinada à aplicação em ativos financeiros.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Regime atual definido pela Resolução CVM 175/2022, que substituiu as Instruções CVM 555 e 578.</rdfs:comment>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;FundoRendaFixa">
         <rdfs:subClassOf rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:label xml:lang="pt-BR">Fundo de Renda Fixa</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Fundo com no mínimo 80% da carteira em ativos relacionados
-            à variação de taxa de juros ou índice de preços.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Fundo com no mínimo 80% da carteira em ativos relacionados à variação de taxa de juros ou índice de preços.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;FundoDeAcoes">
         <rdfs:subClassOf rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:label xml:lang="pt-BR">Fundo de Ações</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Fundo com no mínimo 67% da carteira em ações e ativos
-            equiparados negociados em mercado organizado.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Fundo com no mínimo 67% da carteira em ações e ativos equiparados negociados em mercado organizado.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;FundoMultimercado">
         <rdfs:subClassOf rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:label xml:lang="pt-BR">Fundo Multimercado</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Fundo com política de investimento que envolve vários fatores
-            de risco, sem compromisso de concentração em fator específico.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Fundo com política de investimento que envolve vários fatores de risco, sem compromisso de concentração em fator específico.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;FundoCambial">
         <rdfs:subClassOf rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:label xml:lang="pt-BR">Fundo Cambial</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Fundo com no mínimo 80% da carteira em ativos relacionados
-            à variação de preços de moeda estrangeira.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Fundo com no mínimo 80% da carteira em ativos relacionados à variação de preços de moeda estrangeira.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;FIDC">
         <rdfs:subClassOf rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:label xml:lang="pt-BR">Fundo de Investimento em Direitos Creditórios</rdfs:label>
         <skos:altLabel>FIDC</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Fundo destinado preponderantemente à aplicação em direitos
-            creditórios (recebíveis).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Fundo destinado preponderantemente à aplicação em direitos creditórios (recebíveis).</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;FIP">
         <rdfs:subClassOf rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:label xml:lang="pt-BR">Fundo de Investimento em Participações</rdfs:label>
         <skos:altLabel>FIP</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Fundo destinado à aquisição de participações societárias
-            (private equity / venture capital).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Fundo destinado à aquisição de participações societárias (private equity / venture capital).</skos:definition>
     </owl:Class>
 
     <!-- ========== PREVIDÊNCIA COMPLEMENTAR ========== -->
@@ -938,33 +717,21 @@
     <owl:Class rdf:about="&bfo;PlanoPrevidenciaComplementar">
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:label xml:lang="pt-BR">Plano de Previdência Complementar</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Produto de acumulação de longo prazo destinado à
-            complementação de renda de aposentadoria, supervisionado
-            pela SUSEP (planos abertos) ou PREVIC (planos fechados).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Produto de acumulação de longo prazo destinado à complementação de renda de aposentadoria, supervisionado pela SUSEP (planos abertos) ou PREVIC (planos fechados).</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;PGBL">
         <rdfs:subClassOf rdf:resource="&bfo;PlanoPrevidenciaComplementar" />
         <rdfs:label xml:lang="pt-BR">Plano Gerador de Benefício Livre</rdfs:label>
         <skos:altLabel>PGBL</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Plano de previdência aberta cujas contribuições são dedutíveis
-            da base do IRPF até 12% da renda bruta anual (declaração
-            completa); o IR incide sobre o valor total no resgate.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Plano de previdência aberta cujas contribuições são dedutíveis da base do IRPF até 12% da renda bruta anual (declaração completa); o IR incide sobre o valor total no resgate.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;VGBL">
         <rdfs:subClassOf rdf:resource="&bfo;PlanoPrevidenciaComplementar" />
         <rdfs:label xml:lang="pt-BR">Vida Gerador de Benefício Livre</rdfs:label>
         <skos:altLabel>VGBL</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Seguro de pessoa com cobertura por sobrevivência; as
-            contribuições não são dedutíveis do IRPF e o IR incide
-            apenas sobre os rendimentos no resgate.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Seguro de pessoa com cobertura por sobrevivência; as contribuições não são dedutíveis do IRPF e o IR incide apenas sobre os rendimentos no resgate.</skos:definition>
     </owl:Class>
 
     <!-- ========== ATIVOS VIRTUAIS E MOEDA DIGITAL ========== -->
@@ -973,37 +740,22 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:label xml:lang="pt-BR">Ativo Virtual</rdfs:label>
         <rdfs:label xml:lang="en">Virtual Asset</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Representação digital de valor que pode ser negociada ou
-            transferida por meios eletrônicos e utilizada para pagamentos
-            ou investimento, conforme a Lei 14.478/2022.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Não inclui moeda nacional, moedas estrangeiras, moeda
-            eletrônica, pontos de fidelidade nem valores mobiliários
-            (art. 3º, parágrafo único, Lei 14.478/2022).
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Representação digital de valor que pode ser negociada ou transferida por meios eletrônicos e utilizada para pagamentos ou investimento, conforme a Lei 14.478/2022.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Não inclui moeda nacional, moedas estrangeiras, moeda eletrônica, pontos de fidelidade nem valores mobiliários (art. 3º, parágrafo único, Lei 14.478/2022).</rdfs:comment>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;MoedaDigitalDeBancoCentral">
         <rdfs:label xml:lang="pt-BR">Moeda Digital de Banco Central</rdfs:label>
         <rdfs:label xml:lang="en">Central Bank Digital Currency</rdfs:label>
         <skos:altLabel>CBDC</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Forma digital da moeda soberana, emitida e garantida pelo
-            banco central emissor.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Forma digital da moeda soberana, emitida e garantida pelo banco central emissor.</skos:definition>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;Drex">
         <rdf:type rdf:resource="&bfo;MoedaDigitalDeBancoCentral" />
         <rdfs:label xml:lang="pt-BR">Drex</rdfs:label>
         <skos:altLabel>Real Digital</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Moeda digital do Banco Central do Brasil (CBDC brasileira),
-            baseada em tecnologia de registro distribuído (DLT), em fase
-            de piloto conduzida pelo BCB.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Moeda digital do Banco Central do Brasil (CBDC brasileira), baseada em tecnologia de registro distribuído (DLT), em fase de piloto conduzida pelo BCB.</skos:definition>
         <rdfs:seeAlso rdf:resource="https://www.bcb.gov.br/estabilidadefinanceira/drex" />
     </owl:NamedIndividual>
 
@@ -1013,38 +765,28 @@
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-fi-fi;DerivativeInstrument" />
         <rdfs:label xml:lang="pt-BR">Derivativo</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instrumento financeiro cujo valor deriva de um ativo subjacente.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instrumento financeiro cujo valor deriva de um ativo subjacente.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Opcao">
         <rdfs:subClassOf rdf:resource="&bfo;Derivativo" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-fi-fi;Option" />
         <rdfs:label xml:lang="pt-BR">Opção</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Contrato que dá ao titular o direito de comprar ou vender
-            um ativo a um preço predeterminado.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Contrato que dá ao titular o direito de comprar ou vender um ativo a um preço predeterminado.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;ContratoFuturo">
         <rdfs:subClassOf rdf:resource="&bfo;Derivativo" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-fi-fi;Future" />
         <rdfs:label xml:lang="pt-BR">Contrato Futuro</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Contrato padronizado de compra ou venda de um ativo
-            em data futura.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Contrato padronizado de compra ou venda de um ativo em data futura.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Swap">
         <rdfs:subClassOf rdf:resource="&bfo;Derivativo" />
         <rdfs:subClassOf rdf:resource="&fibo-der-drc-swp;Swap" />
         <rdfs:label xml:lang="pt-BR">Swap</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Contrato de troca de fluxos financeiros entre duas partes.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Contrato de troca de fluxos financeiros entre duas partes.</skos:definition>
     </owl:Class>
 
     <!-- ==========================================
@@ -1055,10 +797,7 @@
     <owl:Class rdf:about="&bfo;Conta">
         <rdfs:subClassOf rdf:resource="&fibo-fbc-pas-caa;Account" />
         <rdfs:label xml:lang="pt-BR">Conta</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Registro de movimentações financeiras de um cliente
-            em uma instituição.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Registro de movimentações financeiras de um cliente em uma instituição.</skos:definition>
         <!-- Mapeamento Open Finance Brasil -->
         <owl:equivalentClass rdf:resource="&ofb;Account" />
     </owl:Class>
@@ -1067,9 +806,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;Conta" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-pas-caa;DemandDepositAccount" />
         <rdfs:label xml:lang="pt-BR">Conta Corrente</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Conta de depósitos à vista para movimentação livre.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Conta de depósitos à vista para movimentação livre.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;CheckingAccount" />
     </owl:Class>
 
@@ -1077,28 +814,20 @@
         <rdfs:subClassOf rdf:resource="&bfo;Conta" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-pas-caa;DepositAccount" />
         <rdfs:label xml:lang="pt-BR">Conta Poupança</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Conta de depósitos com remuneração pela caderneta de poupança.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Conta de depósitos com remuneração pela caderneta de poupança.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;SavingsAccount" />
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;ContaSalario">
         <rdfs:subClassOf rdf:resource="&bfo;Conta" />
         <rdfs:label xml:lang="pt-BR">Conta Salário</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Conta destinada exclusivamente ao recebimento de salários,
-            proventos e pensões.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Conta destinada exclusivamente ao recebimento de salários, proventos e pensões.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;ContaPagamento">
         <rdfs:subClassOf rdf:resource="&bfo;Conta" />
         <rdfs:label xml:lang="pt-BR">Conta de Pagamento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Conta mantida em instituição de pagamento para realização
-            de transações de pagamento.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Conta mantida em instituição de pagamento para realização de transações de pagamento.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;PaymentAccount" />
     </owl:Class>
 
@@ -1110,9 +839,7 @@
     <owl:Class rdf:about="&bfo;OperacaoFinanceira">
         <rdfs:subClassOf rdf:resource="&fibo-fnd-pas-pas;TransactionEvent" />
         <rdfs:label xml:lang="pt-BR">Operação Financeira</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Transação realizada no sistema financeiro brasileiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Transação realizada no sistema financeiro brasileiro.</skos:definition>
     </owl:Class>
 
     <!-- Operações de Crédito -->
@@ -1120,134 +847,103 @@
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:subClassOf rdf:resource="&fibo-loan-ln-ln;Loan" />
         <rdfs:label xml:lang="pt-BR">Operação de Crédito</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação em que uma instituição financeira coloca recursos à disposição de um tomador mediante compromisso de pagamento futuro, sujeita a classificação de risco na forma da Resolução CMN 2.682/1999.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação em que uma instituição financeira coloca recursos à disposição de um tomador mediante compromisso de pagamento futuro, sujeita a classificação de risco na forma da Resolução CMN 2.682/1999.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;CreditOperation" />
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;EmprestimoPessoal">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoCredito" />
         <rdfs:label xml:lang="pt-BR">Empréstimo Pessoal</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação de crédito sem destinação específica concedida a pessoa física, com pagamento em parcelas e sem vinculação de garantia ao bem financiado.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação de crédito sem destinação específica concedida a pessoa física, com pagamento em parcelas e sem vinculação de garantia ao bem financiado.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;PersonalLoan" />
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;CreditoConsignado">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoCredito" />
         <rdfs:label xml:lang="pt-BR">Crédito Consignado</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Empréstimo com desconto automático das parcelas em folha
-            de pagamento.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Empréstimo com desconto automático das parcelas em folha de pagamento.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;FinanciamentoImobiliario">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoCredito" />
         <rdfs:label xml:lang="pt-BR">Financiamento Imobiliário</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação de crédito com destinação específica para aquisição, construção ou reforma de imóvel, tipicamente garantida por alienação fiduciária ou hipoteca do próprio imóvel.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação de crédito com destinação específica para aquisição, construção ou reforma de imóvel, tipicamente garantida por alienação fiduciária ou hipoteca do próprio imóvel.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;RealEstateLoan" />
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;FinanciamentoVeicular">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoCredito" />
         <rdfs:label xml:lang="pt-BR">Financiamento Veicular</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação de crédito com destinação específica para aquisição de veículo, tipicamente garantida por alienação fiduciária do próprio veículo.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação de crédito com destinação específica para aquisição de veículo, tipicamente garantida por alienação fiduciária do próprio veículo.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;VehicleLoan" />
     </owl:Class>
 
     <!-- Classificação de Risco de Crédito BCB -->
     <owl:Class rdf:about="&bfo;ClassificacaoRiscoCredito">
         <rdfs:label xml:lang="pt-BR">Classificação de Risco de Crédito</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Categorização do risco de crédito conforme Resolução CMN 2.682/1999.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Categorização do risco de crédito conforme Resolução CMN 2.682/1999.</skos:definition>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoAA">
         <rdf:type rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label>AA</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Nível de risco de crédito AA, o mais baixo da escala da Resolução CMN 2.682/1999, sem exigência de provisionamento mínimo.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Nível de risco de crédito AA, o mais baixo da escala da Resolução CMN 2.682/1999, sem exigência de provisionamento mínimo.</skos:definition>
         <bfo:provisaoMinima rdf:datatype="&xsd;decimal">0</bfo:provisaoMinima>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoA">
         <rdf:type rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label>A</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Nível de risco de crédito A na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 0,5% do valor da operação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Nível de risco de crédito A na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 0,5% do valor da operação.</skos:definition>
         <bfo:provisaoMinima rdf:datatype="&xsd;decimal">0.005</bfo:provisaoMinima>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoB">
         <rdf:type rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label>B</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Nível de risco de crédito B na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 1% do valor da operação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Nível de risco de crédito B na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 1% do valor da operação.</skos:definition>
         <bfo:provisaoMinima rdf:datatype="&xsd;decimal">0.01</bfo:provisaoMinima>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoC">
         <rdf:type rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label>C</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Nível de risco de crédito C na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 3% do valor da operação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Nível de risco de crédito C na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 3% do valor da operação.</skos:definition>
         <bfo:provisaoMinima rdf:datatype="&xsd;decimal">0.03</bfo:provisaoMinima>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoD">
         <rdf:type rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label>D</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Nível de risco de crédito D na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 10% do valor da operação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Nível de risco de crédito D na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 10% do valor da operação.</skos:definition>
         <bfo:provisaoMinima rdf:datatype="&xsd;decimal">0.10</bfo:provisaoMinima>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoE">
         <rdf:type rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label>E</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Nível de risco de crédito E na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 30% do valor da operação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Nível de risco de crédito E na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 30% do valor da operação.</skos:definition>
         <bfo:provisaoMinima rdf:datatype="&xsd;decimal">0.30</bfo:provisaoMinima>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoF">
         <rdf:type rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label>F</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Nível de risco de crédito F na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 50% do valor da operação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Nível de risco de crédito F na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 50% do valor da operação.</skos:definition>
         <bfo:provisaoMinima rdf:datatype="&xsd;decimal">0.50</bfo:provisaoMinima>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoG">
         <rdf:type rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label>G</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Nível de risco de crédito G na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 70% do valor da operação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Nível de risco de crédito G na escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 70% do valor da operação.</skos:definition>
         <bfo:provisaoMinima rdf:datatype="&xsd;decimal">0.70</bfo:provisaoMinima>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoH">
         <rdf:type rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label>H</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Nível de risco de crédito H, o mais alto da escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 100% do valor da operação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Nível de risco de crédito H, o mais alto da escala da Resolução CMN 2.682/1999, com provisionamento mínimo de 100% do valor da operação.</skos:definition>
         <bfo:provisaoMinima rdf:datatype="&xsd;decimal">1.00</bfo:provisaoMinima>
     </owl:NamedIndividual>
 
@@ -1256,32 +952,21 @@
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:subClassOf rdf:resource="&fibo-fbc-pas-caa;IndividualTransaction" />
         <rdfs:label xml:lang="pt-BR">Operação de Pagamento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação financeira cuja finalidade é a transferência de recursos entre contas, liquidada por um dos arranjos de pagamento em funcionamento no país.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação financeira cuja finalidade é a transferência de recursos entre contas, liquidada por um dos arranjos de pagamento em funcionamento no país.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;PIX">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoPagamento" />
         <rdfs:label xml:lang="pt-BR">PIX</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Pagamento instantâneo realizado no arranjo Pix do Banco
-            Central do Brasil, com liquidação em tempo real no SPI
-            (Sistema de Pagamentos Instantâneos).
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            A mensageria do arranjo Pix segue o padrão ISO 20022
-            (ex.: pacs.008, pacs.002).
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Pagamento instantâneo realizado no arranjo Pix do Banco Central do Brasil, com liquidação em tempo real no SPI (Sistema de Pagamentos Instantâneos).</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">A mensageria do arranjo Pix segue o padrão ISO 20022 (ex.: pacs.008, pacs.002).</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.bcb.gov.br/estabilidadefinanceira/pix" />
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;TED">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoPagamento" />
         <rdfs:label xml:lang="pt-BR">Transferência Eletrônica Disponível</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Transferência Eletrônica Disponível: transferência de recursos entre instituições liquidada em tempo real no STR, sem limite de valor e restrita ao horário de funcionamento do sistema.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Transferência Eletrônica Disponível: transferência de recursos entre instituições liquidada em tempo real no STR, sem limite de valor e restrita ao horário de funcionamento do sistema.</skos:definition>
         <skos:altLabel>TED</skos:altLabel>
     </owl:Class>
 
@@ -1290,63 +975,45 @@
         <rdfs:label xml:lang="pt-BR">Documento de Ordem de Crédito</rdfs:label>
         <skos:altLabel>DOC</skos:altLabel>
         <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
-        <skos:definition xml:lang="pt-BR">
-            Modalidade de transferência interbancária descontinuada pelo
-            sistema financeiro brasileiro em janeiro de 2024. Mantida na
-            ontologia para representação de dados históricos.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Modalidade de transferência interbancária descontinuada pelo sistema financeiro brasileiro em janeiro de 2024. Mantida na ontologia para representação de dados históricos.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Boleto">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoPagamento" />
         <rdfs:label xml:lang="pt-BR">Boleto Bancário</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instrumento de cobrança registrado na Plataforma de Cobrança do BCB, que autoriza o pagador a liquidar uma obrigação em qualquer instituição participante do arranjo.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instrumento de cobrança registrado na Plataforma de Cobrança do BCB, que autoriza o pagador a liquidar uma obrigação em qualquer instituição participante do arranjo.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;OperacaoCartaoCredito">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoPagamento" />
         <rdfs:label xml:lang="pt-BR">Operação com Cartão de Crédito</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Transação de pagamento realizada com cartão de crédito em
-            arranjo de pagamento autorizado pelo BCB.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Transação de pagamento realizada com cartão de crédito em arranjo de pagamento autorizado pelo BCB.</skos:definition>
     </owl:Class>
 
     <!-- Operações de Câmbio -->
     <owl:Class rdf:about="&bfo;OperacaoCambio">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:label xml:lang="pt-BR">Operação de Câmbio</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação de compra ou venda de moeda estrangeira, regida
-            pelo novo marco cambial (Lei 14.286/2021).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação de compra ou venda de moeda estrangeira, regida pelo novo marco cambial (Lei 14.286/2021).</skos:definition>
     </owl:Class>
 
     <!-- Operações de Investimento -->
     <owl:Class rdf:about="&bfo;OperacaoInvestimento">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:label xml:lang="pt-BR">Operação de Investimento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação financeira de aplicação ou resgate de recursos em instrumento financeiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação financeira de aplicação ou resgate de recursos em instrumento financeiro.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Aplicacao">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoInvestimento" />
         <rdfs:label xml:lang="pt-BR">Aplicação</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação de compra ou aporte em instrumento financeiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação de compra ou aporte em instrumento financeiro.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Resgate">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoInvestimento" />
         <rdfs:label xml:lang="pt-BR">Resgate</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação de venda ou retirada de instrumento financeiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação de venda ou retirada de instrumento financeiro.</skos:definition>
     </owl:Class>
 
     <!-- ==========================================
@@ -1356,18 +1023,14 @@
     <owl:Class rdf:about="&bfo;IndicadorEconomico">
         <rdfs:subClassOf rdf:resource="&fibo-fnd-arr-id;Index" />
         <rdfs:label xml:lang="pt-BR">Indicador Econômico</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Série temporal de referência do sistema financeiro brasileiro, publicada pelo BCB (SGS) ou por outra fonte oficial, e usada para indexação de instrumentos financeiros.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Série temporal de referência do sistema financeiro brasileiro, publicada pelo BCB (SGS) ou por outra fonte oficial, e usada para indexação de instrumentos financeiros.</skos:definition>
     </owl:Class>
 
     <!-- Taxa Selic -->
     <owl:NamedIndividual rdf:about="&bfo;TaxaSelic">
         <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:label xml:lang="pt-BR">Taxa Selic</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Taxa básica de juros da economia brasileira, definida pelo COPOM.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Taxa básica de juros da economia brasileira, definida pelo COPOM.</skos:definition>
         <bfo:codigoBCB>4189</bfo:codigoBCB>
         <rdfs:seeAlso
             rdf:resource="https://dadosabertos.bcb.gov.br/dataset/4189-taxa-de-juros---selic" />
@@ -1378,9 +1041,7 @@
         <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:label xml:lang="pt-BR">CDI</rdfs:label>
         <skos:altLabel>Certificado de Depósito Interbancário</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Taxa média dos empréstimos interbancários de um dia.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Taxa média dos empréstimos interbancários de um dia.</skos:definition>
         <bfo:codigoBCB>4391</bfo:codigoBCB>
     </owl:NamedIndividual>
 
@@ -1389,9 +1050,7 @@
         <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:label xml:lang="pt-BR">IPCA</rdfs:label>
         <skos:altLabel>Índice Nacional de Preços ao Consumidor Amplo</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Índice oficial de inflação do Brasil, calculado pelo IBGE.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Índice oficial de inflação do Brasil, calculado pelo IBGE.</skos:definition>
         <bfo:codigoBCB>433</bfo:codigoBCB>
     </owl:NamedIndividual>
 
@@ -1400,10 +1059,7 @@
         <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:label xml:lang="pt-BR">IGP-M</rdfs:label>
         <skos:altLabel>Índice Geral de Preços do Mercado</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Índice de preços calculado pela FGV, utilizado para
-            reajuste de contratos.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Índice de preços calculado pela FGV, utilizado para reajuste de contratos.</skos:definition>
         <bfo:codigoBCB>189</bfo:codigoBCB>
     </owl:NamedIndividual>
 
@@ -1412,10 +1068,7 @@
         <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:label xml:lang="pt-BR">Taxa Referencial</rdfs:label>
         <skos:altLabel>TR</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Taxa utilizada para remunerar a caderneta de poupança e
-            corrigir o FGTS.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Taxa utilizada para remunerar a caderneta de poupança e corrigir o FGTS.</skos:definition>
         <bfo:codigoBCB>226</bfo:codigoBCB>
     </owl:NamedIndividual>
 
@@ -1424,11 +1077,7 @@
         <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:label xml:lang="pt-BR">PTAX</rdfs:label>
         <skos:altLabel>Taxa de câmbio PTAX</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Taxa de câmbio de referência do dólar dos EUA calculada e
-            divulgada pelo Banco Central do Brasil, utilizada como
-            referência em contratos financeiros e derivativos cambiais.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Taxa de câmbio de referência do dólar dos EUA calculada e divulgada pelo Banco Central do Brasil, utilizada como referência em contratos financeiros e derivativos cambiais.</skos:definition>
         <bfo:codigoBCB>1</bfo:codigoBCB>
     </owl:NamedIndividual>
 
@@ -1437,11 +1086,7 @@
         <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:label xml:lang="pt-BR">INPC</rdfs:label>
         <skos:altLabel>Índice Nacional de Preços ao Consumidor</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Índice de preços calculado pelo IBGE para famílias com
-            rendimento de 1 a 5 salários mínimos, usado em reajustes
-            salariais e benefícios.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Índice de preços calculado pelo IBGE para famílias com rendimento de 1 a 5 salários mínimos, usado em reajustes salariais e benefícios.</skos:definition>
         <bfo:codigoBCB>188</bfo:codigoBCB>
     </owl:NamedIndividual>
 
@@ -1450,11 +1095,7 @@
         <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:label xml:lang="pt-BR">Ibovespa</rdfs:label>
         <skos:altLabel>IBOV</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Principal índice de desempenho das ações negociadas na B3,
-            composto pelos ativos de maior negociabilidade e
-            representatividade do mercado brasileiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Principal índice de desempenho das ações negociadas na B3, composto pelos ativos de maior negociabilidade e representatividade do mercado brasileiro.</skos:definition>
         <rdfs:seeAlso rdf:resource="https://www.b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/ibovespa.htm" />
     </owl:NamedIndividual>
 
@@ -1465,63 +1106,43 @@
     <owl:Class rdf:about="&bfo;Garantia">
         <rdfs:label xml:lang="pt-BR">Garantia</rdfs:label>
         <rdfs:label xml:lang="en">Collateral / Guarantee</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Mecanismo jurídico que assegura o cumprimento de uma
-            obrigação em operação de crédito.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Mecanismo jurídico que assegura o cumprimento de uma obrigação em operação de crédito.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;GarantiaReal">
         <rdfs:subClassOf rdf:resource="&bfo;Garantia" />
         <rdfs:label xml:lang="pt-BR">Garantia Real</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Garantia vinculada a um bem específico do devedor ou de terceiro.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Garantia vinculada a um bem específico do devedor ou de terceiro.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;GarantiaFidejussoria">
         <rdfs:subClassOf rdf:resource="&bfo;Garantia" />
         <rdfs:label xml:lang="pt-BR">Garantia Fidejussória</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Garantia pessoal prestada por terceiro que se obriga pelo
-            cumprimento da obrigação do devedor.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Garantia pessoal prestada por terceiro que se obriga pelo cumprimento da obrigação do devedor.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;AlienacaoFiduciaria">
         <rdfs:subClassOf rdf:resource="&bfo;GarantiaReal" />
         <rdfs:label xml:lang="pt-BR">Alienação Fiduciária</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Transferência da propriedade resolúvel de bem móvel ou imóvel
-            ao credor até a quitação da dívida.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Transferência da propriedade resolúvel de bem móvel ou imóvel ao credor até a quitação da dívida.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Hipoteca">
         <rdfs:subClassOf rdf:resource="&bfo;GarantiaReal" />
         <rdfs:label xml:lang="pt-BR">Hipoteca</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Direito real de garantia sobre bem imóvel que permanece na
-            posse do devedor.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Direito real de garantia sobre bem imóvel que permanece na posse do devedor.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Aval">
         <rdfs:subClassOf rdf:resource="&bfo;GarantiaFidejussoria" />
         <rdfs:label xml:lang="pt-BR">Aval</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Garantia pessoal, autônoma e solidária, prestada em títulos
-            de crédito.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Garantia pessoal, autônoma e solidária, prestada em títulos de crédito.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Fianca">
         <rdfs:subClassOf rdf:resource="&bfo;GarantiaFidejussoria" />
         <rdfs:label xml:lang="pt-BR">Fiança</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Garantia pessoal acessória em que o fiador se obriga a
-            satisfazer a obrigação caso o devedor não a cumpra.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Garantia pessoal acessória em que o fiador se obriga a satisfazer a obrigação caso o devedor não a cumpra.</skos:definition>
     </owl:Class>
 
     <!-- ==========================================
@@ -1531,54 +1152,39 @@
     <owl:Class rdf:about="&bfo;Consentimento">
         <rdfs:label xml:lang="pt-BR">Consentimento</rdfs:label>
         <rdfs:label xml:lang="en">Consent</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Manifestação livre, informada e inequívoca pela qual o cliente
-            autoriza o compartilhamento de seus dados ou a iniciação de
-            pagamentos no âmbito do Open Finance, em conformidade com a
-            LGPD (Lei 13.709/2018) e a Resolução Conjunta CMN/BCB 1/2020.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Manifestação livre, informada e inequívoca pela qual o cliente autoriza o compartilhamento de seus dados ou a iniciação de pagamentos no âmbito do Open Finance, em conformidade com a LGPD (Lei 13.709/2018) e a Resolução Conjunta CMN/BCB 1/2020.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;StatusConsentimento">
         <rdfs:label xml:lang="pt-BR">Status do Consentimento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Situação do ciclo de vida de um consentimento Open Finance.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Situação do ciclo de vida de um consentimento Open Finance.</skos:definition>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;ConsentimentoAguardandoAutorizacao">
         <rdf:type rdf:resource="&bfo;StatusConsentimento" />
         <rdfs:label xml:lang="pt-BR">Aguardando Autorização</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Estado inicial do ciclo de vida do consentimento no Open Finance Brasil: o consentimento foi criado mas ainda não foi autorizado pelo titular dos dados.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Estado inicial do ciclo de vida do consentimento no Open Finance Brasil: o consentimento foi criado mas ainda não foi autorizado pelo titular dos dados.</skos:definition>
         <skos:notation>AWAITING_AUTHORISATION</skos:notation>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;ConsentimentoAutorizado">
         <rdf:type rdf:resource="&bfo;StatusConsentimento" />
         <rdfs:label xml:lang="pt-BR">Autorizado</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Estado do consentimento no Open Finance Brasil em que o titular autorizou o compartilhamento e a transmissora pode atender às requisições até a data de expiração.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Estado do consentimento no Open Finance Brasil em que o titular autorizou o compartilhamento e a transmissora pode atender às requisições até a data de expiração.</skos:definition>
         <skos:notation>AUTHORISED</skos:notation>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;ConsentimentoRejeitado">
         <rdf:type rdf:resource="&bfo;StatusConsentimento" />
         <rdfs:label xml:lang="pt-BR">Rejeitado</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Estado terminal do consentimento no Open Finance Brasil em que o titular não concluiu ou recusou a autorização, e nenhum dado é compartilhado.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Estado terminal do consentimento no Open Finance Brasil em que o titular não concluiu ou recusou a autorização, e nenhum dado é compartilhado.</skos:definition>
         <skos:notation>REJECTED</skos:notation>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;ConsentimentoRevogado">
         <rdf:type rdf:resource="&bfo;StatusConsentimento" />
         <rdfs:label xml:lang="pt-BR">Revogado</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Estado terminal do consentimento no Open Finance Brasil em que a autorização previamente concedida foi cancelada pelo titular, pela transmissora ou pela receptora, cessando o compartilhamento.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Estado terminal do consentimento no Open Finance Brasil em que a autorização previamente concedida foi cancelada pelo titular, pela transmissora ou pela receptora, cessando o compartilhamento.</skos:definition>
         <skos:notation>REVOKED</skos:notation>
     </owl:NamedIndividual>
 
@@ -1592,53 +1198,41 @@
         <rdfs:domain rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:range rdf:resource="&bfo;OrgaoReguladorBrasileiro" />
         <rdfs:label xml:lang="pt-BR">regulado por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a instituição financeira ao órgão que exerce sua regulação e supervisão.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a instituição financeira ao órgão que exerce sua regulação e supervisão.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;possuiConta">
         <rdfs:domain rdf:resource="&bfo;Pessoa" />
         <rdfs:range rdf:resource="&bfo;Conta" />
         <rdfs:label xml:lang="pt-BR">possui conta</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a pessoa à conta da qual ela é titular.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a pessoa à conta da qual ela é titular.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;contaMantidaPor">
         <owl:inverseOf rdf:resource="&bfo;possuiConta" />
         <rdfs:label xml:lang="pt-BR">conta mantida por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a conta ao seu titular. Inversa de possuiConta.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a conta ao seu titular. Inversa de possuiConta.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;realizadaPor">
         <rdfs:domain rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:range rdf:resource="&bfo;Pessoa" />
         <rdfs:label xml:lang="pt-BR">realizada por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a operação financeira à pessoa que a realiza.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a operação financeira à pessoa que a realiza.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;envolveInstrumento">
         <rdfs:domain rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:range rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:label xml:lang="pt-BR">envolve instrumento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a operação financeira ao instrumento financeiro que é seu objeto.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a operação financeira ao instrumento financeiro que é seu objeto.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;emitidoPor">
         <rdfs:domain rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:range rdf:resource="&bfo;PessoaJuridica" />
         <rdfs:label xml:lang="pt-BR">emitido por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona o instrumento financeiro à pessoa jurídica emissora, responsável pela obrigação nele representada.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona o instrumento financeiro à pessoa jurídica emissora, responsável pela obrigação nele representada.</skos:definition>
         <rdfs:subPropertyOf rdf:resource="&fibo-fnd-rel-rel;isIssuedBy" />
     </owl:ObjectProperty>
 
@@ -1646,101 +1240,77 @@
         <rdfs:domain rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:range rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:label xml:lang="pt-BR">custodiado por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona o instrumento financeiro à instituição responsável pela sua custódia e guarda escritural.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona o instrumento financeiro à instituição responsável pela sua custódia e guarda escritural.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;indexadoPor">
         <rdfs:domain rdf:resource="&bfo;InstrumentoRendaFixa" />
         <rdfs:range rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:label xml:lang="pt-BR">indexado por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona o instrumento de renda fixa ao indicador econômico que corrige sua remuneração.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona o instrumento de renda fixa ao indicador econômico que corrige sua remuneração.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;segmentoPrudencial">
         <rdfs:domain rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:range rdf:resource="&bfo;SegmentacaoPrudencial" />
         <rdfs:label xml:lang="pt-BR">segmento prudencial</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a instituição financeira ao seu segmento de enquadramento prudencial (S1 a S5), na forma da Resolução CMN 4.553/2017.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a instituição financeira ao seu segmento de enquadramento prudencial (S1 a S5), na forma da Resolução CMN 4.553/2017.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;classificacaoInvestidor">
         <rdfs:domain rdf:resource="&bfo;Pessoa" />
         <rdfs:range rdf:resource="&bfo;ClassificacaoInvestidor" />
         <rdfs:label xml:lang="pt-BR">classificação de investidor</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a pessoa à sua classificação como investidor, na forma da Resolução CVM 30/2021.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a pessoa à sua classificação como investidor, na forma da Resolução CVM 30/2021.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;classificacaoRisco">
         <rdfs:domain rdf:resource="&bfo;OperacaoCredito" />
         <rdfs:range rdf:resource="&bfo;ClassificacaoRiscoCredito" />
         <rdfs:label xml:lang="pt-BR">classificação de risco</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a operação de crédito ao seu nível de risco, na forma da Resolução CMN 2.682/1999.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a operação de crédito ao seu nível de risco, na forma da Resolução CMN 2.682/1999.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;garantidaPor">
         <rdfs:domain rdf:resource="&bfo;OperacaoCredito" />
         <rdfs:range rdf:resource="&bfo;Garantia" />
         <rdfs:label xml:lang="pt-BR">garantida por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a operação de crédito à garantia que a assegura.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a operação de crédito à garantia que a assegura.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;administradoPor">
         <rdfs:domain rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:range rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:label xml:lang="pt-BR">administrado por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona o fundo ao seu administrador fiduciário
-            (Resolução CVM 175/2022).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona o fundo ao seu administrador fiduciário (Resolução CVM 175/2022).</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;geridoPor">
         <rdfs:domain rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:range rdf:resource="&bfo;PessoaJuridica" />
         <rdfs:label xml:lang="pt-BR">gerido por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona o fundo ao seu gestor de carteira.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona o fundo ao seu gestor de carteira.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;consentimentoConcedidoPor">
         <rdfs:domain rdf:resource="&bfo;Consentimento" />
         <rdfs:range rdf:resource="&bfo;Pessoa" />
         <rdfs:label xml:lang="pt-BR">consentimento concedido por</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona o consentimento ao titular dos dados que o concedeu, na forma da LGPD e da Resolução Conjunta CMN/BCB 1/2020.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona o consentimento ao titular dos dados que o concedeu, na forma da LGPD e da Resolução Conjunta CMN/BCB 1/2020.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;consentimentoConcedidoA">
         <rdfs:domain rdf:resource="&bfo;Consentimento" />
         <rdfs:range rdf:resource="&fibo-fbc-pas-fpas;FinancialServiceProvider" />
         <rdfs:label xml:lang="pt-BR">consentimento concedido a</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Instituição receptora dos dados ou iniciadora de pagamento
-            autorizada pelo consentimento.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Instituição receptora dos dados ou iniciadora de pagamento autorizada pelo consentimento.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;statusConsentimento">
         <rdfs:domain rdf:resource="&bfo;Consentimento" />
         <rdfs:range rdf:resource="&bfo;StatusConsentimento" />
         <rdfs:label xml:lang="pt-BR">status do consentimento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona o consentimento ao seu estado corrente no ciclo de vida definido pelo Open Finance Brasil.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona o consentimento ao seu estado corrente no ciclo de vida definido pelo Open Finance Brasil.</skos:definition>
     </owl:ObjectProperty>
 
     <!-- ========== Data Properties ========== -->
@@ -1750,74 +1320,55 @@
         <rdfs:domain rdf:resource="&bfo;PessoaFisica" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">CPF</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Cadastro de Pessoas Físicas - identificador único de pessoa
-            física no Brasil (11 dígitos).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Cadastro de Pessoas Físicas - identificador único de pessoa física no Brasil (11 dígitos).</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;cnpj">
         <rdfs:domain rdf:resource="&bfo;PessoaJuridica" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">CNPJ</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Cadastro Nacional da Pessoa Jurídica - identificador único
-            de pessoa jurídica no Brasil (14 dígitos).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Cadastro Nacional da Pessoa Jurídica - identificador único de pessoa jurídica no Brasil (14 dígitos).</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;codigoISPB">
         <rdfs:domain rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">Código ISPB</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Identificador do Sistema de Pagamentos Brasileiro (8 dígitos).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Identificador do Sistema de Pagamentos Brasileiro (8 dígitos).</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;codigoISIN">
         <rdfs:domain rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">Código ISIN</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            International Securities Identification Number (12 caracteres).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">International Securities Identification Number (12 caracteres).</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;ticker">
         <rdfs:domain rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">Ticker</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Código de negociação do ativo em bolsa.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Código de negociação do ativo em bolsa.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;chavePIX">
         <rdfs:domain rdf:resource="&bfo;Conta" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">Chave PIX</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Identificador único para recebimento de PIX (CPF/CNPJ,
-            e-mail, telefone ou chave aleatória).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Identificador único para recebimento de PIX (CPF/CNPJ, e-mail, telefone ou chave aleatória).</skos:definition>
     </owl:DatatypeProperty>
 
     <!-- Valores Monetários -->
     <owl:DatatypeProperty rdf:about="&bfo;valorBRL">
         <rdfs:range rdf:resource="&xsd;decimal" />
         <rdfs:label xml:lang="pt-BR">Valor em BRL</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Valor monetário expresso em Reais brasileiros.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Valor monetário expresso em Reais brasileiros.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;taxaJuros">
         <rdfs:range rdf:resource="&xsd;decimal" />
         <rdfs:label xml:lang="pt-BR">Taxa de Juros</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Taxa de juros expressa em percentual ao ano.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Taxa de juros expressa em percentual ao ano.</skos:definition>
     </owl:DatatypeProperty>
 
     <!-- Datas -->
@@ -1825,73 +1376,54 @@
         <rdfs:domain rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">Data da Operação</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Data e hora em que a operação financeira foi realizada.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Data e hora em que a operação financeira foi realizada.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;dataLiquidacao">
         <rdfs:domain rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">Data de Liquidação</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Data em que a operação financeira é efetivamente liquidada, com a transferência definitiva dos recursos.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Data em que a operação financeira é efetivamente liquidada, com a transferência definitiva dos recursos.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;dataVencimento">
         <rdfs:domain rdf:resource="&bfo;InstrumentoRendaFixa" />
         <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">Data de Vencimento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Data de vencimento do instrumento de renda fixa, em que o principal se torna exigível.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Data de vencimento do instrumento de renda fixa, em que o principal se torna exigível.</skos:definition>
     </owl:DatatypeProperty>
 
     <!-- Atributos Booleanos -->
     <owl:DatatypeProperty rdf:about="&bfo;coberturaFGC">
         <rdfs:range rdf:resource="&xsd;boolean" />
         <rdfs:label xml:lang="pt-BR">Cobertura FGC</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Indica se o instrumento possui cobertura do Fundo
-            Garantidor de Créditos.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Indica se o instrumento possui cobertura do Fundo Garantidor de Créditos.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;isentoIRPF">
         <rdfs:range rdf:resource="&xsd;boolean" />
         <rdfs:label xml:lang="pt-BR">Isento de IRPF</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Indica se o instrumento é isento de Imposto de Renda
-            para pessoa física.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Indica se o instrumento é isento de Imposto de Renda para pessoa física.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;isentoIRPF_Rendimentos">
         <rdfs:range rdf:resource="&xsd;boolean" />
         <rdfs:label xml:lang="pt-BR">Rendimentos Isentos de IRPF</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Indica se os rendimentos distribuídos pelo instrumento são
-            isentos de Imposto de Renda para pessoa física.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Indica se os rendimentos distribuídos pelo instrumento são isentos de Imposto de Renda para pessoa física.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;direitoVoto">
         <rdfs:domain rdf:resource="&bfo;Acao" />
         <rdfs:range rdf:resource="&xsd;boolean" />
         <rdfs:label xml:lang="pt-BR">Direito a Voto</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Indica se a ação confere ao titular direito de voto nas assembleias da companhia.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Indica se a ação confere ao titular direito de voto nas assembleias da companhia.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;preferenciaDistribuicao">
         <rdfs:domain rdf:resource="&bfo;Acao" />
         <rdfs:range rdf:resource="&xsd;boolean" />
         <rdfs:label xml:lang="pt-BR">Preferência na Distribuição</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Indica se a ação confere ao titular preferência na distribuição de dividendos ou no reembolso do capital.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Indica se a ação confere ao titular preferência na distribuição de dividendos ou no reembolso do capital.</skos:definition>
     </owl:DatatypeProperty>
 
     <!-- Atributos de Classificação e Regulação -->
@@ -1899,71 +1431,48 @@
         <rdfs:domain rdf:resource="&bfo;InstrumentoRendaFixa" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">Tipo de Remuneração</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Forma de remuneração do instrumento de renda fixa: prefixada, pós-fixada ou híbrida.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Valores: prefixado, pos-fixado, hibrido.
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Forma de remuneração do instrumento de renda fixa: prefixada, pós-fixada ou híbrida.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Valores: prefixado, pos-fixado, hibrido.</rdfs:comment>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;tipoCarteiraBCB">
         <rdfs:domain rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">Tipo de Carteira BCB</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Carteira de operação autorizada pelo Banco Central: comercial, investimento, crédito imobiliário, crédito/financiamento/investimento ou arrendamento mercantil.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Valores: comercial, investimento, credito-imobiliario,
-            credito-financiamento-investimento, arrendamento-mercantil.
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Carteira de operação autorizada pelo Banco Central: comercial, investimento, crédito imobiliário, crédito/financiamento/investimento ou arrendamento mercantil.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Valores: comercial, investimento, credito-imobiliario, credito-financiamento-investimento, arrendamento-mercantil.</rdfs:comment>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;exposicaoMinima">
         <rdfs:range rdf:resource="&xsd;decimal" />
         <rdfs:label xml:lang="pt-BR">Exposição Mínima</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Limite inferior de exposição total em relação ao PIB usado
-            na segmentação prudencial.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Limite inferior de exposição total em relação ao PIB usado na segmentação prudencial.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;valorMinimoAplicacoes">
         <rdfs:range rdf:resource="&xsd;decimal" />
         <rdfs:label xml:lang="pt-BR">Valor Mínimo de Aplicações</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Valor mínimo de aplicações financeiras exigido para a
-            classificação de investidor (Resolução CVM 30/2021).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Valor mínimo de aplicações financeiras exigido para a classificação de investidor (Resolução CVM 30/2021).</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;provisaoMinima">
         <rdfs:range rdf:resource="&xsd;decimal" />
         <rdfs:label xml:lang="pt-BR">Provisão Mínima</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Percentual mínimo de provisão exigido para o nível de risco
-            (Resolução CMN 2.682/1999).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Percentual mínimo de provisão exigido para o nível de risco (Resolução CMN 2.682/1999).</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;tabelaRegressiva">
         <rdfs:domain rdf:resource="&bfo;Tributo" />
         <rdfs:range rdf:resource="&xsd;boolean" />
         <rdfs:label xml:lang="pt-BR">Tabela Regressiva</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Indica se o tributo segue tabela regressiva de alíquotas em função do prazo da aplicação.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Indica se o tributo segue tabela regressiva de alíquotas em função do prazo da aplicação.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;codigoBCB">
         <rdfs:domain rdf:resource="&bfo;IndicadorEconomico" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">Código BCB/SGS</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Código da série no Sistema Gerenciador de Séries Temporais
-            (SGS) do Banco Central do Brasil.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Código da série no Sistema Gerenciador de Séries Temporais (SGS) do Banco Central do Brasil.</skos:definition>
     </owl:DatatypeProperty>
 
     <!-- Identificadores Internacionais e Adicionais -->
@@ -1972,21 +1481,14 @@
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">Código LEI</rdfs:label>
         <rdfs:label xml:lang="en">Legal Entity Identifier</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Legal Entity Identifier (ISO 17442) - identificador global
-            de 20 caracteres para entidades legais que participam de
-            transações financeiras.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Legal Entity Identifier (ISO 17442) - identificador global de 20 caracteres para entidades legais que participam de transações financeiras.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;codigoCOMPE">
         <rdfs:domain rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="pt-BR">Código COMPE</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Código de compensação bancária de 3 dígitos (ex.: 001 -
-            Banco do Brasil, 341 - Itaú).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Código de compensação bancária de 3 dígitos (ex.: 001 - Banco do Brasil, 341 - Itaú).</skos:definition>
     </owl:DatatypeProperty>
 
     <!-- Atributos de Consentimento -->
@@ -1994,18 +1496,14 @@
         <rdfs:domain rdf:resource="&bfo;Consentimento" />
         <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">Data do Consentimento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Data e hora em que o consentimento foi concedido pelo titular dos dados.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Data e hora em que o consentimento foi concedido pelo titular dos dados.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;dataExpiracaoConsentimento">
         <rdfs:domain rdf:resource="&bfo;Consentimento" />
         <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">Data de Expiração do Consentimento</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Data e hora em que o consentimento perde validade, encerrando o compartilhamento sem necessidade de revogação expressa.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Data e hora em que o consentimento perde validade, encerrando o compartilhamento sem necessidade de revogação expressa.</skos:definition>
     </owl:DatatypeProperty>
 
     <!-- ==========================================
@@ -2014,55 +1512,36 @@
 
     <owl:Class rdf:about="&bfo;Tributo">
         <rdfs:label xml:lang="pt-BR">Tributo</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Obrigação pecuniária compulsória devida ao Estado.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Obrigação pecuniária compulsória devida ao Estado.</skos:definition>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;IR_RendaFixa">
         <rdf:type rdf:resource="&bfo;Tributo" />
         <rdfs:label xml:lang="pt-BR">IR sobre Renda Fixa</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Imposto de Renda retido na fonte sobre rendimentos de
-            aplicações em renda fixa, com alíquotas regressivas.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Imposto de Renda retido na fonte sobre rendimentos de aplicações em renda fixa, com alíquotas regressivas.</skos:definition>
         <bfo:tabelaRegressiva rdf:datatype="&xsd;boolean">true</bfo:tabelaRegressiva>
-        <rdfs:comment xml:lang="pt-BR">
-            Alíquotas: 22,5% (até 180 dias), 20% (181-360),
-            17,5% (361-720), 15% (acima de 720 dias).
-        </rdfs:comment>
+        <rdfs:comment xml:lang="pt-BR">Alíquotas: 22,5% (até 180 dias), 20% (181-360), 17,5% (361-720), 15% (acima de 720 dias).</rdfs:comment>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;IR_RendaVariavel">
         <rdf:type rdf:resource="&bfo;Tributo" />
         <rdfs:label xml:lang="pt-BR">IR sobre Renda Variável</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Imposto de Renda sobre ganhos de capital em operações
-            com ações e derivativos.
-        </skos:definition>
-        <rdfs:comment xml:lang="pt-BR">
-            Alíquota de 15% para operações normais e 20% para day-trade.
-            Isenção mensal para vendas de ações até R$ 20.000.
-        </rdfs:comment>
+        <skos:definition xml:lang="pt-BR">Imposto de Renda sobre ganhos de capital em operações com ações e derivativos.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Alíquota de 15% para operações normais e 20% para day-trade. Isenção mensal para vendas de ações até R$ 20.000.</rdfs:comment>
     </owl:NamedIndividual>
 
     <owl:NamedIndividual rdf:about="&bfo;IOF">
         <rdf:type rdf:resource="&bfo;Tributo" />
         <rdfs:label xml:lang="pt-BR">IOF</rdfs:label>
         <skos:altLabel>Imposto sobre Operações Financeiras</skos:altLabel>
-        <skos:definition xml:lang="pt-BR">
-            Imposto federal sobre operações de crédito, câmbio,
-            seguros e títulos mobiliários.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Imposto federal sobre operações de crédito, câmbio, seguros e títulos mobiliários.</skos:definition>
     </owl:NamedIndividual>
 
     <owl:ObjectProperty rdf:about="&bfo;incideTributo">
         <rdfs:domain rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:range rdf:resource="&bfo;Tributo" />
         <rdfs:label xml:lang="pt-BR">incide tributo</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a operação financeira ao tributo que sobre ela incide.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a operação financeira ao tributo que sobre ela incide.</skos:definition>
     </owl:ObjectProperty>
 
     <!-- ==========================================
@@ -2438,10 +1917,7 @@
         <rdfs:domain rdf:resource="&bfo;PessoaJuridica" />
         <rdfs:range rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:label xml:lang="pt-BR">emite</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a pessoa jurídica ao instrumento financeiro por ela
-            emitido. Inversa de emitidoPor.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a pessoa jurídica ao instrumento financeiro por ela emitido. Inversa de emitidoPor.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;regula">
@@ -2449,10 +1925,7 @@
         <rdfs:domain rdf:resource="&bfo;OrgaoReguladorBrasileiro" />
         <rdfs:range rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:label xml:lang="pt-BR">regula</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona o órgão regulador à instituição financeira sob sua
-            supervisão. Inversa de reguladoPor.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona o órgão regulador à instituição financeira sob sua supervisão. Inversa de reguladoPor.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;realiza">
@@ -2460,10 +1933,7 @@
         <rdfs:domain rdf:resource="&bfo;Pessoa" />
         <rdfs:range rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:label xml:lang="pt-BR">realiza</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a pessoa à operação financeira que ela realiza.
-            Inversa de realizadaPor.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a pessoa à operação financeira que ela realiza. Inversa de realizadaPor.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;custodia">
@@ -2471,10 +1941,7 @@
         <rdfs:domain rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:range rdf:resource="&bfo;InstrumentoFinanceiro" />
         <rdfs:label xml:lang="pt-BR">custodia</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona a instituição custodiante ao instrumento financeiro sob
-            sua custódia. Inversa de custodiadoPor.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a instituição custodiante ao instrumento financeiro sob sua custódia. Inversa de custodiadoPor.</skos:definition>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&bfo;administra">
@@ -2482,10 +1949,7 @@
         <rdfs:domain rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:range rdf:resource="&bfo;FundoDeInvestimento" />
         <rdfs:label xml:lang="pt-BR">administra</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Relaciona o administrador ao fundo de investimento que administra.
-            Inversa de administradoPor.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona o administrador ao fundo de investimento que administra. Inversa de administradoPor.</skos:definition>
     </owl:ObjectProperty>
 
 </rdf:RDF>

@@ -43,6 +43,23 @@ robot reason --reasoner HermiT --input merged.owl --output reasoned.owl
 robot verify --input merged.owl --queries queries/anotacoes-obrigatorias.rq queries/rotulos-duplicados.rq --output-dir .
 ```
 
+### Sobre os ERRORs do `robot report`
+
+O `robot report` roda como **informativo** e não bloqueia o merge. Ele segue
+as convenções OBO, e três classes de violação que ele acusa aqui são
+decisões deliberadas deste projeto — não corrija:
+
+| Regra | Por que fica assim |
+|---|---|
+| `multiple_labels` | Rótulo em pt-BR **e** en é característica declarada do projeto. |
+| `duplicate_label` | Um stub `&ofb;`/`&bcb;` declarado `owl:equivalentClass` de um termo BFO denota a mesma classe; compartilhar rótulo é correto. A regra de verdade está em `queries/rotulos-duplicados.rq`, que exclui esses pares. |
+| `deprecated_class_reference` | Termos depreciados (ex.: `bfo:DOC`) **mantêm** seus `rdfs:subClassOf`. A convenção OBO os desliga da hierarquia; aqui eles precisam continuar classificando dados históricos. |
+
+Qualquer outra regra em nível ERROR é para corrigir. Em especial
+`label_whitespace` e `label_formatting`: escreva `rdfs:label` e
+`skos:definition` **em uma única linha**, sem quebra nem indentação — em XML
+essa formatação entra no literal e vaza para quem consulta.
+
 O job `fibo-alignment` baixa a FIBO e verifica que toda IRI externa
 referenciada existe de fato. **Não invente IRIs da FIBO**: elas são
 hierárquicas (`…/SEC/Equities/EquityInstruments/Share`), não achatadas, e

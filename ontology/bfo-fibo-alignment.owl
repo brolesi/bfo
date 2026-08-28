@@ -30,10 +30,7 @@
     <owl:Ontology rdf:about="https://w3id.org/bfo-br/modules/fibo-alignment">
         <rdfs:label xml:lang="pt-BR">BFO - Alinhamento FIBO</rdfs:label>
         <rdfs:label xml:lang="en">BFO - FIBO Alignment</rdfs:label>
-        <dcterms:description xml:lang="pt-BR">
-            Módulo opt-in que importa a BFO e os domínios da FIBO referenciados
-            pelo core, permitindo raciocínio sobre a hierarquia FIBO completa.
-        </dcterms:description>
+        <dcterms:description xml:lang="pt-BR">Módulo opt-in que importa a BFO e os domínios da FIBO referenciados pelo core, permitindo raciocínio sobre a hierarquia FIBO completa.</dcterms:description>
         <owl:versionInfo>2.0.0</owl:versionInfo>
 
         <owl:imports rdf:resource="&bfo;" />

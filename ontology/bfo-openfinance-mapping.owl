@@ -25,10 +25,7 @@
 
     <owl:Ontology rdf:about="https://w3id.org/bfo-br/mappings/openfinance">
         <rdfs:label xml:lang="pt-BR">BFO - Mapeamento Open Finance Brasil</rdfs:label>
-        <dcterms:description xml:lang="pt-BR">
-            Mapeamento semântico entre a Brazilian Financial Ontology e os
-            schemas de dados do Open Finance Brasil.
-        </dcterms:description>
+        <dcterms:description xml:lang="pt-BR">Mapeamento semântico entre a Brazilian Financial Ontology e os schemas de dados do Open Finance Brasil.</dcterms:description>
         <owl:imports rdf:resource="https://w3id.org/bfo-br#" />
         <owl:versionInfo>2.0.0</owl:versionInfo>
     </owl:Ontology>
@@ -41,10 +38,7 @@
     <owl:Class rdf:about="&ofb;Consent">
         <owl:equivalentClass rdf:resource="&bfo;Consentimento" />
         <rdfs:label xml:lang="en">Consent</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Autorização concedida pelo cliente para compartilhamento
-            de seus dados no âmbito do Open Finance.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Autorização concedida pelo cliente para compartilhamento de seus dados no âmbito do Open Finance.</skos:definition>
     </owl:Class>
 
     <!-- Clientes -->
@@ -137,19 +131,13 @@
     <owl:Class rdf:about="&ofb;BankFixedIncome">
         <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
         <rdfs:label xml:lang="en">Bank Fixed Income</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Produtos de renda fixa emitidos por instituições bancárias
-            (CDB, RDB, LCI, LCA) na API de investimentos do Open Finance.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Produtos de renda fixa emitidos por instituições bancárias (CDB, RDB, LCI, LCA) na API de investimentos do Open Finance.</skos:definition>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;CreditFixedIncome">
         <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
         <rdfs:label xml:lang="en">Credit Fixed Income</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Produtos de renda fixa não bancários (debêntures, CRI, CRA)
-            na API de investimentos do Open Finance.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Produtos de renda fixa não bancários (debêntures, CRI, CRA) na API de investimentos do Open Finance.</skos:definition>
     </owl:Class>
 
 </rdf:RDF>

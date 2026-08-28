@@ -25,10 +25,7 @@
 
     <owl:Ontology rdf:about="https://w3id.org/bfo-br/mappings/bcb">
         <rdfs:label xml:lang="pt-BR">BFO - Mapeamento BCB</rdfs:label>
-        <dcterms:description xml:lang="pt-BR">
-            Mapeamento semântico entre a Brazilian Financial Ontology e os
-            schemas de dados abertos do Banco Central do Brasil.
-        </dcterms:description>
+        <dcterms:description xml:lang="pt-BR">Mapeamento semântico entre a Brazilian Financial Ontology e os schemas de dados abertos do Banco Central do Brasil.</dcterms:description>
         <owl:imports rdf:resource="https://w3id.org/bfo-br#" />
         <owl:versionInfo>2.0.0</owl:versionInfo>
     </owl:Ontology>
@@ -40,19 +37,14 @@
 
     <owl:Class rdf:about="&bcb;SerieTemporal">
         <rdfs:label xml:lang="en">Serie Temporal</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Série de dados econômicos mantida pelo Sistema Gerenciador
-            de Séries Temporais do Banco Central.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Série de dados econômicos mantida pelo Sistema Gerenciador de Séries Temporais do Banco Central.</skos:definition>
     </owl:Class>
 
     <owl:DatatypeProperty rdf:about="&bcb;codigoSerie">
         <rdfs:domain rdf:resource="&bcb;SerieTemporal" />
         <rdfs:range rdf:resource="&xsd;integer" />
         <rdfs:label xml:lang="en">codigo Serie</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Identificador numérico único da série no SGS.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Identificador numérico único da série no SGS.</skos:definition>
     </owl:DatatypeProperty>
 
     <!-- Mapeamento de Indicadores -->
@@ -114,9 +106,7 @@
     <owl:Class rdf:about="&bcb;InstituicaoIF">
         <owl:equivalentClass rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
         <rdfs:label xml:lang="en">Instituicao IF</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Registro de instituição financeira no sistema IF.data do BCB.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Registro de instituição financeira no sistema IF.data do BCB.</skos:definition>
     </owl:Class>
 
     <owl:DatatypeProperty rdf:about="&bcb;codigoIFData">
@@ -141,19 +131,14 @@
     <owl:Class rdf:about="&bcb;OperacaoSCR">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoCredito" />
         <rdfs:label xml:lang="en">Operacao SCR</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Operação de crédito registrada no Sistema de Informações
-            de Crédito do Banco Central.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Operação de crédito registrada no Sistema de Informações de Crédito do Banco Central.</skos:definition>
     </owl:Class>
 
     <owl:DatatypeProperty rdf:about="&bcb;modalidadeSCR">
         <rdfs:domain rdf:resource="&bcb;OperacaoSCR" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="en">modalidade SCR</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Código da modalidade de crédito conforme tabela do SCR.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Código da modalidade de crédito conforme tabela do SCR.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bcb;classificacaoRiscoSCR">
@@ -170,10 +155,7 @@
 
     <owl:Class rdf:about="&bcb;EstatisticaCredito">
         <rdfs:label xml:lang="en">Estatistica Credito</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Dados estatísticos agregados sobre operações de crédito
-            do Sistema Financeiro Nacional.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Dados estatísticos agregados sobre operações de crédito do Sistema Financeiro Nacional.</skos:definition>
     </owl:Class>
 
     <owl:DatatypeProperty rdf:about="&bcb;saldoCarteira">
@@ -202,9 +184,7 @@
 
     <owl:Class rdf:about="&bcb;EstatisticaPIX">
         <rdfs:label xml:lang="en">Estatistica PIX</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Dados estatísticos do arranjo de pagamentos instantâneos PIX.
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Dados estatísticos do arranjo de pagamentos instantâneos PIX.</skos:definition>
     </owl:Class>
 
     <owl:DatatypeProperty rdf:about="&bcb;quantidadeTransacoesPIX">
@@ -226,19 +206,14 @@
 
     <owl:Class rdf:about="&bcb;ChaveDICT">
         <rdfs:label xml:lang="en">Chave DICT</rdfs:label>
-        <skos:definition xml:lang="pt-BR">
-            Chave de endereçamento registrada no Diretório de
-            Identificadores de Contas Transacionais (DICT).
-        </skos:definition>
+        <skos:definition xml:lang="pt-BR">Chave de endereçamento registrada no Diretório de Identificadores de Contas Transacionais (DICT).</skos:definition>
     </owl:Class>
 
     <owl:DatatypeProperty rdf:about="&bcb;tipoChave">
         <rdfs:domain rdf:resource="&bcb;ChaveDICT" />
         <rdfs:range rdf:resource="&xsd;string" />
         <rdfs:label xml:lang="en">tipo Chave</rdfs:label>
-        <rdfs:comment xml:lang="pt-BR">
-            Valores: CPF, CNPJ, EMAIL, PHONE, EVP (chave aleatória)
-        </rdfs:comment>
+        <rdfs:comment xml:lang="pt-BR">Valores: CPF, CNPJ, EMAIL, PHONE, EVP (chave aleatória)</rdfs:comment>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bcb;valorChave">

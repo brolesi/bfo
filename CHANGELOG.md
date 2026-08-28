@@ -103,6 +103,16 @@ repontadas. Nenhum termo `bfo:` foi removido ou renomeado.
   `CollectiveInvestmentVehicle` abaixo — alinhar com termo deprecado
   apodrece silenciosamente na próxima release da FIBO.
 
+- **213 literais de anotação normalizados para uma única linha.** Anotações
+  escritas em várias linhas indentadas geravam literais começando com
+  `"\n            "` — o rótulo da `bfo:ANBIMA` era um deles, e ia inteiro,
+  com quebras e indentação, para quem consultasse via SPARQL. Atinge
+  `rdfs:label`, `skos:definition`, `rdfs:comment` e `dcterms:description`.
+- Actions do CI atualizadas (`checkout@v7`, `setup-java@v6`,
+  `upload-artifact@v7`); as anteriores rodavam em Node 20, já depreciado.
+- O resumo do job agora imprime a contagem de violações por regra e **todas**
+  as linhas de nível ERROR, não as 40 primeiras do arquivo.
+
 ### Documentação
 
 - Todo o texto do projeto passou a ser em português: `README.md` foi
