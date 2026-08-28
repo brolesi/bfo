@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
-    <!ENTITY bfo "https://ontology.brasil.gov.br/bfo#">
+    <!ENTITY bfo "https://w3id.org/bfo-br#">
     <!ENTITY bcb "https://dadosabertos.bcb.gov.br/schema/">
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
@@ -20,17 +20,17 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:bfo="https://ontology.brasil.gov.br/bfo#"
+    xmlns:bfo="https://w3id.org/bfo-br#"
     xmlns:bcb="https://dadosabertos.bcb.gov.br/schema/">
 
-    <owl:Ontology rdf:about="https://ontology.brasil.gov.br/bfo/mappings/bcb">
+    <owl:Ontology rdf:about="https://w3id.org/bfo-br/mappings/bcb">
         <rdfs:label xml:lang="pt-BR">BFO - Mapeamento BCB</rdfs:label>
         <dcterms:description xml:lang="pt-BR">
             Mapeamento semântico entre a Brazilian Financial Ontology e os
             schemas de dados abertos do Banco Central do Brasil.
         </dcterms:description>
-        <owl:imports rdf:resource="https://ontology.brasil.gov.br/bfo#" />
-        <owl:versionInfo>1.1.0</owl:versionInfo>
+        <owl:imports rdf:resource="https://w3id.org/bfo-br#" />
+        <owl:versionInfo>2.0.0</owl:versionInfo>
     </owl:Ontology>
 
     <!-- ==========================================

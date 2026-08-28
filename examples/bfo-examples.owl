@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
-    <!ENTITY bfo "https://ontology.brasil.gov.br/bfo#">
+    <!ENTITY bfo "https://w3id.org/bfo-br#">
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
 <!--
@@ -15,7 +15,7 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:bfo="https://ontology.brasil.gov.br/bfo#">
+    xmlns:bfo="https://w3id.org/bfo-br#">
 
     <!-- ==========================================
          EXEMPLO 1: INSTITUIÇÃO FINANCEIRA

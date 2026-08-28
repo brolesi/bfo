@@ -16,9 +16,13 @@ bfo/
 │   ├── bfo-core.owl                  # Ontologia principal
 │   ├── bfo-openfinance-mapping.owl   # Mapeamento Open Finance Brasil
 │   ├── bfo-bcb-mapping.owl           # Mapeamento BCB/SGS
+│   ├── bfo-fibo-alignment.owl        # Módulo opt-in que importa a FIBO
 │   └── catalog-v001.xml              # Catálogo XML (resolução local no Protégé)
 ├── examples/
 │   └── bfo-examples.owl              # Exemplos de instâncias
+├── queries/                          # Consultas SPARQL verificadas pelo CI
+├── w3id/                             # Registro do IRI persistente w3id.org
+├── legacy/                           # Ontologia anterior, fora da distribuição
 └── docs/
     └── README.md                     # Esta documentação
 ```
@@ -27,11 +31,24 @@ bfo/
 
 | Prefixo | URI | Descrição |
 |---------|-----|-----------|
-| `bfo` | `https://ontology.brasil.gov.br/bfo#` | Brazilian Financial Ontology |
-| `fibo-fnd` | `https://spec.edmcouncil.org/fibo/ontology/FND/` | FIBO Foundations |
-| `fibo-be` | `https://spec.edmcouncil.org/fibo/ontology/BE/` | FIBO Business Entities |
-| `fibo-fbc` | `https://spec.edmcouncil.org/fibo/ontology/FBC/` | FIBO Financial Business & Commerce |
-| `fibo-sec` | `https://spec.edmcouncil.org/fibo/ontology/SEC/` | FIBO Securities |
+| `bfo` | `https://w3id.org/bfo-br#` | Brazilian Financial Ontology |
+| `cmns-org` | `https://www.omg.org/spec/Commons/Organizations/` | OMG Commons - Organizations |
+| `cmns-pts` | `https://www.omg.org/spec/Commons/PartiesAndSituations/` | OMG Commons - Parties |
+| `cmns-rga` | `https://www.omg.org/spec/Commons/RegulatoryAgencies/` | OMG Commons - Regulatory Agencies |
+| `fibo-fbc-fct-fse` | `…/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/` | FIBO FBC - Entidades |
+| `fibo-fbc-fi-fi` | `…/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/` | FIBO FBC - Instrumentos |
+| `fibo-fbc-pas-caa` | `…/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/` | FIBO FBC - Contas |
+| `fibo-fbc-pas-fpas` | `…/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/` | FIBO FBC - Produtos |
+| `fibo-fnd-arr-id` | `…/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/` | FIBO FND - Índices |
+| `fibo-fnd-pas-pas` | `…/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/` | FIBO FND - Produtos |
+| `fibo-fnd-rel-rel` | `…/fibo/ontology/FND/Relations/Relations/` | FIBO FND - Relações |
+| `fibo-be-le-lp` | `…/fibo/ontology/BE/LegalEntities/LegalPersons/` | FIBO BE - Pessoas |
+| `fibo-sec-eq-eq` | `…/fibo/ontology/SEC/Equities/EquityInstruments/` | FIBO SEC - Ações |
+| `fibo-sec-eq-dr` | `…/fibo/ontology/SEC/Equities/DepositaryReceipts/` | FIBO SEC - BDR |
+| `fibo-sec-dbt-bnd` | `…/fibo/ontology/SEC/Debt/Bonds/` | FIBO SEC - Títulos de dívida |
+| `fibo-sec-fund-fund` | `…/fibo/ontology/SEC/Funds/Funds/` | FIBO SEC - Fundos |
+| `fibo-der-drc-swp` | `…/fibo/ontology/DER/DerivativesContracts/Swaps/` | FIBO DER - Swaps |
+| `fibo-loan-ln-ln` | `…/fibo/ontology/LOAN/LoansGeneral/Loans/` | FIBO LOAN - Empréstimos |
 | `ofb` | `https://openfinancebrasil.org.br/schema/` | Open Finance Brasil |
 | `bcb` | `https://dadosabertos.bcb.gov.br/schema/` | BCB Dados Abertos |
 
@@ -49,14 +66,14 @@ Termos descontinuados no mercado (ex.: `bfo:DOC`) são mantidos com
 
 | Classe BFO | Superclasse FIBO | Descrição |
 |------------|------------------|-----------|
-| `bfo:OrgaoReguladorBrasileiro` | `fibo-fbc:RegulatoryAgency` | BCB, CVM, SUSEP, PREVIC |
-| `bfo:InstituicaoFinanceiraBrasileira` | `fibo-fbc:FinancialServiceProvider` | Bancos, cooperativas, fintechs |
-| `bfo:BancoComercial` | `fibo-fbc:DepositoryInstitution` | Banco que capta depósitos à vista |
+| `bfo:OrgaoReguladorBrasileiro` | `cmns-rga:RegulatoryAgency` | BCB, CVM, SUSEP, PREVIC |
+| `bfo:InstituicaoFinanceiraBrasileira` | `fibo-fbc-pas-fpas:FinancialServiceProvider` | Bancos, cooperativas, fintechs |
+| `bfo:BancoComercial` | `fibo-fbc-fct-fse:DepositoryInstitution` | Banco que capta depósitos à vista |
 | `bfo:BancoMultiplo` | - | Opera com múltiplas carteiras |
 | `bfo:InstituicaoDePagamento` | - | IPs reguladas pela Lei 12.865/2013 |
 | `bfo:SociedadeDeCreditoDireto` | - | SCD - fintech de crédito (Res. CMN 4.656/2018) |
 | `bfo:SociedadeDeEmprestimoEntrePessoas` | - | SEP - P2P lending (Res. CMN 4.656/2018) |
-| `bfo:PrestadoraDeServicosDeAtivosVirtuais` | `fibo-fbc:FinancialServiceProvider` | PSAV/VASP (Lei 14.478/2022) |
+| `bfo:PrestadoraDeServicosDeAtivosVirtuais` | `fibo-fbc-pas-fpas:FinancialServiceProvider` | PSAV/VASP (Lei 14.478/2022) |
 | `bfo:InfraestruturaDoMercadoFinanceiro` | - | FMIs, alinhada aos PFMI (CPMI-IOSCO) |
 
 **Indivíduos de infraestrutura e suporte**: `bfo:B3`, `bfo:TesouroNacional`,
@@ -74,22 +91,22 @@ Termos descontinuados no mercado (ex.: `bfo:DOC`) são mantidos com
 #### Renda Fixa
 | Classe BFO | Superclasse FIBO | Características |
 |------------|------------------|-----------------|
-| `bfo:TituloPublicoFederal` | `fibo-sec:GovernmentDebtSecurity` | Tesouro Direto |
+| `bfo:TituloPublicoFederal` | `fibo-sec-dbt-bnd:SovereignDebtInstrument` | Tesouro Direto |
 | `bfo:TesouroSelic` | - | Pós-fixado, indexado à Selic |
 | `bfo:TesouroIPCA` | - | Híbrido, IPCA + taxa |
-| `bfo:CDB` | `fibo-sec:CertificateOfDeposit` | Cobertura FGC até R$ 250k |
+| `bfo:CDB` | `fibo-fbc-pas-caa:CertificateOfDeposit` | Cobertura FGC até R$ 250k |
 | `bfo:LCI` / `bfo:LCA` | - | Isentos de IR para PF |
 | `bfo:CRI` / `bfo:CRA` | - | Securitização, isentos de IR para PF |
-| `bfo:Debenture` | `fibo-sec:CorporateBond` | Sem cobertura FGC |
+| `bfo:Debenture` | `fibo-sec-dbt-bnd:CorporateBond` | Sem cobertura FGC |
 
 #### Renda Variável
 | Classe BFO | Superclasse FIBO | Características |
 |------------|------------------|-----------------|
-| `bfo:AcaoOrdinaria` | `fibo-sec:CommonShare` | ON - direito a voto |
-| `bfo:AcaoPreferencial` | `fibo-sec:PreferredShare` | PN - preferência em dividendos |
+| `bfo:AcaoOrdinaria` | `fibo-sec-eq-eq:CommonShare` | ON - direito a voto |
+| `bfo:AcaoPreferencial` | `fibo-sec-eq-eq:PreferredShare` | PN - preferência em dividendos |
 | `bfo:FundoImobiliario` | - | FII - rendimentos isentos* |
-| `bfo:ETF` | `fibo-sec:ExchangeTradedFund` | Replica índice |
-| `bfo:BDR` | `fibo-sec:DepositaryReceipt` | Ações estrangeiras |
+| `bfo:ETF` | `fibo-sec-fund-fund:ExchangeTradedFund` | Replica índice |
+| `bfo:BDR` | `fibo-sec-eq-dr:DepositaryReceipt` | Ações estrangeiras |
 
 #### Fundos de Investimento (Resolução CVM 175/2022)
 | Classe BFO | Descrição |
@@ -119,7 +136,7 @@ Propriedades associadas: `bfo:administradoPor` (administrador fiduciário) e
 | `bfo:Drex` | Real Digital - piloto do BCB (indivíduo) |
 
 #### Derivativos
-`bfo:Opcao`, `bfo:ContratoFuturo`, `bfo:Swap` — alinhados a `fibo-sec:Derivative`.
+`bfo:Opcao`, `bfo:ContratoFuturo`, `bfo:Swap` — alinhados a `fibo-fbc-fi-fi:DerivativeInstrument`.
 
 ### 4. Contas
 
@@ -133,8 +150,8 @@ Propriedades associadas: `bfo:administradoPor` (administrador fiduciário) e
 
 | Classe BFO | Superclasse FIBO | Exemplos |
 |------------|------------------|----------|
-| `bfo:OperacaoCredito` | `fibo-fbc:LoanTransaction` | Empréstimos, financiamentos |
-| `bfo:OperacaoPagamento` | `fibo-fbc:PaymentTransaction` | PIX, TED, Boleto, Cartão de Crédito |
+| `bfo:OperacaoCredito` | `fibo-loan-ln-ln:Loan` | Empréstimos, financiamentos |
+| `bfo:OperacaoPagamento` | `fibo-fbc-pas-caa:IndividualTransaction` | PIX, TED, Boleto, Cartão de Crédito |
 | `bfo:OperacaoInvestimento` | - | Aplicação, Resgate |
 | `bfo:OperacaoCambio` | - | Novo marco cambial (Lei 14.286/2021) |
 
@@ -219,10 +236,27 @@ A BFO está alinhada com os seguintes módulos do FIBO:
 
 | Módulo FIBO | Classes Utilizadas |
 |-------------|-------------------|
-| **FND** (Foundations) | Party, Transaction, FinancialInstrument, Index |
-| **BE** (Business Entities) | NaturalPerson, LegalEntity |
-| **FBC** (Financial Business & Commerce) | RegulatoryAgency, FinancialServiceProvider, Account |
-| **SEC** (Securities) | DebtInstrument, EquityInstrument, Derivative, Fund |
+| **FND** (Foundations) | Index, TransactionEvent, isIssuedBy |
+| **BE** (Business Entities) | LegallyCompetentNaturalPerson |
+| **FBC** (Financial Business & Commerce) | FinancialServiceProvider, DepositoryInstitution, InvestmentBank, CreditUnion, BrokerDealer, Account, DemandDepositAccount, DepositAccount, CertificateOfDeposit, IndividualTransaction, FinancialInstrument, DebtInstrument, EquityInstrument, DerivativeInstrument, Option, Future |
+| **SEC** (Securities) | Share, CommonShare, PreferredShare, DepositaryReceipt, CorporateBond, SovereignDebtInstrument, ExchangeTradedFund, CollectiveInvestmentVehicle |
+| **DER** (Derivatives) | Swap |
+| **LOAN** (Loans) | Loan |
+| **OMG Commons** | Party, LegalEntity, RegulatoryAgency |
+
+O core **não** importa a FIBO: são ~2 milhões de triplas, e importá-las torna
+o carregamento no Protégé e o raciocínio impraticáveis para quem só quer as
+classes brasileiras. Os alinhamentos (`rdfs:subClassOf` para IRIs da FIBO)
+ficam no core e são OWL válido sem o import.
+
+Para que um reasoner enxergue a hierarquia FIBO por trás deles, carregue
+`ontology/bfo-fibo-alignment.owl` no lugar do core — ele importa os dois.
+
+> **Atenção ao alinhar novos termos**: as IRIs da FIBO são hierárquicas
+> (`…/SEC/Equities/EquityInstruments/Share`), não achatadas
+> (`…/SEC/Share`), e vários termos de topo migraram para o OMG Commons.
+> Até a v1.1.0 os 35 alinhamentos deste arquivo apontavam para IRIs que não
+> existem; o job `fibo-alignment` do CI existe para impedir a repetição.
 
 ## Integração Open Finance Brasil
 
@@ -264,7 +298,7 @@ Mapeamentos com dados abertos do Banco Central:
 ### SPARQL - Buscar CDBs por emissor e taxa
 
 ```sparql
-PREFIX bfo: <https://ontology.brasil.gov.br/bfo#>
+PREFIX bfo: <https://w3id.org/bfo-br#>
 
 SELECT ?cdb ?emissor ?taxa WHERE {
   ?cdb a bfo:CDB ;
@@ -276,7 +310,7 @@ SELECT ?cdb ?emissor ?taxa WHERE {
 ### SPARQL - Operações de um Cliente
 
 ```sparql
-PREFIX bfo: <https://ontology.brasil.gov.br/bfo#>
+PREFIX bfo: <https://w3id.org/bfo-br#>
 
 SELECT ?operacao ?tipo ?valor ?data WHERE {
   ?cliente bfo:cpf "12345678901" .
@@ -291,7 +325,7 @@ ORDER BY DESC(?data)
 ### SPARQL - Consentimentos ativos de um cliente
 
 ```sparql
-PREFIX bfo: <https://ontology.brasil.gov.br/bfo#>
+PREFIX bfo: <https://w3id.org/bfo-br#>
 
 SELECT ?consent ?instituicao ?expira WHERE {
   ?consent a bfo:Consentimento ;
@@ -356,6 +390,9 @@ SELECT ?consent ?instituicao ?expira WHERE {
 - **RDFLib**: Biblioteca Python para RDF
 - **GraphDB / Blazegraph**: Triple stores
 - **HermiT / ELK**: Reasoners para verificação de consistência
+- **ROBOT**: Automação de validação — é o que o CI roda
+  (`.github/workflows/validate.yml`); ver [CONTRIBUTING.md](../CONTRIBUTING.md)
+  para os comandos do ciclo curto local
 
 ## Referências
 
@@ -377,5 +414,5 @@ e abra issues ou pull requests no repositório.
 
 ---
 
-**Versão**: 1.1.0
-**Data**: Julho 2026
+**Versão**: 2.0.0
+**Data**: Agosto 2026

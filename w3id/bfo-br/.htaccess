@@ -1,0 +1,26 @@
+# Brazilian Financial Ontology (BFO-BR)
+# https://github.com/brolesi/bfo
+#
+# Copiar este diretório para a raiz de um fork de perma-id/w3id.org
+# e abrir PR. Ver ../README.md.
+
+Options +FollowSymLinks
+RewriteEngine on
+
+# Negociação de conteúdo: RDF/XML por padrão, Turtle sob demanda.
+RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
+RewriteCond %{HTTP_ACCEPT} application/x-turtle
+RewriteRule ^$ https://brolesi.github.io/bfo/dist/bfo-core.ttl [R=302,L]
+
+RewriteRule ^$ https://brolesi.github.io/bfo/ontology/bfo-core.owl [R=302,L]
+
+# Módulos
+RewriteRule ^mappings/openfinance$ https://brolesi.github.io/bfo/ontology/bfo-openfinance-mapping.owl [R=302,L]
+RewriteRule ^mappings/bcb$         https://brolesi.github.io/bfo/ontology/bfo-bcb-mapping.owl [R=302,L]
+RewriteRule ^modules/fibo-alignment$ https://brolesi.github.io/bfo/ontology/bfo-fibo-alignment.owl [R=302,L]
+
+# Versões fixadas (owl:versionIRI)
+RewriteRule ^([0-9]+\.[0-9]+\.[0-9]+)$ https://raw.githubusercontent.com/brolesi/bfo/v$1/ontology/bfo-core.owl [R=302,L]
+
+# Qualquer outra coisa cai na documentação.
+RewriteRule ^(.*)$ https://github.com/brolesi/bfo [R=302,L]

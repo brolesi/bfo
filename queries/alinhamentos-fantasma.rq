@@ -1,0 +1,22 @@
+# Roda SOMENTE sobre o grafo com a FIBO já mesclada (job fibo-alignment).
+#
+# Um rdfs:subClassOf apontando para uma IRI da FIBO que não existe é OWL
+# perfeitamente válido — mundo aberto, a IRI vira apenas uma classe não
+# declarada, e nenhum reasoner reclama. Foi assim que 35 alinhamentos
+# inventados sobreviveram até a v1.1.0.
+#
+# Com a FIBO mesclada, toda IRI FIBO/OMG Commons de verdade tem rdfs:label.
+# Sem label = a IRI não existe lá. `robot verify` falha se retornar linhas.
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?termoBFO ?alvoInexistente WHERE {
+  ?termoBFO ?p ?alvoInexistente .
+  VALUES ?p { rdfs:subClassOf rdfs:subPropertyOf rdfs:domain rdfs:range }
+
+  FILTER(STRSTARTS(STR(?termoBFO), "https://w3id.org/bfo-br#"))
+  FILTER(STRSTARTS(STR(?alvoInexistente), "https://spec.edmcouncil.org/fibo/")
+      || STRSTARTS(STR(?alvoInexistente), "https://www.omg.org/spec/Commons"))
+
+  FILTER NOT EXISTS { ?alvoInexistente rdfs:label ?qualquer }
+}
+ORDER BY ?termoBFO

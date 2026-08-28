@@ -32,11 +32,25 @@ convenções do projeto.
 
 ## Validação antes do PR
 
-- O arquivo deve ser XML bem-formado e carregável no
-  [Protégé](https://protege.stanford.edu/) sem erros.
-- Verifique a consistência lógica com um reasoner (HermiT ou ELK).
-- Atualize `CHANGELOG.md` e, se houver mudança de conteúdo, os exemplos
-  em `examples/` e a documentação em `docs/`.
+O CI (`.github/workflows/validate.yml`) roda tudo isto automaticamente em
+cada PR. Você não precisa reproduzir localmente — mas se quiser o ciclo
+curto, instale o [ROBOT](https://robot.obolibrary.org/) e rode:
+
+```bash
+robot merge --input ontology/bfo-core.owl --input ontology/bfo-openfinance-mapping.owl --input ontology/bfo-bcb-mapping.owl --input examples/bfo-examples.owl --output merged.owl
+robot validate-profile --profile DL --input merged.owl
+robot reason --reasoner HermiT --input merged.owl --output reasoned.owl
+robot verify --input merged.owl --queries queries/anotacoes-obrigatorias.rq --output-dir .
+```
+
+O job `fibo-alignment` baixa a FIBO e verifica que toda IRI externa
+referenciada existe de fato. **Não invente IRIs da FIBO**: elas são
+hierárquicas (`…/SEC/Equities/EquityInstruments/Share`), não achatadas, e
+vários termos de topo vivem no OMG Commons (`cmns-org`, `cmns-pts`,
+`cmns-rga`). Confira em <https://spec.edmcouncil.org/fibo/> antes de alinhar.
+
+Atualize `CHANGELOG.md` e, se houver mudança de conteúdo, os exemplos
+em `examples/` e a documentação em `docs/`.
 
 ## Versionamento
 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY bfo "https://w3id.org/bfo-br#">
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<!--
+    Brazilian Financial Ontology (BFO)
+    Módulo: Alinhamento FIBO
+
+    O core declara os alinhamentos (rdfs:subClassOf / rdfs:subPropertyOf para
+    IRIs da FIBO e do OMG Commons) mas NÃO importa a FIBO: importá-la traz
+    ~2 milhões de triplas e torna o carregamento no Protégé e o raciocínio no
+    CI impraticáveis para quem só quer as classes brasileiras.
+
+    Este módulo é o ponto de entrada opt-in para quem precisa que um reasoner
+    enxergue a hierarquia FIBO por trás desses alinhamentos. Carregue ESTE
+    arquivo, não o core, nesse caso.
+
+    Referência: https://spec.edmcouncil.org/fibo/
+-->
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:bfo="&bfo;">
+
+    <owl:Ontology rdf:about="https://w3id.org/bfo-br/modules/fibo-alignment">
+        <rdfs:label xml:lang="pt-BR">BFO - Alinhamento FIBO</rdfs:label>
+        <rdfs:label xml:lang="en">BFO - FIBO Alignment</rdfs:label>
+        <dcterms:description xml:lang="pt-BR">
+            Módulo opt-in que importa a BFO e os domínios da FIBO referenciados
+            pelo core, permitindo raciocínio sobre a hierarquia FIBO completa.
+        </dcterms:description>
+        <owl:versionInfo>2.0.0</owl:versionInfo>
+
+        <owl:imports rdf:resource="&bfo;" />
+
+        <!-- Domínios FIBO efetivamente referenciados pelo core.
+             O OMG Commons (cmns-org, cmns-pts, cmns-rga) entra por transitividade. -->
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AllFND/" />
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/AllBE/" />
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC/" />
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/SEC/AllSEC/" />
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/DER/AllDER/" />
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/LOAN/AllLOAN/" />
+    </owl:Ontology>
+
+</rdf:RDF>

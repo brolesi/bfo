@@ -1,14 +1,23 @@
-# Protégé backup/temp files
+# Backups e temporários do Protégé
 *.owl~
 catalog-v001.xml.bak
 .protege/
 
-# Third-party reference ontology kept locally (not part of the BFO distribution)
-/bfo.owl
+# Ontologia legada, anterior à BFO. Mantida apenas localmente,
+# fora da distribuição. Ver legacy/README.md.
+/legacy/*.owl
 
-# OS files
+# Saídas do ROBOT geradas pelo CI (Turtle, merges, relatórios)
+/dist/
+merged*.owl
+reasoned.owl
+report.tsv
+
+# Arquivos de sistema
 Thumbs.db
 .DS_Store
 
-# Editor
+# Editores
 *.swp
+.vscode/
+.idea/
