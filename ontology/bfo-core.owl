@@ -1564,10 +1564,18 @@
     </owl:NamedIndividual>
 
     <owl:ObjectProperty rdf:about="&bfo;incideTributo">
-        <rdfs:domain rdf:resource="&bfo;OperacaoFinanceira" />
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&bfo;OperacaoFinanceira" />
+                    <rdf:Description rdf:about="&bfo;EventoSocietario" />
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="&bfo;Tributo" />
         <rdfs:label xml:lang="pt-BR">incide tributo</rdfs:label>
-        <skos:definition xml:lang="pt-BR">Relaciona a operação financeira ao tributo que sobre ela incide.</skos:definition>
+        <skos:definition xml:lang="pt-BR">Relaciona a operação financeira ou o evento societário ao tributo que sobre ele incide.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">O domínio foi ampliado na v2.1.0: provento de evento societário também é tributado, como o JCP retido na fonte a quinze por cento. Sem a união, afirmar o tributo sobre um JCP o inferiria como operação financeira.</rdfs:comment>
     </owl:ObjectProperty>
 
     <!-- ==========================================
@@ -2805,6 +2813,14 @@
         <skos:definition xml:lang="pt-BR">Título de dívida de curto prazo emitido por sociedade anônima ou limitada para captação de recursos, dispensada a garantia real.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 14.195/2021, que substituiu o antigo regime das notas promissórias comerciais.</rdfs:comment>
     </owl:Class>
+
+    <owl:ObjectProperty rdf:about="&bfo;emitenteDoTitulo">
+        <rdfs:domain rdf:resource="&bfo;TituloDeCredito" />
+        <rdfs:range rdf:resource="&bfo;Pessoa" />
+        <rdfs:label xml:lang="pt-BR">emitente do título</rdfs:label>
+        <skos:definition xml:lang="pt-BR">Relaciona o título de crédito à pessoa que o emite e assume a obrigação nele representada.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Distinta de emitidoPor, cuja imagem é PessoaJuridica porque se destina a valores mobiliários. Título de crédito é emitido também por pessoa física: a CCB de um consignado e a CPR de um produtor rural são os casos correntes.</rdfs:comment>
+    </owl:ObjectProperty>
 
     <owl:AllDisjointClasses>
         <owl:members rdf:parseType="Collection">

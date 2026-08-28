@@ -73,6 +73,20 @@ renomeado; uma propriedade depreciada.
   importado pelo módulo de alinhamento. Todos verificados contra um clone da
   FIBO antes do commit: existem, têm rótulo e não estão depreciados.
 
+### Modificado
+
+- `incideTributo` teve o domínio ampliado de `OperacaoFinanceira` para a
+  união com `EventoSocietario`. Provento de evento societário também é
+  tributado — o JCP é retido na fonte a quinze por cento — e, sem a união,
+  afirmar o tributo sobre um JCP o inferiria como operação financeira.
+- Nova `emitenteDoTitulo` (domínio `TituloDeCredito`, imagem `Pessoa`),
+  distinta de `emitidoPor`, cuja imagem é `PessoaJuridica` por se destinar a
+  valores mobiliários. Título de crédito é emitido também por pessoa física:
+  a CCB de um consignado e a CPR de um produtor rural são os casos
+  correntes. Usar `emitidoPor` nesses casos tornava a ontologia
+  inconsistente, por colidir com a disjunção entre `PessoaFisica` e
+  `PessoaJuridica`.
+
 ### Descontinuado
 
 - `valorBRL` marcada `owl:deprecated`. A denominação estava embutida no nome

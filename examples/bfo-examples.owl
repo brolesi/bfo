@@ -241,9 +241,15 @@
          EXEMPLO 14: CONSORCIO (Lei 11.795/2008)
          ========================================== -->
 
+    <bfo:AdministradoraDeConsorcio rdf:about="https://example.org/consorcios/administradora-exemplo">
+        <rdfs:label>Administradora de Consórcio Exemplo Ltda.</rdfs:label>
+        <bfo:cnpj>45678901000133</bfo:cnpj>
+        <bfo:reguladoPor rdf:resource="&bfo;BancoCentralDoBrasil" />
+    </bfo:AdministradoraDeConsorcio>
+
     <bfo:GrupoDeConsorcio rdf:about="https://example.org/consorcios/grupo-500">
         <rdfs:label>Grupo de consórcio 500 - imóveis</rdfs:label>
-        <bfo:grupoAdministradoPor rdf:resource="https://example.org/bancos/banco-exemplo" />
+        <bfo:grupoAdministradoPor rdf:resource="https://example.org/consorcios/administradora-exemplo" />
         <bfo:prazoGrupoMeses rdf:datatype="&xsd;integer">180</bfo:prazoGrupoMeses>
         <bfo:taxaAdministracao rdf:datatype="&xsd;decimal">0.18</bfo:taxaAdministracao>
     </bfo:GrupoDeConsorcio>
@@ -260,7 +266,7 @@
 
     <bfo:CCB rdf:about="https://example.org/titulos/ccb-001">
         <rdfs:label>Cédula de Crédito Bancário 001</rdfs:label>
-        <bfo:emitidoPor rdf:resource="https://example.org/clientes/cliente-001" />
+        <bfo:emitenteDoTitulo rdf:resource="https://example.org/clientes/cliente-001" />
         <bfo:valor rdf:datatype="&xsd;decimal">50000.00</bfo:valor>
         <bfo:moeda rdf:resource="&bfo;BRL" />
         <bfo:registradoEm rdf:resource="&bfo;SCR" />
@@ -273,7 +279,7 @@
 
     <bfo:JurosSobreCapitalProprio rdf:about="https://example.org/eventos/jcp-2026-t1">
         <rdfs:label>JCP do primeiro trimestre de 2026</rdfs:label>
-        <bfo:eventoSobreInstrumento rdf:resource="https://example.org/instrumentos/acao-exemplo-on" />
+        <bfo:eventoSobreInstrumento rdf:resource="https://example.org/instrumentos/petr3" />
         <bfo:dataCom rdf:datatype="&xsd;dateTime">2026-04-15T00:00:00-03:00</bfo:dataCom>
         <bfo:dataEx rdf:datatype="&xsd;dateTime">2026-04-16T00:00:00-03:00</bfo:dataEx>
         <bfo:incideTributo rdf:resource="&bfo;IR_FonteRendaFixa" />
