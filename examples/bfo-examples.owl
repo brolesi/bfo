@@ -226,8 +226,8 @@
         <bfo:numeroApolice>2026-AUTO-000123</bfo:numeroApolice>
         <bfo:apoliceEmitidaPor rdf:resource="https://example.org/seguradoras/seguradora-exemplo" />
         <bfo:seguradoDaApolice rdf:resource="https://example.org/clientes/cliente-001" />
-        <bfo:dataInicioVigencia rdf:datatype="&xsd;date">2026-04-01</bfo:dataInicioVigencia>
-        <bfo:dataFimVigencia rdf:datatype="&xsd;date">2027-03-31</bfo:dataFimVigencia>
+        <bfo:dataInicioVigencia rdf:datatype="&xsd;dateTime">2026-04-01T00:00:00-03:00</bfo:dataInicioVigencia>
+        <bfo:dataFimVigencia rdf:datatype="&xsd;dateTime">2027-03-31T23:59:59-03:00</bfo:dataFimVigencia>
     </bfo:ApoliceDeSeguro>
 
     <bfo:PremioDeSeguro rdf:about="https://example.org/premios/premio-001">
@@ -274,8 +274,8 @@
     <bfo:JurosSobreCapitalProprio rdf:about="https://example.org/eventos/jcp-2026-t1">
         <rdfs:label>JCP do primeiro trimestre de 2026</rdfs:label>
         <bfo:eventoSobreInstrumento rdf:resource="https://example.org/instrumentos/acao-exemplo-on" />
-        <bfo:dataCom rdf:datatype="&xsd;date">2026-04-15</bfo:dataCom>
-        <bfo:dataEx rdf:datatype="&xsd;date">2026-04-16</bfo:dataEx>
+        <bfo:dataCom rdf:datatype="&xsd;dateTime">2026-04-15T00:00:00-03:00</bfo:dataCom>
+        <bfo:dataEx rdf:datatype="&xsd;dateTime">2026-04-16T00:00:00-03:00</bfo:dataEx>
         <bfo:incideTributo rdf:resource="&bfo;IR_FonteRendaFixa" />
         <rdfs:comment>Retenção na fonte de 15% conforme a Lei 9.249/1995</rdfs:comment>
     </bfo:JurosSobreCapitalProprio>
@@ -291,7 +291,7 @@
         <bfo:taxaCambio rdf:datatype="&xsd;decimal">5.4321</bfo:taxaCambio>
         <bfo:valor rdf:datatype="&xsd;decimal">10000.00</bfo:valor>
         <bfo:moeda rdf:resource="&bfo;USD" />
-        <bfo:dataInicioVigencia rdf:datatype="&xsd;date">2026-05-20</bfo:dataInicioVigencia>
+        <bfo:dataInicioVigencia rdf:datatype="&xsd;dateTime">2026-05-20T00:00:00-03:00</bfo:dataInicioVigencia>
         <bfo:prazoLiquidacaoDiasUteis rdf:datatype="&xsd;integer">2</bfo:prazoLiquidacaoDiasUteis>
     </bfo:CambioPronto>
 

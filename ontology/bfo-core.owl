@@ -2054,14 +2054,14 @@
     </owl:ObjectProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;dataInicioVigencia">
-        <rdfs:range rdf:resource="&xsd;date" />
+        <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">data de início de vigência</rdfs:label>
         <skos:definition xml:lang="pt-BR">Data a partir da qual o contrato, a classificação regulatória ou o enquadramento passa a valer.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Sem vigência, uma classificação regulatória não serve a dado histórico: não há como saber em que data a instituição estava no segmento S3.</rdfs:comment>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;dataFimVigencia">
-        <rdfs:range rdf:resource="&xsd;date" />
+        <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">data de fim de vigência</rdfs:label>
         <skos:definition xml:lang="pt-BR">Data em que o contrato, a classificação regulatória ou o enquadramento deixa de valer. Ausente enquanto vigente.</skos:definition>
     </owl:DatatypeProperty>
@@ -2086,7 +2086,7 @@
 
     <owl:DatatypeProperty rdf:about="&bfo;dataFeriado">
         <rdfs:domain rdf:resource="&bfo;FeriadoBancario" />
-        <rdfs:range rdf:resource="&xsd;date" />
+        <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">data do feriado</rdfs:label>
         <skos:definition xml:lang="pt-BR">Data em que ocorre o feriado bancário.</skos:definition>
     </owl:DatatypeProperty>
@@ -3041,14 +3041,14 @@
 
     <owl:DatatypeProperty rdf:about="&bfo;dataCom">
         <rdfs:domain rdf:resource="&bfo;EventoSocietario" />
-        <rdfs:range rdf:resource="&xsd;date" />
+        <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">data com</rdfs:label>
         <skos:definition xml:lang="pt-BR">Última data em que a aquisição do valor mobiliário ainda assegura o direito ao provento do evento societário.</skos:definition>
     </owl:DatatypeProperty>
 
     <owl:DatatypeProperty rdf:about="&bfo;dataEx">
         <rdfs:domain rdf:resource="&bfo;EventoSocietario" />
-        <rdfs:range rdf:resource="&xsd;date" />
+        <rdfs:range rdf:resource="&xsd;dateTime" />
         <rdfs:label xml:lang="pt-BR">data ex</rdfs:label>
         <skos:definition xml:lang="pt-BR">Primeira data em que o valor mobiliário é negociado sem o direito ao provento do evento societário.</skos:definition>
     </owl:DatatypeProperty>

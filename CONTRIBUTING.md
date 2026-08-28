@@ -27,6 +27,13 @@ convenções do projeto.
 - **OWL DL**: não faça asserções de propriedades de dados diretamente em
   classes; use restrições (`owl:Restriction` + `owl:hasValue`) ou mova a
   asserção para indivíduos.
+- **Datas**: use sempre `xsd:dateTime`, nunca `xsd:date`. O mapa de
+  datatypes do OWL 2 inclui `xsd:dateTime` e `xsd:dateTimeStamp`, mas **não**
+  `xsd:date` — usá-lo tira a ontologia do perfil DL e o job `core` do CI
+  falha em `validate-profile`. Vale para o `rdfs:range` e para o
+  `rdf:datatype` de cada literal. A exceção são as anotações do cabeçalho
+  (`dcterms:created`, `dcterms:modified`), que o perfil DL não submete ao
+  mapa de datatypes.
 - **Depreciação**: nunca remova termos publicados; marque-os com
   `owl:deprecated true` e documente a substituição.
 
