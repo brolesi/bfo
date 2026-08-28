@@ -111,7 +111,7 @@ Todo push e pull request roda
 | Toda entidade tem `rdfs:label` e `skos:definition` | [`queries/anotacoes-obrigatorias.rq`](queries/anotacoes-obrigatorias.rq) |
 | Nenhum rótulo duplicado entre entidades distintas | [`queries/rotulos-duplicados.rq`](queries/rotulos-duplicados.rq) |
 | Relatório de modelagem (informativo, não bloqueia) | `robot report` |
-| Os imports da FIBO resolvem e cada IRI alinhada existe lá | [`queries/alinhamentos-fantasma.rq`](queries/alinhamentos-fantasma.rq) |
+| Os imports da FIBO resolvem, e cada IRI alinhada existe lá e não está deprecada | [`queries/alinhamentos-fantasma.rq`](queries/alinhamentos-fantasma.rq) |
 
 O job da FIBO também roda semanalmente, porque a FIBO é publicada por
 terceiros e muda sem aviso.

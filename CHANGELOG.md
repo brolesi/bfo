@@ -25,6 +25,9 @@ repontadas. Nenhum termo `bfo:` foi removido ou renomeado.
     FND), `Swap` em DER, `CertificateOfDeposit` em FBC.
   - `Party`, `LegalEntity` e `RegulatoryAgency` migraram da FIBO para o
     OMG Commons (`cmns-pts`, `cmns-org`, `cmns-rga`).
+  - `FundoDeInvestimento` aponta para
+    `SEC/Securities/Pools/CollectiveInvestmentVehicle`. A homônima em
+    `SEC/Funds/Funds/` existe, mas é um alias `owl:deprecated` da primeira.
 - **Os `owl:imports` da FIBO não resolviam.** Apontavam para URLs de
   diretório (`…/ontology/FND/`) em vez de documentos de ontologia. Foram
   movidos para o novo módulo opt-in `bfo-fibo-alignment.owl` e corrigidos
@@ -95,6 +98,10 @@ repontadas. Nenhum termo `bfo:` foi removido ou renomeado.
 - Os 36 stubs `&ofb;` e `&bcb;` passaram a ter rótulo em inglês, com o nome
   do termo no schema de origem. Rotulá-los em pt-BR com a tradução do termo
   BFO equivalente duplicava rótulos entre entidades distintas.
+- `queries/alinhamentos-fantasma.rq` passou a rejeitar também alvos marcados
+  `owl:deprecated` na FIBO, não só os inexistentes. Foi ela que pegou o
+  `CollectiveInvestmentVehicle` abaixo — alinhar com termo deprecado
+  apodrece silenciosamente na próxima release da FIBO.
 
 ### Documentação
 

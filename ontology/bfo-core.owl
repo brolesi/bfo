@@ -18,6 +18,7 @@
     <!ENTITY fibo-sec-eq-dr "https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/DepositaryReceipts/">
     <!ENTITY fibo-sec-eq-eq "https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/EquityInstruments/">
     <!ENTITY fibo-sec-fund-fund "https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/Funds/">
+    <!ENTITY fibo-sec-sec-pls "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/Pools/">
     <!ENTITY ofb "https://openfinancebrasil.org.br/schema/">
     <!ENTITY bcb "https://dadosabertos.bcb.gov.br/schema/">
     <!ENTITY cvm "https://dados.cvm.gov.br/schema/">
@@ -51,6 +52,7 @@
     xmlns:fibo-sec-eq-dr="&fibo-sec-eq-dr;"
     xmlns:fibo-sec-eq-eq="&fibo-sec-eq-eq;"
     xmlns:fibo-sec-fund-fund="&fibo-sec-fund-fund;"
+    xmlns:fibo-sec-sec-pls="&fibo-sec-sec-pls;"
     xmlns:cvm="&cvm;">
 
     <!-- ==========================================
@@ -861,7 +863,7 @@
 
     <owl:Class rdf:about="&bfo;FundoDeInvestimento">
         <rdfs:subClassOf rdf:resource="&bfo;InstrumentoFinanceiro" />
-        <rdfs:subClassOf rdf:resource="&fibo-sec-fund-fund;CollectiveInvestmentVehicle" />
+        <rdfs:subClassOf rdf:resource="&fibo-sec-sec-pls;CollectiveInvestmentVehicle" />
         <rdfs:label xml:lang="pt-BR">Fundo de Investimento</rdfs:label>
         <rdfs:label xml:lang="en">Investment Fund</rdfs:label>
         <skos:definition xml:lang="pt-BR">

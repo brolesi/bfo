@@ -47,6 +47,7 @@ bfo/
 | `fibo-sec-eq-dr` | `…/fibo/ontology/SEC/Equities/DepositaryReceipts/` | FIBO SEC - BDR |
 | `fibo-sec-dbt-bnd` | `…/fibo/ontology/SEC/Debt/Bonds/` | FIBO SEC - Títulos de dívida |
 | `fibo-sec-fund-fund` | `…/fibo/ontology/SEC/Funds/Funds/` | FIBO SEC - Fundos |
+| `fibo-sec-sec-pls` | `…/fibo/ontology/SEC/Securities/Pools/` | FIBO SEC - Veículos de investimento coletivo |
 | `fibo-der-drc-swp` | `…/fibo/ontology/DER/DerivativesContracts/Swaps/` | FIBO DER - Swaps |
 | `fibo-loan-ln-ln` | `…/fibo/ontology/LOAN/LoansGeneral/Loans/` | FIBO LOAN - Empréstimos |
 | `ofb` | `https://openfinancebrasil.org.br/schema/` | Open Finance Brasil |

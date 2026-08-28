@@ -5,18 +5,34 @@
 # declarada, e nenhum reasoner reclama. Foi assim que 35 alinhamentos
 # inventados sobreviveram até a v1.1.0.
 #
-# Com a FIBO mesclada, toda IRI FIBO/OMG Commons de verdade tem rdfs:label.
-# Sem label = a IRI não existe lá. `robot verify` falha se retornar linhas.
+# Dois defeitos são detectados aqui:
+#
+#   inexistente  Com a FIBO mesclada, toda IRI FIBO/OMG Commons de verdade
+#                tem rdfs:label. Sem label = a IRI não existe lá.
+#   deprecada    A IRI existe mas a FIBO a marcou owl:deprecated. Foi o caso
+#                de SEC/Funds/Funds/CollectiveInvestmentVehicle, um alias
+#                para SEC/Securities/Pools/CollectiveInvestmentVehicle.
+#                Alinhar com termo deprecado apodrece na próxima release da
+#                FIBO, então trata-se como erro agora.
+#
+# `robot verify` falha se retornar linhas.
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?termoBFO ?alvoInexistente WHERE {
-  ?termoBFO ?p ?alvoInexistente .
+SELECT DISTINCT ?termoBFO ?alvo ?defeito WHERE {
+  ?termoBFO ?p ?alvo .
   VALUES ?p { rdfs:subClassOf rdfs:subPropertyOf rdfs:domain rdfs:range }
 
   FILTER(STRSTARTS(STR(?termoBFO), "https://w3id.org/bfo-br#"))
-  FILTER(STRSTARTS(STR(?alvoInexistente), "https://spec.edmcouncil.org/fibo/")
-      || STRSTARTS(STR(?alvoInexistente), "https://www.omg.org/spec/Commons"))
+  FILTER(STRSTARTS(STR(?alvo), "https://spec.edmcouncil.org/fibo/")
+      || STRSTARTS(STR(?alvo), "https://www.omg.org/spec/Commons"))
 
-  FILTER NOT EXISTS { ?alvoInexistente rdfs:label ?qualquer }
+  {
+    FILTER NOT EXISTS { ?alvo rdfs:label ?qualquer }
+    BIND("inexistente na FIBO" AS ?defeito)
+  } UNION {
+    ?alvo owl:deprecated true .
+    BIND("deprecado na FIBO" AS ?defeito)
+  }
 }
 ORDER BY ?termoBFO
