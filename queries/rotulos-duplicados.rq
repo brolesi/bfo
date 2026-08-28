@@ -1,0 +1,30 @@
+# Duas entidades distintas com o mesmo rdfs:label no mesmo idioma.
+#
+# Substitui a regra `duplicate_label` do `robot report`, que aqui dava falso
+# positivo: um stub externo (&ofb;, &bcb;) declarado como owl:equivalentClass
+# de um termo BFO denota a MESMA classe, então compartilhar rótulo é correto.
+# Esta consulta exclui os pares equivalentes e mantém o resto como erro.
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entidadeA ?entidadeB ?rotulo WHERE {
+  ?entidadeA rdfs:label ?rotulo .
+  ?entidadeB rdfs:label ?rotulo .
+
+  # Um literal com language tag só casa com outro idêntico, tag inclusive,
+  # então ligar os dois em ?rotulo já garante mesmo idioma.
+  FILTER(STR(?entidadeA) < STR(?entidadeB))
+
+  # Pelo menos uma das duas precisa ser nossa; colisões entre dois
+  # vocabulários de terceiros não são problema deste repositório.
+  FILTER(STRSTARTS(STR(?entidadeA), "https://w3id.org/bfo-br#")
+      || STRSTARTS(STR(?entidadeB), "https://w3id.org/bfo-br#"))
+
+  FILTER NOT EXISTS { ?entidadeA owl:equivalentClass ?entidadeB }
+  FILTER NOT EXISTS { ?entidadeB owl:equivalentClass ?entidadeA }
+  FILTER NOT EXISTS { ?entidadeA owl:equivalentProperty ?entidadeB }
+  FILTER NOT EXISTS { ?entidadeB owl:equivalentProperty ?entidadeA }
+  FILTER NOT EXISTS { ?entidadeA owl:sameAs ?entidadeB }
+  FILTER NOT EXISTS { ?entidadeB owl:sameAs ?entidadeA }
+}
+ORDER BY ?rotulo

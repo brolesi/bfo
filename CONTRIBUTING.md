@@ -40,7 +40,7 @@ curto, instale o [ROBOT](https://robot.obolibrary.org/) e rode:
 robot merge --input ontology/bfo-core.owl --input ontology/bfo-openfinance-mapping.owl --input ontology/bfo-bcb-mapping.owl --input examples/bfo-examples.owl --output merged.owl
 robot validate-profile --profile DL --input merged.owl
 robot reason --reasoner HermiT --input merged.owl --output reasoned.owl
-robot verify --input merged.owl --queries queries/anotacoes-obrigatorias.rq --output-dir .
+robot verify --input merged.owl --queries queries/anotacoes-obrigatorias.rq queries/rotulos-duplicados.rq --output-dir .
 ```
 
 O job `fibo-alignment` baixa a FIBO e verifica que toda IRI externa

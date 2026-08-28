@@ -40,7 +40,7 @@
     <!-- Consentimento -->
     <owl:Class rdf:about="&ofb;Consent">
         <owl:equivalentClass rdf:resource="&bfo;Consentimento" />
-        <rdfs:label xml:lang="pt-BR">Consentimento</rdfs:label>
+        <rdfs:label xml:lang="en">Consent</rdfs:label>
         <skos:definition xml:lang="pt-BR">
             Autorização concedida pelo cliente para compartilhamento
             de seus dados no âmbito do Open Finance.
@@ -50,50 +50,50 @@
     <!-- Clientes -->
     <owl:Class rdf:about="&ofb;NaturalPerson">
         <owl:equivalentClass rdf:resource="&bfo;PessoaFisica" />
-        <rdfs:label xml:lang="pt-BR">Pessoa Natural</rdfs:label>
+        <rdfs:label xml:lang="en">Natural Person</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;BusinessEntity">
         <owl:equivalentClass rdf:resource="&bfo;PessoaJuridica" />
-        <rdfs:label xml:lang="pt-BR">Pessoa Jurídica</rdfs:label>
+        <rdfs:label xml:lang="en">Business Entity</rdfs:label>
     </owl:Class>
 
     <!-- Contas -->
     <owl:Class rdf:about="&ofb;Account">
         <owl:equivalentClass rdf:resource="&bfo;Conta" />
-        <rdfs:label xml:lang="pt-BR">Conta</rdfs:label>
+        <rdfs:label xml:lang="en">Account</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;CheckingAccount">
         <owl:equivalentClass rdf:resource="&bfo;ContaCorrente" />
-        <rdfs:label xml:lang="pt-BR">Conta de Depósito à Vista</rdfs:label>
+        <rdfs:label xml:lang="en">Checking Account</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;SavingsAccount">
         <owl:equivalentClass rdf:resource="&bfo;ContaPoupanca" />
-        <rdfs:label xml:lang="pt-BR">Conta de Poupança</rdfs:label>
+        <rdfs:label xml:lang="en">Savings Account</rdfs:label>
     </owl:Class>
 
     <!-- Crédito -->
     <owl:Class rdf:about="&ofb;PersonalLoan">
         <owl:equivalentClass rdf:resource="&bfo;EmprestimoPessoal" />
-        <rdfs:label xml:lang="pt-BR">Empréstimo Pessoal</rdfs:label>
+        <rdfs:label xml:lang="en">Personal Loan</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;RealEstateLoan">
         <owl:equivalentClass rdf:resource="&bfo;FinanciamentoImobiliario" />
-        <rdfs:label xml:lang="pt-BR">Financiamento Imobiliário</rdfs:label>
+        <rdfs:label xml:lang="en">Real Estate Loan</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;VehicleLoan">
         <owl:equivalentClass rdf:resource="&bfo;FinanciamentoVeicular" />
-        <rdfs:label xml:lang="pt-BR">Financiamento de Veículos</rdfs:label>
+        <rdfs:label xml:lang="en">Vehicle Loan</rdfs:label>
     </owl:Class>
 
     <!-- Cartão de Crédito -->
     <owl:Class rdf:about="&ofb;CreditCardTransaction">
         <owl:equivalentClass rdf:resource="&bfo;OperacaoCartaoCredito" />
-        <rdfs:label xml:lang="pt-BR">Transação de Cartão de Crédito</rdfs:label>
+        <rdfs:label xml:lang="en">Credit Card Transaction</rdfs:label>
     </owl:Class>
 
     <!-- ==========================================
@@ -102,12 +102,12 @@
 
     <owl:Class rdf:about="&ofb;PaymentInitiation">
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoPagamento" />
-        <rdfs:label xml:lang="pt-BR">Iniciação de Pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">Payment Initiation</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;PIXPayment">
         <rdfs:subClassOf rdf:resource="&bfo;PIX" />
-        <rdfs:label xml:lang="pt-BR">Pagamento PIX</rdfs:label>
+        <rdfs:label xml:lang="en">PIX Payment</rdfs:label>
     </owl:Class>
 
     <!-- ==========================================
@@ -116,27 +116,27 @@
 
     <owl:Class rdf:about="&ofb;FixedIncomeInvestment">
         <owl:equivalentClass rdf:resource="&bfo;InstrumentoRendaFixa" />
-        <rdfs:label xml:lang="pt-BR">Investimento em Renda Fixa</rdfs:label>
+        <rdfs:label xml:lang="en">Fixed Income Investment</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;VariableIncomeInvestment">
         <owl:equivalentClass rdf:resource="&bfo;InstrumentoRendaVariavel" />
-        <rdfs:label xml:lang="pt-BR">Investimento em Renda Variável</rdfs:label>
+        <rdfs:label xml:lang="en">Variable Income Investment</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;TreasuryTitles">
         <owl:equivalentClass rdf:resource="&bfo;TituloPublicoFederal" />
-        <rdfs:label xml:lang="pt-BR">Títulos do Tesouro</rdfs:label>
+        <rdfs:label xml:lang="en">Treasury Titles</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;InvestmentFund">
         <owl:equivalentClass rdf:resource="&bfo;FundoDeInvestimento" />
-        <rdfs:label xml:lang="pt-BR">Fundo de Investimento</rdfs:label>
+        <rdfs:label xml:lang="en">Investment Fund</rdfs:label>
     </owl:Class>
 
     <owl:Class rdf:about="&ofb;BankFixedIncome">
         <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
-        <rdfs:label xml:lang="pt-BR">Renda Fixa Bancária</rdfs:label>
+        <rdfs:label xml:lang="en">Bank Fixed Income</rdfs:label>
         <skos:definition xml:lang="pt-BR">
             Produtos de renda fixa emitidos por instituições bancárias
             (CDB, RDB, LCI, LCA) na API de investimentos do Open Finance.
@@ -145,7 +145,7 @@
 
     <owl:Class rdf:about="&ofb;CreditFixedIncome">
         <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
-        <rdfs:label xml:lang="pt-BR">Renda Fixa de Crédito</rdfs:label>
+        <rdfs:label xml:lang="en">Credit Fixed Income</rdfs:label>
         <skos:definition xml:lang="pt-BR">
             Produtos de renda fixa não bancários (debêntures, CRI, CRA)
             na API de investimentos do Open Finance.

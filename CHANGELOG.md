@@ -77,6 +77,25 @@ repontadas. Nenhum termo `bfo:` foi removido ou renomeado.
   Já estava fora do versionamento; na raiz, só confundia quem clonava.
   Ver [legacy/README.md](legacy/README.md).
 
+### CI
+
+- O `robot report` deixou de bloquear o merge e virou artefato informativo,
+  com as primeiras linhas impressas no resumo do job. O perfil padrão dele é
+  feito para ontologias OBO: cobra definição em `IAO:0000115` (aqui se usa
+  `skos:definition`, verificada pela nossa própria consulta) e trata rótulo
+  bilíngue como erro, sendo que anotação bilíngue é uma característica
+  declarada do projeto. Das 39 violações de nível ERROR do primeiro run,
+  nenhuma indicava defeito real de modelagem além dos rótulos duplicados
+  abaixo. As regras que valem aqui viraram consultas em `queries/`, onde o
+  critério é explícito e o nome não depende da versão do ROBOT instalada.
+- Nova consulta `queries/rotulos-duplicados.rq`, que substitui a regra
+  `duplicate_label` excluindo os pares ligados por `owl:equivalentClass` —
+  um stub externo equivalente a um termo BFO denota a mesma classe, então
+  compartilhar rótulo não é erro.
+- Os 36 stubs `&ofb;` e `&bcb;` passaram a ter rótulo em inglês, com o nome
+  do termo no schema de origem. Rotulá-los em pt-BR com a tradução do termo
+  BFO equivalente duplicava rótulos entre entidades distintas.
+
 ### Documentação
 
 - Todo o texto do projeto passou a ser em português: `README.md` foi

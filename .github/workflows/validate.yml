@@ -55,9 +55,23 @@ jobs:
       - name: Anotações obrigatórias
         run: robot verify --input merged.owl --queries queries/anotacoes-obrigatorias.rq --output-dir .
 
-      # Rótulos ausentes, definições duplicadas, IRIs malformadas.
-      - name: Relatório do ROBOT
-        run: robot report --input merged.owl --fail-on ERROR --output report.tsv
+      - name: Rótulos duplicados
+        run: robot verify --input merged.owl --queries queries/rotulos-duplicados.rq --output-dir .
+
+      # Informativo, NÃO bloqueia o merge. O perfil padrão do `robot report` é
+      # feito para ontologias OBO: cobra definição em IAO:0000115 (usamos
+      # skos:definition) e trata rótulo bilíngue como erro (é feature nossa,
+      # está no README). As regras que de fato valem aqui viraram as consultas
+      # em queries/, onde o critério é explícito e o nome não depende de qual
+      # versão do ROBOT está instalada.
+      - name: Relatório do ROBOT (informativo)
+        continue-on-error: true
+        run: |
+          robot report --input merged.owl --output report.tsv || true
+          echo "### Relatório do ROBOT" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          head -40 report.tsv >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
 
       - uses: actions/upload-artifact@v4
         if: always()
