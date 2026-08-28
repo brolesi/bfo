@@ -1,7 +1,7 @@
 # Brazilian Financial Ontology (BFO)
 
 [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Versão](https://img.shields.io/badge/vers%C3%A3o-2.0.0-blue.svg)](CHANGELOG.md)
+[![Versão](https://img.shields.io/badge/vers%C3%A3o-2.1.0-blue.svg)](CHANGELOG.md)
 [![OWL 2](https://img.shields.io/badge/OWL-2_DL-orange.svg)](https://www.w3.org/TR/owl2-overview/)
 
 Ontologia formal do sistema financeiro brasileiro, em OWL/RDF, para
@@ -16,17 +16,36 @@ brasileiros (Open Finance Brasil, Banco Central do Brasil).
 
 - **Interoperabilidade semântica** para sistemas financeiros brasileiros
 - **Alinhamento FIBO** — `rdfs:subClassOf` / `rdfs:subPropertyOf` para FND,
-  BE, FBC, SEC, DER e LOAN, mais o OMG Commons. Cada IRI alvo é conferida
-  contra um download real da FIBO no CI (ver [Validação](#validação)); os
-  imports ficam no [módulo opt-in](#módulo-de-alinhamento-fibo)
+  BE, FBC, SEC, DER, LOAN e CAE, mais o OMG Commons. Cada IRI alvo é
+  conferida contra um download real da FIBO no CI (ver
+  [Validação](#validação)); os imports ficam no
+  [módulo opt-in](#módulo-de-alinhamento-fibo)
 - **Integração Open Finance Brasil** — clientes, contas, crédito, iniciação
   de pagamento, investimentos e **ciclo de vida do consentimento**
   (LGPD / Resolução Conjunta CMN/BCB 1/2020)
 - **Integração com os dados abertos do BCB** — séries do SGS (Selic, CDI,
   IPCA, PTAX, INPC…), IF.data, SCR, DICT
 - **Cobertura de mercado atualizada** — fundos sob a Resolução CVM 175/2022
-  (FIDC, FIP, multimercado…), ativos virtuais (Lei 14.478/2022), Drex,
-  fintechs de crédito direto (SCD/SEP), garantias, câmbio (Lei 14.286/2021)
+  (FIDC, FIP, Fiagro, multimercado…), ativos virtuais (Lei 14.478/2022),
+  Drex, fintechs de crédito direto (SCD/SEP), garantias, câmbio
+  (Lei 14.286/2021)
+- **Seguros, resseguro e capitalização** (SUSEP) — apólice, sinistro,
+  prêmio, EAPC
+- **Previdência complementar fechada** (PREVIC) — EFPC, planos BD/CD/CV,
+  patrocinador, participante, assistido
+- **Infraestruturas do mercado** — SPB, STR, Selic, SPI, DICT, Nuclea, SCR,
+  câmara de compensação e depositária central
+- **Arranjos de pagamento** — credenciadora, subcredenciadora, bandeira,
+  emissor, cartões, e as modalidades do PIX (automático, cobrança, saque,
+  troco) com os cinco tipos de chave
+- **Consórcio** (Lei 11.795/2008) — administradora, grupo, cota,
+  contemplação, lance
+- **Títulos de crédito** — CCB, CCI, CPR, CDCA, duplicata escritural, nota
+  comercial, warrant agropecuário
+- **Ofertas públicas** (Resolução CVM 160/2022) e **eventos societários** —
+  dividendo, JCP, bonificação, desdobramento, grupamento, subscrição
+- **PLD/FT** (Circular BCB 3.978/2020) — COAF, comunicação de operação
+  suspeita, PEP, beneficiário final
 - **Anotações bilíngues** (rótulos e definições em pt-BR; en onde aplicável)
 - Instâncias de exemplo e consultas SPARQL de demonstração
 
@@ -153,7 +172,7 @@ Se você usar a BFO, por favor cite (ver [CITATION.cff](CITATION.cff)):
   year         = {2026},
   publisher    = {GitHub},
   url          = {https://github.com/brolesi/bfo},
-  version      = {2.0.0},
+  version      = {2.1.0},
   note         = {Ontologia OWL/RDF alinhada com FIBO e integrada ao Open Finance Brasil e BCB}
 }
 ```

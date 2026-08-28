@@ -31,7 +31,7 @@
         <rdfs:label xml:lang="pt-BR">BFO - Alinhamento FIBO</rdfs:label>
         <rdfs:label xml:lang="en">BFO - FIBO Alignment</rdfs:label>
         <dcterms:description xml:lang="pt-BR">Módulo opt-in que importa a BFO e os domínios da FIBO referenciados pelo core, permitindo raciocínio sobre a hierarquia FIBO completa.</dcterms:description>
-        <owl:versionInfo>2.0.0</owl:versionInfo>
+        <owl:versionInfo>2.1.0</owl:versionInfo>
 
         <owl:imports rdf:resource="&bfo;" />
 
@@ -43,6 +43,8 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/SEC/AllSEC/" />
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/DER/AllDER/" />
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/LOAN/AllLOAN/" />
+        <!-- CAE entra na v2.1.0 com os eventos societários (CorporateAction, StockSplit). -->
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/CAE/AllCAE/" />
     </owl:Ontology>
 
 </rdf:RDF>

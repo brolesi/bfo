@@ -27,7 +27,7 @@
         <rdfs:label xml:lang="pt-BR">BFO - Mapeamento Open Finance Brasil</rdfs:label>
         <dcterms:description xml:lang="pt-BR">Mapeamento semântico entre a Brazilian Financial Ontology e os schemas de dados do Open Finance Brasil.</dcterms:description>
         <owl:imports rdf:resource="https://w3id.org/bfo-br#" />
-        <owl:versionInfo>2.0.0</owl:versionInfo>
+        <owl:versionInfo>2.1.0</owl:versionInfo>
     </owl:Ontology>
 
     <!-- ==========================================

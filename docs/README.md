@@ -50,6 +50,18 @@ bfo/
 | `fibo-sec-sec-pls` | `…/fibo/ontology/SEC/Securities/Pools/` | FIBO SEC - Veículos de investimento coletivo |
 | `fibo-der-drc-swp` | `…/fibo/ontology/DER/DerivativesContracts/Swaps/` | FIBO DER - Swaps |
 | `fibo-loan-ln-ln` | `…/fibo/ontology/LOAN/LoansGeneral/Loans/` | FIBO LOAN - Empréstimos |
+| `fibo-loan-spc-cra` | `…/fibo/ontology/LOAN/LoansSpecific/CardAccounts/` | FIBO LOAN - Cartões |
+| `fibo-fnd-acc-cur` | `…/fibo/ontology/FND/Accounting/CurrencyAmount/` | FIBO FND - Moeda e valores |
+| `fibo-fnd-agr-ctr` | `…/fibo/ontology/FND/Agreements/Contracts/` | FIBO FND - Contratos |
+| `fibo-fnd-agr-agr` | `…/fibo/ontology/FND/Agreements/Agreements/` | FIBO FND - Acordos |
+| `fibo-fbc-dae-gty` | `…/fibo/ontology/FBC/DebtAndEquities/Guaranty/` | FIBO FBC - Garantias e seguro |
+| `fibo-fbc-dae-dbt` | `…/fibo/ontology/FBC/DebtAndEquities/Debt/` | FIBO FBC - Dívida |
+| `fibo-fbc-dae-cr` | `…/fibo/ontology/FBC/DebtAndEquities/CreditRatings/` | FIBO FBC - Rating |
+| `fibo-sec-sec-iss` | `…/fibo/ontology/SEC/Securities/SecuritiesIssuance/` | FIBO SEC - Emissão |
+| `fibo-sec-dbt-tstd` | `…/fibo/ontology/SEC/Debt/TradedShortTermDebt/` | FIBO SEC - Dívida de curto prazo |
+| `fibo-be-oac-cown` | `…/fibo/ontology/BE/OwnershipAndControl/CorporateOwnership/` | FIBO BE - Participação societária |
+| `fibo-cae-cev-cac` | `…/fibo/ontology/CAE/CorporateEvents/CorporateActions/` | FIBO CAE - Eventos societários |
+| `fibo-cae-cev-scac` | `…/fibo/ontology/CAE/CorporateEvents/SecurityRelatedCorporateActions/` | FIBO CAE - Eventos sobre valores mobiliários |
 | `ofb` | `https://openfinancebrasil.org.br/schema/` | Open Finance Brasil |
 | `bcb` | `https://dadosabertos.bcb.gov.br/schema/` | BCB Dados Abertos |
 
@@ -294,6 +306,154 @@ Mapeamentos com dados abertos do Banco Central:
 | 4189 | Taxa Selic (meta) |
 | 4391 | CDI |
 
+## Domínios acrescentados na v2.1.0
+
+### Fundamentos monetários, contratuais e temporais
+
+Base estrutural exigida pelos demais domínios: câmbio precisa de moeda,
+apólice e consórcio precisam de contrato, classificação regulatória precisa
+de vigência.
+
+| Termo BFO | Superclasse FIBO | Observação |
+|---|---|---|
+| `bfo:Moeda` | `fibo-fnd-acc-cur:Currency` | Indivíduos `bfo:BRL`, `bfo:USD`, `bfo:EUR`, com `bfo:codigoISO4217` |
+| `bfo:Contrato` | `fibo-fnd-agr-ctr:Contract` | Instrumento jurídico que formaliza a operação |
+| `bfo:CalendarioBancario` | - | Indivíduo `bfo:CalendarioANBIMA` |
+
+Propriedades: `bfo:valor` e `bfo:moeda` (substituem `bfo:valorBRL`),
+`bfo:formalizadaPor`, `bfo:parteDoContrato`, `bfo:dataInicioVigencia`,
+`bfo:dataFimVigencia`, `bfo:prazoLiquidacaoDiasUteis`, `bfo:dataFeriado`.
+
+> **`bfo:valorBRL` está depreciada.** A denominação estava embutida no nome
+> da propriedade, o que impede representar câmbio e conta em moeda
+> estrangeira. Use `bfo:valor` com `bfo:moeda`. Conforme a política de
+> versionamento, o termo antigo permanece publicado.
+
+### Seguros, resseguro e capitalização (SUSEP)
+
+| Classe BFO | Superclasse FIBO | Referência normativa |
+|---|---|---|
+| `bfo:Seguradora` | `fibo-fbc-fct-fse:InsuranceCompany` | Decreto-Lei 73/1966 |
+| `bfo:Resseguradora` | `fibo-fbc-fct-fse:InsuranceCompany` | LC 126/2007 |
+| `bfo:CorretoraDeSeguros` | - | Lei 4.594/1964 |
+| `bfo:SociedadeDeCapitalizacao` | - | Decreto-Lei 261/1967 |
+| `bfo:EntidadeAbertaDePrevidenciaComplementar` | - | LC 109/2001 |
+| `bfo:ApoliceDeSeguro` | `fibo-fbc-dae-gty:InsurancePolicy` | CC, arts. 757 a 802 |
+| `bfo:Sinistro`, `bfo:PremioDeSeguro`, `bfo:TituloDeCapitalizacao` | - | - |
+
+`bfo:planoOperadoPor` liga PGBL e VGBL à EAPC que os opera, fechando a
+lacuna em que ambos existiam sem entidade operadora.
+
+### Previdência complementar fechada (PREVIC)
+
+`bfo:EntidadeFechadaDePrevidenciaComplementar` (alinhada a
+`fibo-sec-fund-fund:PensionFund`), `bfo:PlanoDeBeneficios` com as
+modalidades BD, CD e CV, e os papéis `bfo:Patrocinador`,
+`bfo:InstituidorDePlano`, `bfo:Participante` e `bfo:Assistido`.
+Identificação por `bfo:codigoCNPB`.
+
+### Infraestruturas do mercado financeiro
+
+| Indivíduo | Classe | Papel |
+|---|---|---|
+| `bfo:SPB` | `InfraestruturaDoMercadoFinanceiro` | Sistema de Pagamentos Brasileiro |
+| `bfo:STR` | `SistemaDePagamentos` | Liquida a TED em tempo real |
+| `bfo:SistemaSelic` | `DepositariaCentral` | Custódia e liquidação de títulos públicos |
+| `bfo:SPI` | `SistemaDePagamentos` | Liquida o PIX |
+| `bfo:DICT` | `SistemaDeRegistro` | Diretório de chaves PIX |
+| `bfo:Nuclea` | `CamaraDeCompensacao` | Antiga CIP |
+| `bfo:SCR` | `SistemaDeRegistro` | Sistema de Informações de Créditos |
+
+> `bfo:SistemaSelic` é o sistema; `bfo:TaxaSelic` é a taxa. A taxa recebe
+> esse nome por ser apurada nas compromissadas registradas no sistema.
+
+### Arranjos de pagamento, cartões e PIX
+
+Cadeia da Lei 12.865/2013: `bfo:ArranjoDePagamento`,
+`bfo:InstituidorDeArranjo`, `bfo:Credenciadora`, `bfo:Subcredenciadora`,
+`bfo:EmissorDeInstrumentoDePagamento`, `bfo:BandeiraDeCartao`.
+
+Cartões alinhados ao módulo LOAN da FIBO: `bfo:CartaoDePagamento`
+(`fibo-loan-spc-cra:PaymentCard`), `bfo:CartaoDeCredito`
+(`fibo-loan-spc-cra:CreditCard`), `bfo:CartaoDeDebito`, `bfo:CartaoPrePago`,
+`bfo:ContaDeCartao` (`fibo-loan-spc-cra:CardAccount`).
+
+PIX: modalidades `bfo:PIXAutomatico`, `bfo:PIXCobranca`, `bfo:PIXSaque`,
+`bfo:PIXTroco`, e `bfo:TipoChavePIX` como enumeração fechada dos cinco tipos
+de chave registráveis no DICT.
+
+### Consórcio (Lei 11.795/2008)
+
+`bfo:AdministradoraDeConsorcio`, `bfo:GrupoDeConsorcio`,
+`bfo:CotaDeConsorcio`, `bfo:Contemplacao`, `bfo:Lance`, com
+`bfo:taxaAdministracao` e `bfo:prazoGrupoMeses`.
+
+### Títulos de crédito
+
+| Classe BFO | Referência normativa |
+|---|---|
+| `bfo:CCB` | Lei 10.931/2004 |
+| `bfo:CCI` | Lei 10.931/2004 — lastro usual de CRI |
+| `bfo:CPR` | Lei 8.929/1994, alterada pela Lei 13.986/2020 |
+| `bfo:CDCA` | Lei 11.076/2004 |
+| `bfo:WarrantAgropecuario` | Lei 11.076/2004 |
+| `bfo:DuplicataEscritural` | Lei 13.775/2018 |
+| `bfo:NotaComercial` | Lei 14.195/2021 |
+
+### Ofertas públicas (Resolução CVM 160/2022)
+
+`bfo:OfertaPublica` (`fibo-sec-sec-iss:PublicOffering`),
+`bfo:OfertaPublicaInicial`, `bfo:OfertaSubsequente`, `bfo:Prospecto`,
+`bfo:CoordenadorLider` e `bfo:RitoDeRegistro` como enumeração fechada
+(automático ou ordinário).
+
+### Eventos societários e governança
+
+`bfo:EventoSocietario` (`fibo-cae-cev-cac:CorporateAction`) com
+`bfo:Dividendo`, `bfo:JurosSobreCapitalProprio`, `bfo:Bonificacao`,
+`bfo:Desdobramento` (`fibo-cae-cev-scac:StockSplit`), `bfo:Grupamento`,
+`bfo:Subscricao` e `bfo:RecompraDeAcoes`, mais `bfo:dataCom` e `bfo:dataEx`.
+
+`bfo:NivelGovernancaB3` cobre Novo Mercado, Nível 2, Nível 1 e Bovespa Mais.
+
+> O JCP não tem contrapartida na FIBO: é instituto da Lei 9.249/1995 sem
+> equivalente direto na maioria das jurisdições.
+
+### PLD/FT (Circular BCB 3.978/2020)
+
+`bfo:UnidadeDeInteligenciaFinanceira` com o indivíduo `bfo:COAF`,
+`bfo:ComunicacaoDeOperacaoSuspeita`, `bfo:PessoaExpostaPoliticamente`,
+`bfo:AvaliacaoKYC` e a propriedade `bfo:beneficiarioFinal`.
+
+### Câmbio (Lei 14.286/2021)
+
+`bfo:ContratoDeCambio` com as modalidades pronto e futuro, `bfo:ACC`,
+`bfo:ACE` e `bfo:ContaEmMoedaEstrangeira`, cuja abertura ao público em geral
+foi justamente o que o novo marco cambial autorizou.
+
+### Crédito, rating e tributação
+
+Novas operações: `bfo:ChequeEspecial`, `bfo:CapitalDeGiro`,
+`bfo:AntecipacaoDeRecebiveis`, `bfo:CreditoRural`, `bfo:Microcredito`,
+`bfo:CreditoEstudantil`.
+
+`bfo:RatingDeCredito` e `bfo:AgenciaDeClassificacaoDeRisco` representam a
+opinião de agência sobre o emissor — distinta de
+`bfo:ClassificacaoRiscoCredito`, que é o enquadramento obrigatório da
+operação na escala AA a H da Resolução CMN 2.682/1999.
+
+Tributação ganhou `bfo:aliquota`, `bfo:prazoMinimoDias`,
+`bfo:prazoMaximoDias`, `bfo:limiteIsencaoMensal` e os indivíduos
+`bfo:ComeCotas`, `bfo:IOF_Cambio`, `bfo:IOF_Credito`, `bfo:IOF_Seguro`,
+`bfo:IOF_Titulos`, `bfo:IR_GanhoCapital` e `bfo:IR_FonteRendaFixa`.
+
+### Sustentabilidade e ativos virtuais
+
+`bfo:TituloTematicoSustentavel` com `bfo:TituloVerde` e `bfo:TituloSocial`
+— deliberadamente **não** disjuntos de título público nem privado, porque
+existem emissões soberanas e corporativas. Em ativos virtuais,
+`bfo:Stablecoin` e `bfo:TokenDeRecebivel`.
+
 ## Exemplos de Uso
 
 ### SPARQL - Buscar CDBs por emissor e taxa
@@ -415,5 +575,5 @@ e abra issues ou pull requests no repositório.
 
 ---
 
-**Versão**: 2.0.0
+**Versão**: 2.1.0
 **Data**: Agosto 2026

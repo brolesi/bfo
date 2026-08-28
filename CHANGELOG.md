@@ -5,6 +5,82 @@ Todas as mudanças relevantes deste projeto são documentadas neste arquivo.
 O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [2.1.0] - 2026-08-28
+
+Expansão de cobertura: 89 para 184 classes, 23 para 64 object properties, 27
+para 48 data properties, 41 para 71 indivíduos. Nenhum termo removido ou
+renomeado; uma propriedade depreciada.
+
+### Adicionado
+
+- **Seguros, resseguro e capitalização** (SUSEP): `Seguradora`,
+  `Resseguradora`, `CorretoraDeSeguros`, `SociedadeDeCapitalizacao`,
+  `EntidadeAbertaDePrevidenciaComplementar`, `ApoliceDeSeguro`, `Sinistro`,
+  `PremioDeSeguro`, `TituloDeCapitalizacao`. A SUSEP estava modelada como
+  órgão regulador desde a v1.0.0 sem que nada do que ela regula existisse.
+  `planoOperadoPor` liga PGBL e VGBL à EAPC operadora.
+- **Previdência complementar fechada** (PREVIC), na mesma situação:
+  `EntidadeFechadaDePrevidenciaComplementar`, `PlanoDeBeneficios` nas
+  modalidades BD, CD e CV, `Patrocinador`, `InstituidorDePlano`,
+  `Participante`, `Assistido`, `codigoCNPB`.
+- **Infraestruturas do mercado**: `CamaraDeCompensacao`,
+  `DepositariaCentral`, `SistemaDePagamentos`, `SistemaDeRegistro`, com os
+  indivíduos `SPB`, `STR`, `SistemaSelic`, `SPI`, `DICT`, `Nuclea` e `SCR`.
+  A classe `InfraestruturaDoMercadoFinanceiro` tinha uma única instância.
+- **Arranjos de pagamento e cartões** (Lei 12.865/2013, já citada na
+  documentação sem que nenhum papel da cadeia existisse):
+  `ArranjoDePagamento`, `InstituidorDeArranjo`, `Credenciadora`,
+  `Subcredenciadora`, `EmissorDeInstrumentoDePagamento`, `BandeiraDeCartao`,
+  `CartaoDePagamento` e subtipos, `ContaDeCartao`.
+- **PIX detalhado**: modalidades `PIXAutomatico`, `PIXCobranca`, `PIXSaque`
+  e `PIXTroco`; `TipoChavePIX` como enumeração fechada dos cinco tipos;
+  `codigoQRPIX` e `linhaDigitavel`.
+- **Consórcio** (Lei 11.795/2008): `AdministradoraDeConsorcio`,
+  `GrupoDeConsorcio`, `CotaDeConsorcio`, `Contemplacao`, `Lance`,
+  `taxaAdministracao`, `prazoGrupoMeses`.
+- **Títulos de crédito**: `CCB`, `CCI`, `CPR`, `CDCA`, `WarrantAgropecuario`,
+  `DuplicataEscritural`, `NotaComercial`.
+- **Ofertas públicas** (Resolução CVM 160/2022): `OfertaPublica`,
+  `OfertaPublicaInicial`, `OfertaSubsequente`, `Prospecto`,
+  `CoordenadorLider`, `RitoDeRegistro` enumerado.
+- **Eventos societários**: `EventoSocietario`, `Dividendo`,
+  `JurosSobreCapitalProprio`, `Bonificacao`, `Desdobramento`, `Grupamento`,
+  `Subscricao`, `RecompraDeAcoes`, `AssembleiaGeral`, `dataCom`, `dataEx`, e
+  `NivelGovernancaB3` com os quatro segmentos de listagem.
+- **PLD/FT** (Circular BCB 3.978/2020): `UnidadeDeInteligenciaFinanceira`
+  com o indivíduo `COAF`, `ComunicacaoDeOperacaoSuspeita`,
+  `PessoaExpostaPoliticamente`, `AvaliacaoKYC`, `beneficiarioFinal`.
+- **Câmbio** (Lei 14.286/2021): `ContratoDeCambio`, `CambioPronto`,
+  `CambioFuturo`, `ACC`, `ACE`, `ContaEmMoedaEstrangeira`, `taxaCambio`.
+- **Crédito adicional**: `ChequeEspecial`, `CapitalDeGiro`,
+  `AntecipacaoDeRecebiveis`, `CreditoRural`, `Microcredito`,
+  `CreditoEstudantil`.
+- **Rating**: `AgenciaDeClassificacaoDeRisco` e `RatingDeCredito`, distintos
+  de `ClassificacaoRiscoCredito`, que continua sendo o enquadramento
+  obrigatório da operação na escala AA a H.
+- **Tributação**: `aliquota`, `prazoMinimoDias`, `prazoMaximoDias`,
+  `limiteIsencaoMensal`, e os indivíduos `ComeCotas`, `IOF_Cambio`,
+  `IOF_Credito`, `IOF_Seguro`, `IOF_Titulos`, `IR_GanhoCapital`,
+  `IR_FonteRendaFixa`. A classe `Tributo` tinha três instâncias e nenhuma
+  alíquota.
+- **Fundos e sustentabilidade**: `Fiagro` (Lei 14.130/2021),
+  `TituloTematicoSustentavel` com `TituloVerde` e `TituloSocial`.
+- **Ativos virtuais**: `Stablecoin`, `TokenDeRecebivel`.
+- **Fundamentos estruturais**: `Moeda` com os indivíduos `BRL`, `USD` e
+  `EUR`; `Contrato`; `CalendarioBancario` e `FeriadoBancario`;
+  `dataInicioVigencia` e `dataFimVigencia`; `prazoLiquidacaoDiasUteis`.
+- Alinhamentos a doze novos módulos FIBO, incluindo o domínio CAE, agora
+  importado pelo módulo de alinhamento. Todos verificados contra um clone da
+  FIBO antes do commit: existem, têm rótulo e não estão depreciados.
+
+### Descontinuado
+
+- `valorBRL` marcada `owl:deprecated`. A denominação estava embutida no nome
+  da propriedade, o que torna impossível representar contrato de câmbio e
+  conta em moeda estrangeira. Substituída por `valor` mais `moeda`, esta
+  apontando para um indivíduo de `Moeda` identificado por ISO 4217. Conforme
+  a política de versionamento, o termo permanece publicado.
+
 ## [2.0.0] - 2026-08-27
 
 Versão MAJOR: o namespace mudou e 35 IRIs de alinhamento externo foram

@@ -210,4 +210,89 @@
         <bfo:dataExpiracaoConsentimento rdf:datatype="&xsd;dateTime">2027-03-01T08:15:00-03:00</bfo:dataExpiracaoConsentimento>
     </bfo:Consentimento>
 
+    <!-- ==========================================
+         EXEMPLO 13: SEGURO (SUSEP)
+         ========================================== -->
+
+    <bfo:Seguradora rdf:about="https://example.org/seguradoras/seguradora-exemplo">
+        <rdfs:label>Seguradora Exemplo S.A.</rdfs:label>
+        <bfo:cnpj>34567890000122</bfo:cnpj>
+        <bfo:codigoSUSEP>01234</bfo:codigoSUSEP>
+        <bfo:reguladoPor rdf:resource="&bfo;SUSEP" />
+    </bfo:Seguradora>
+
+    <bfo:ApoliceDeSeguro rdf:about="https://example.org/apolices/apolice-001">
+        <rdfs:label>Apólice de seguro de automóvel</rdfs:label>
+        <bfo:numeroApolice>2026-AUTO-000123</bfo:numeroApolice>
+        <bfo:apoliceEmitidaPor rdf:resource="https://example.org/seguradoras/seguradora-exemplo" />
+        <bfo:seguradoDaApolice rdf:resource="https://example.org/clientes/cliente-001" />
+        <bfo:dataInicioVigencia rdf:datatype="&xsd;date">2026-04-01</bfo:dataInicioVigencia>
+        <bfo:dataFimVigencia rdf:datatype="&xsd;date">2027-03-31</bfo:dataFimVigencia>
+    </bfo:ApoliceDeSeguro>
+
+    <bfo:PremioDeSeguro rdf:about="https://example.org/premios/premio-001">
+        <rdfs:label>Prêmio anual da apólice 2026-AUTO-000123</rdfs:label>
+        <bfo:premioDaApolice rdf:resource="https://example.org/apolices/apolice-001" />
+        <bfo:valor rdf:datatype="&xsd;decimal">2400.00</bfo:valor>
+        <bfo:moeda rdf:resource="&bfo;BRL" />
+    </bfo:PremioDeSeguro>
+
+    <!-- ==========================================
+         EXEMPLO 14: CONSORCIO (Lei 11.795/2008)
+         ========================================== -->
+
+    <bfo:GrupoDeConsorcio rdf:about="https://example.org/consorcios/grupo-500">
+        <rdfs:label>Grupo de consórcio 500 - imóveis</rdfs:label>
+        <bfo:grupoAdministradoPor rdf:resource="https://example.org/bancos/banco-exemplo" />
+        <bfo:prazoGrupoMeses rdf:datatype="&xsd;integer">180</bfo:prazoGrupoMeses>
+        <bfo:taxaAdministracao rdf:datatype="&xsd;decimal">0.18</bfo:taxaAdministracao>
+    </bfo:GrupoDeConsorcio>
+
+    <bfo:CotaDeConsorcio rdf:about="https://example.org/consorcios/cota-500-042">
+        <rdfs:label>Cota 042 do grupo 500</rdfs:label>
+        <bfo:cotaDoGrupo rdf:resource="https://example.org/consorcios/grupo-500" />
+        <bfo:cotaTitularizadaPor rdf:resource="https://example.org/clientes/cliente-001" />
+    </bfo:CotaDeConsorcio>
+
+    <!-- ==========================================
+         EXEMPLO 15: TITULO DE CREDITO (CCB)
+         ========================================== -->
+
+    <bfo:CCB rdf:about="https://example.org/titulos/ccb-001">
+        <rdfs:label>Cédula de Crédito Bancário 001</rdfs:label>
+        <bfo:emitidoPor rdf:resource="https://example.org/clientes/cliente-001" />
+        <bfo:valor rdf:datatype="&xsd;decimal">50000.00</bfo:valor>
+        <bfo:moeda rdf:resource="&bfo;BRL" />
+        <bfo:registradoEm rdf:resource="&bfo;SCR" />
+        <rdfs:comment>Título executivo da Lei 10.931/2004</rdfs:comment>
+    </bfo:CCB>
+
+    <!-- ==========================================
+         EXEMPLO 16: EVENTO SOCIETARIO (JCP)
+         ========================================== -->
+
+    <bfo:JurosSobreCapitalProprio rdf:about="https://example.org/eventos/jcp-2026-t1">
+        <rdfs:label>JCP do primeiro trimestre de 2026</rdfs:label>
+        <bfo:eventoSobreInstrumento rdf:resource="https://example.org/instrumentos/acao-exemplo-on" />
+        <bfo:dataCom rdf:datatype="&xsd;date">2026-04-15</bfo:dataCom>
+        <bfo:dataEx rdf:datatype="&xsd;date">2026-04-16</bfo:dataEx>
+        <bfo:incideTributo rdf:resource="&bfo;IR_FonteRendaFixa" />
+        <rdfs:comment>Retenção na fonte de 15% conforme a Lei 9.249/1995</rdfs:comment>
+    </bfo:JurosSobreCapitalProprio>
+
+    <!-- ==========================================
+         EXEMPLO 17: CAMBIO (Lei 14.286/2021)
+         ========================================== -->
+
+    <bfo:CambioPronto rdf:about="https://example.org/cambio/contrato-001">
+        <rdfs:label>Contrato de câmbio pronto - compra de USD</rdfs:label>
+        <bfo:parteDoContrato rdf:resource="https://example.org/clientes/cliente-001" />
+        <bfo:moedaEstrangeiraDaOperacao rdf:resource="&bfo;USD" />
+        <bfo:taxaCambio rdf:datatype="&xsd;decimal">5.4321</bfo:taxaCambio>
+        <bfo:valor rdf:datatype="&xsd;decimal">10000.00</bfo:valor>
+        <bfo:moeda rdf:resource="&bfo;USD" />
+        <bfo:dataInicioVigencia rdf:datatype="&xsd;date">2026-05-20</bfo:dataInicioVigencia>
+        <bfo:prazoLiquidacaoDiasUteis rdf:datatype="&xsd;integer">2</bfo:prazoLiquidacaoDiasUteis>
+    </bfo:CambioPronto>
+
 </rdf:RDF>
