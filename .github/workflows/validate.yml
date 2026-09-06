@@ -12,6 +12,10 @@ on:
 
 env:
   ROBOT_VERSION: v1.9.7
+  # sha256 do robot.jar publicado nesse release. Se o download não bater,
+  # é jar corrompido ou release adulterado — falha antes de rodar java -jar
+  # em algo não verificado.
+  ROBOT_SHA256: 91890c2e83d0f092dd08731376f154b36610544cfbe8685337a1bf7244ccaa2d
 
 jobs:
   # O que o CONTRIBUTING.md pedia manualmente ("carregar no Protégé sem erros",
@@ -26,10 +30,20 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Cache do robot.jar
+        id: robot-cache
+        uses: actions/cache@v4
+        with:
+          path: robot.jar
+          key: robot-jar-${{ env.ROBOT_VERSION }}-${{ env.ROBOT_SHA256 }}
+
       - name: Instalar o ROBOT
         run: |
-          curl -sSL -o robot.jar \
-            "https://github.com/ontodev/robot/releases/download/${ROBOT_VERSION}/robot.jar"
+          if [ ! -f robot.jar ]; then
+            curl -sSL -o robot.jar \
+              "https://github.com/ontodev/robot/releases/download/${ROBOT_VERSION}/robot.jar"
+          fi
+          echo "${ROBOT_SHA256}  robot.jar" | sha256sum -c -
           printf '#!/bin/sh\nexec java -Xmx4g -jar "%s/robot.jar" "$@"\n' "$PWD" > /usr/local/bin/robot
           chmod +x /usr/local/bin/robot
           robot --version
@@ -99,10 +113,18 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+      - name: Cache do robot.jar
+        uses: actions/cache@v4
+        with:
+          path: robot.jar
+          key: robot-jar-${{ env.ROBOT_VERSION }}-${{ env.ROBOT_SHA256 }}
       - name: Instalar o ROBOT
         run: |
-          curl -sSL -o robot.jar \
-            "https://github.com/ontodev/robot/releases/download/${ROBOT_VERSION}/robot.jar"
+          if [ ! -f robot.jar ]; then
+            curl -sSL -o robot.jar \
+              "https://github.com/ontodev/robot/releases/download/${ROBOT_VERSION}/robot.jar"
+          fi
+          echo "${ROBOT_SHA256}  robot.jar" | sha256sum -c -
           printf '#!/bin/sh\nexec java -Xmx4g -jar "%s/robot.jar" "$@"\n' "$PWD" > /usr/local/bin/robot
           chmod +x /usr/local/bin/robot
 
@@ -131,10 +153,18 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+      - name: Cache do robot.jar
+        uses: actions/cache@v4
+        with:
+          path: robot.jar
+          key: robot-jar-${{ env.ROBOT_VERSION }}-${{ env.ROBOT_SHA256 }}
       - name: Instalar o ROBOT
         run: |
-          curl -sSL -o robot.jar \
-            "https://github.com/ontodev/robot/releases/download/${ROBOT_VERSION}/robot.jar"
+          if [ ! -f robot.jar ]; then
+            curl -sSL -o robot.jar \
+              "https://github.com/ontodev/robot/releases/download/${ROBOT_VERSION}/robot.jar"
+          fi
+          echo "${ROBOT_SHA256}  robot.jar" | sha256sum -c -
           printf '#!/bin/sh\nexec java -Xmx8g -jar "%s/robot.jar" "$@"\n' "$PWD" > /usr/local/bin/robot
           chmod +x /usr/local/bin/robot
 
@@ -149,3 +179,48 @@ jobs:
 
       - name: Alinhamentos apontam para termos que existem na FIBO
         run: robot verify --input merged-fibo.owl --queries queries/alinhamentos-fantasma.rq --output-dir .
+
+  # O .htaccess só é ativado quando o PR em perma-id/w3id.org for aceito
+  # (ver w3id/README.md), então ninguém percebe se ele apontar para um
+  # arquivo que foi renomeado ou removido. Checagem estática, sem rede.
+  w3id-drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Caminhos do .htaccess existem no repositório
+        run: |
+          set -e
+          htaccess=w3id/bfo-br/.htaccess
+          # Alvos github.io apontam para caminhos deste repo (ontology/, dist/);
+          # dist/ é gerado pelo job `turtle` a partir de ontology/, então
+          # validamos a fonte .owl correspondente em vez do .ttl inexistente aqui.
+          grep -oE 'brolesi\.github\.io/bfo/[A-Za-z0-9_./-]+' "$htaccess" | sed 's#.*/bfo/##' | sort -u |
+          while read -r path; do
+            case "$path" in
+              dist/*.ttl)
+                src="ontology/$(basename "${path%.ttl}").owl"
+                [ -f "$src" ] || { echo "::error::$htaccess referencia $path, mas $src não existe"; exit 1; }
+                ;;
+              *)
+                [ -f "$path" ] || { echo "::error::$htaccess referencia $path, que não existe"; exit 1; }
+                ;;
+            esac
+          done
+
+  # CONTRIBUTING.md pede para atualizar o CHANGELOG a cada mudança de
+  # conteúdo, mas isso é fácil de esquecer num PR. Só roda em PR — não faz
+  # sentido em push direto a main nem no cron semanal da FIBO.
+  changelog:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: CHANGELOG.md atualizado quando a ontologia muda
+        run: |
+          changed=$(git diff --name-only "origin/${{ github.base_ref }}"...HEAD)
+          if echo "$changed" | grep -qE '^ontology/.*\.owl$' && ! echo "$changed" | grep -q '^CHANGELOG.md$'; then
+            echo "::error::PR muda arquivo(s) em ontology/ mas não atualiza CHANGELOG.md"
+            exit 1
+          fi
