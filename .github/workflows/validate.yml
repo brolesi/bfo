@@ -9,6 +9,8 @@ on:
     # descobrir um alinhamento quebrado antes de um contribuidor descobrir.
     - cron: '0 6 * * 1'
   workflow_dispatch:
+  # Chamado pelo release.yml: nada é publicado sem passar por aqui.
+  workflow_call:
 
 env:
   ROBOT_VERSION: v1.9.7

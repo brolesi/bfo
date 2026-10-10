@@ -1,0 +1,91 @@
+name: release
+
+# Publica uma versão: GitHub Release com os arquivos anexados e GitHub Pages
+# em brolesi.github.io/bfo, que é para onde o w3id/bfo-br/.htaccess aponta.
+on:
+  push:
+    tags: ['v*.*.*']
+  # Para publicar uma tag que já existia antes deste workflow (ex.: v2.1.0).
+  # Roda a partir de main; o passo "Conferir versão" exige que ontology/ e
+  # examples/ sejam idênticos aos da tag, senão o validado não é o publicado.
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag já existente, ex.: v2.1.0'
+        required: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    uses: ./.github/workflows/validate.yml
+
+  publish:
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      # Uma tag v2.2.0 com owl:versionInfo 2.1.0 publicaria o arquivo errado
+      # sob o IRI de versão errado.
+      - name: Conferir versão
+        run: |
+          set -e
+          version="${TAG#v}"
+          git rev-parse -q --verify "refs/tags/$TAG" >/dev/null || { echo "::error::tag $TAG não existe"; exit 1; }
+          git diff --quiet "$TAG" HEAD -- ontology examples || { echo "::error::ontology/ ou examples/ difere de $TAG"; exit 1; }
+          grep -q "<owl:versionIRI rdf:resource=\"https://w3id.org/bfo-br/$version\"" ontology/bfo-core.owl \
+            || { echo "::error::owl:versionIRI de bfo-core.owl não é $version"; exit 1; }
+          for f in ontology/*.owl; do
+            if grep -q '<owl:versionInfo>' "$f" && ! grep -q "<owl:versionInfo>$version</owl:versionInfo>" "$f"; then
+              echo "::error::owl:versionInfo de $f não é $version"; exit 1
+            fi
+          done
+          grep -q "^## \[$version\]" CHANGELOG.md || { echo "::error::CHANGELOG.md sem seção [$version]"; exit 1; }
+
+      # Gerado pelo job `turtle` do validate.yml, na mesma execução.
+      - uses: actions/download-artifact@v8
+        with:
+          name: turtle
+          path: dist
+
+      # Mesma estrutura de caminhos que o .htaccess espera.
+      - name: Montar o site
+        run: |
+          mkdir -p site
+          cp -r ontology examples dist site/
+          cp LICENSE site/
+
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v5
+
+      - name: GitHub Release
+        run: |
+          version="${TAG#v}"
+          # Corpo da seção da versão no CHANGELOG, sem o título.
+          awk -v v="$version" '
+            index($0, "## [" v "]") == 1 { on = 1; next }
+            on && index($0, "## [") == 1 { exit }
+            on { print }
+          ' CHANGELOG.md > notes.md
+          gh release create "$TAG" --verify-tag --title "$TAG" --notes-file notes.md \
+            ontology/*.owl examples/*.owl dist/*.ttl

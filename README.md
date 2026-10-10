@@ -161,6 +161,12 @@ Termos publicados nunca são removidos; os superados recebem
 `owl:deprecated true` (ex.: `bfo:DOC`, descontinuado em 2024). Ver
 [CHANGELOG.md](CHANGELOG.md).
 
+Para lançar uma versão, atualize `owl:versionIRI`/`owl:versionInfo` e o
+CHANGELOG, e faça push de uma tag `vX.Y.Z`.
+[`release.yml`](.github/workflows/release.yml) roda toda a validação,
+publica os arquivos (RDF/XML e Turtle) em `https://brolesi.github.io/bfo/` e
+cria o GitHub Release com eles anexados.
+
 ## Citação
 
 Se você usar a BFO, por favor cite (ver [CITATION.cff](CITATION.cff)):
