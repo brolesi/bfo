@@ -217,6 +217,8 @@
         <skos:altLabel>IP</skos:altLabel>
         <skos:definition xml:lang="pt-BR">Pessoa jurídica que executa serviços de pagamento, incluindo emissores de moeda eletrônica, iniciadores de pagamento e credenciadores.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Regulamentada pela Lei 12.865/2013 e Circular BCB 3.885/2018.</rdfs:comment>
+        <dcterms:source>Lei 12.865/2013</dcterms:source>
+        <dcterms:source>Circular BCB 3.885/2018</dcterms:source>
     </owl:Class>
 
     <!-- Corretora de Títulos e Valores Mobiliários -->
@@ -243,6 +245,8 @@
         <skos:altLabel>SCD</skos:altLabel>
         <skos:definition xml:lang="pt-BR">Instituição financeira que realiza operações de empréstimo e financiamento exclusivamente por meio de plataforma eletrônica, com capital próprio.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Criada pela Resolução CMN 4.656/2018; consolidada pela Resolução CMN 5.050/2022.</rdfs:comment>
+        <dcterms:source>Resolução CMN 4.656/2018</dcterms:source>
+        <dcterms:source>Resolução CMN 5.050/2022</dcterms:source>
     </owl:Class>
 
     <!-- Sociedade de Empréstimo entre Pessoas (P2P lending) -->
@@ -252,6 +256,7 @@
         <skos:altLabel>SEP</skos:altLabel>
         <skos:definition xml:lang="pt-BR">Instituição financeira que intermedeia operações de empréstimo e financiamento entre pessoas (peer-to-peer lending) por meio de plataforma eletrônica.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Criada pela Resolução CMN 4.656/2018.</rdfs:comment>
+        <dcterms:source>Resolução CMN 4.656/2018</dcterms:source>
     </owl:Class>
 
     <!-- Prestadora de Serviços de Ativos Virtuais (VASP) -->
@@ -262,6 +267,8 @@
         <skos:altLabel>VASP</skos:altLabel>
         <skos:definition xml:lang="pt-BR">Pessoa jurídica que executa, em nome de terceiros, serviços de troca, transferência, custódia ou administração de ativos virtuais, conforme a Lei 14.478/2022 (Marco Legal dos Criptoativos).</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Supervisionada pelo Banco Central do Brasil (Decreto 11.563/2023).</rdfs:comment>
+        <dcterms:source>Lei 14.478/2022</dcterms:source>
+        <dcterms:source>Decreto 11.563/2023</dcterms:source>
     </owl:Class>
 
     <!-- Infraestruturas do Mercado Financeiro e entidades de suporte -->
@@ -310,7 +317,8 @@
     <!-- Segmentação Prudencial BCB (S1-S5) -->
     <owl:Class rdf:about="&bfo;SegmentacaoPrudencial">
         <rdfs:label xml:lang="pt-BR">Segmentação Prudencial</rdfs:label>
-        <skos:definition xml:lang="pt-BR">Classificação das instituições financeiras em segmentos (S1 a S5) conforme porte, atividade internacional e perfil de risco, definida pela Resolução BCB 4.553/2017.</skos:definition>
+        <skos:definition xml:lang="pt-BR">Classificação das instituições financeiras em segmentos (S1 a S5) conforme porte, atividade internacional e perfil de risco, definida pela Resolução CMN 4.553/2017.</skos:definition>
+        <dcterms:source>Resolução CMN 4.553/2017</dcterms:source>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;SegmentoS1">
@@ -381,6 +389,7 @@
     <owl:Class rdf:about="&bfo;ClassificacaoInvestidor">
         <rdfs:label xml:lang="pt-BR">Classificação de Investidor</rdfs:label>
         <skos:definition xml:lang="pt-BR">Categorização de investidores conforme a Resolução CVM 30/2021.</skos:definition>
+        <dcterms:source>Resolução CVM 30/2021</dcterms:source>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;InvestidorProfissional">
@@ -573,6 +582,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Regulamentada pela Lei 12.431/2011</rdfs:comment>
+        <dcterms:source>Lei 12.431/2011</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;CRI">
@@ -696,6 +706,7 @@
         <rdfs:label xml:lang="en">Investment Fund</rdfs:label>
         <skos:definition xml:lang="pt-BR">Comunhão de recursos, constituída sob a forma de condomínio de natureza especial, destinada à aplicação em ativos financeiros.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Regime atual definido pela Resolução CVM 175/2022, que substituiu as Instruções CVM 555 e 578.</rdfs:comment>
+        <dcterms:source>Resolução CVM 175/2022</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;FundoRendaFixa">
@@ -766,6 +777,7 @@
         <rdfs:label xml:lang="en">Virtual Asset</rdfs:label>
         <skos:definition xml:lang="pt-BR">Representação digital de valor que pode ser negociada ou transferida por meios eletrônicos e utilizada para pagamentos ou investimento, conforme a Lei 14.478/2022.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Não inclui moeda nacional, moedas estrangeiras, moeda eletrônica, pontos de fidelidade nem valores mobiliários (art. 3º, parágrafo único, Lei 14.478/2022).</rdfs:comment>
+        <dcterms:source>Lei 14.478/2022</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;MoedaDigitalDeBancoCentral">
@@ -873,6 +885,7 @@
         <rdfs:label xml:lang="pt-BR">Operação de Crédito</rdfs:label>
         <skos:definition xml:lang="pt-BR">Operação em que uma instituição financeira coloca recursos à disposição de um tomador mediante compromisso de pagamento futuro, sujeita a classificação de risco na forma da Resolução CMN 2.682/1999.</skos:definition>
         <owl:equivalentClass rdf:resource="&ofb;CreditOperation" />
+        <dcterms:source>Resolução CMN 2.682/1999</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;EmprestimoPessoal">
@@ -906,6 +919,7 @@
     <owl:Class rdf:about="&bfo;ClassificacaoRiscoCredito">
         <rdfs:label xml:lang="pt-BR">Classificação de Risco de Crédito</rdfs:label>
         <skos:definition xml:lang="pt-BR">Categorização do risco de crédito conforme Resolução CMN 2.682/1999.</skos:definition>
+        <dcterms:source>Resolução CMN 2.682/1999</dcterms:source>
     </owl:Class>
 
     <owl:NamedIndividual rdf:about="&bfo;RiscoAA">
@@ -1019,6 +1033,7 @@
         <rdfs:subClassOf rdf:resource="&bfo;OperacaoFinanceira" />
         <rdfs:label xml:lang="pt-BR">Operação de Câmbio</rdfs:label>
         <skos:definition xml:lang="pt-BR">Operação de compra ou venda de moeda estrangeira, regida pelo novo marco cambial (Lei 14.286/2021).</skos:definition>
+        <dcterms:source>Lei 14.286/2021</dcterms:source>
     </owl:Class>
 
     <!-- Operações de Investimento -->
@@ -1177,6 +1192,8 @@
         <rdfs:label xml:lang="pt-BR">Consentimento</rdfs:label>
         <rdfs:label xml:lang="en">Consent</rdfs:label>
         <skos:definition xml:lang="pt-BR">Manifestação livre, informada e inequívoca pela qual o cliente autoriza o compartilhamento de seus dados ou a iniciação de pagamentos no âmbito do Open Finance, em conformidade com a LGPD (Lei 13.709/2018) e a Resolução Conjunta CMN/BCB 1/2020.</skos:definition>
+        <dcterms:source>Lei 13.709/2018</dcterms:source>
+        <dcterms:source>Resolução Conjunta CMN/BCB 1/2020</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;StatusConsentimento">
@@ -2123,6 +2140,8 @@
         <rdfs:label xml:lang="pt-BR">Sociedade Seguradora</rdfs:label>
         <skos:definition xml:lang="pt-BR">Sociedade anônima autorizada pela SUSEP a assumir riscos de terceiros mediante contrato de seguro e cobrança de prêmio.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Decreto-Lei 73/1966 e Resolução CNSP 432/2021.</rdfs:comment>
+        <dcterms:source>Decreto-Lei 73/1966</dcterms:source>
+        <dcterms:source>Resolução CNSP 432/2021</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Resseguradora">
@@ -2131,6 +2150,7 @@
         <rdfs:label xml:lang="pt-BR">Resseguradora</rdfs:label>
         <skos:definition xml:lang="pt-BR">Entidade que assume, no todo ou em parte, risco previamente subscrito por sociedade seguradora.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei Complementar 126/2007, que abriu o mercado antes monopolizado pelo IRB.</rdfs:comment>
+        <dcterms:source>Lei Complementar 126/2007</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;CorretoraDeSeguros">
@@ -2138,6 +2158,7 @@
         <rdfs:label xml:lang="pt-BR">Corretora de Seguros</rdfs:label>
         <skos:definition xml:lang="pt-BR">Intermediário legalmente autorizado a angariar e promover contratos de seguro entre sociedades seguradoras e segurados.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 4.594/1964.</rdfs:comment>
+        <dcterms:source>Lei 4.594/1964</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;SociedadeDeCapitalizacao">
@@ -2145,6 +2166,8 @@
         <rdfs:label xml:lang="pt-BR">Sociedade de Capitalização</rdfs:label>
         <skos:definition xml:lang="pt-BR">Entidade autorizada pela SUSEP a emitir títulos de capitalização, que combinam formação de poupança programada com sorteio.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Decreto-Lei 261/1967 e Resolução CNSP 384/2020.</rdfs:comment>
+        <dcterms:source>Decreto-Lei 261/1967</dcterms:source>
+        <dcterms:source>Resolução CNSP 384/2020</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;EntidadeAbertaDePrevidenciaComplementar">
@@ -2152,6 +2175,7 @@
         <rdfs:label xml:lang="pt-BR">Entidade Aberta de Previdência Complementar</rdfs:label>
         <skos:definition xml:lang="pt-BR">EAPC: entidade supervisionada pela SUSEP que opera planos de previdência complementar acessíveis a qualquer pessoa, como PGBL e VGBL.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei Complementar 109/2001.</rdfs:comment>
+        <dcterms:source>Lei Complementar 109/2001</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;ApoliceDeSeguro">
@@ -2160,6 +2184,7 @@
         <rdfs:label xml:lang="pt-BR">Apólice de Seguro</rdfs:label>
         <skos:definition xml:lang="pt-BR">Instrumento contratual pelo qual a seguradora se obriga a garantir interesse legítimo do segurado contra riscos predeterminados, mediante pagamento de prêmio.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Artigos 757 a 802 do Código Civil.</rdfs:comment>
+        <dcterms:source>Lei 10.406/2002 (Código Civil)</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;PremioDeSeguro">
@@ -2263,6 +2288,7 @@
         <rdfs:label xml:lang="pt-BR">Entidade Fechada de Previdência Complementar</rdfs:label>
         <skos:definition xml:lang="pt-BR">EFPC ou fundo de pensão: entidade sem fins lucrativos, supervisionada pela PREVIC, que opera planos de benefícios acessíveis apenas a empregados de patrocinadores ou associados de instituidores.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei Complementar 109/2001.</rdfs:comment>
+        <dcterms:source>Lei Complementar 109/2001</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;PlanoDeBeneficios">
@@ -2363,6 +2389,7 @@
         <rdfs:label xml:lang="pt-BR">Câmara de Compensação e Liquidação</rdfs:label>
         <skos:definition xml:lang="pt-BR">Infraestrutura que compensa e liquida obrigações entre participantes, atuando como contraparte central quando assume a garantia da liquidação.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 10.214/2001, que disciplina os sistemas integrantes do Sistema de Pagamentos Brasileiro.</rdfs:comment>
+        <dcterms:source>Lei 10.214/2001</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;DepositariaCentral">
@@ -2450,6 +2477,7 @@
         <rdfs:label xml:lang="pt-BR">Arranjo de Pagamento</rdfs:label>
         <skos:definition xml:lang="pt-BR">Conjunto de regras e procedimentos que disciplina a prestação de serviço de pagamento ao público, aceito por mais de um recebedor.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 12.865/2013, artigo 6º, inciso I.</rdfs:comment>
+        <dcterms:source>Lei 12.865/2013</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;InstituidorDeArranjo">
@@ -2680,6 +2708,8 @@
         <rdfs:label xml:lang="pt-BR">Administradora de Consórcio</rdfs:label>
         <skos:definition xml:lang="pt-BR">Pessoa jurídica autorizada pelo Banco Central a constituir e administrar grupos de consórcio, prestando serviço de natureza financeira.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 11.795/2008 e Circular BCB 3.432/2009.</rdfs:comment>
+        <dcterms:source>Lei 11.795/2008</dcterms:source>
+        <dcterms:source>Circular BCB 3.432/2009</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;GrupoDeConsorcio">
@@ -2768,6 +2798,7 @@
         <rdfs:label xml:lang="pt-BR">Cédula de Crédito Bancário</rdfs:label>
         <skos:definition xml:lang="pt-BR">Título executivo emitido por pessoa física ou jurídica em favor de instituição financeira, representando promessa de pagamento decorrente de operação de crédito.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 10.931/2004.</rdfs:comment>
+        <dcterms:source>Lei 10.931/2004</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;CCI">
@@ -2775,6 +2806,7 @@
         <rdfs:label xml:lang="pt-BR">Cédula de Crédito Imobiliário</rdfs:label>
         <skos:definition xml:lang="pt-BR">Título que representa crédito imobiliário e permite sua negociação de forma fracionada e desvinculada da garantia original.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 10.931/2004. Frequentemente serve de lastro para emissão de CRI.</rdfs:comment>
+        <dcterms:source>Lei 10.931/2004</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;CPR">
@@ -2782,6 +2814,8 @@
         <rdfs:label xml:lang="pt-BR">Cédula de Produto Rural</rdfs:label>
         <skos:definition xml:lang="pt-BR">Título emitido por produtor rural ou cooperativa representando promessa de entrega de produto rural ou, na modalidade financeira, de pagamento em dinheiro.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 8.929/1994, alterada pela Lei 13.986/2020. Principal instrumento de financiamento privado do agronegócio brasileiro.</rdfs:comment>
+        <dcterms:source>Lei 8.929/1994</dcterms:source>
+        <dcterms:source>Lei 13.986/2020</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;CDCA">
@@ -2789,6 +2823,7 @@
         <rdfs:label xml:lang="pt-BR">Certificado de Direitos Creditórios do Agronegócio</rdfs:label>
         <skos:definition xml:lang="pt-BR">Título emitido por cooperativa ou empresa do agronegócio, lastreado em direitos creditórios originados de negócios do setor.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 11.076/2004.</rdfs:comment>
+        <dcterms:source>Lei 11.076/2004</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;WarrantAgropecuario">
@@ -2796,6 +2831,7 @@
         <rdfs:label xml:lang="pt-BR">Warrant Agropecuário</rdfs:label>
         <skos:definition xml:lang="pt-BR">Título de crédito que confere direito de penhor sobre produto agropecuário depositado, emitido em conjunto com o Certificado de Depósito Agropecuário.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 11.076/2004.</rdfs:comment>
+        <dcterms:source>Lei 11.076/2004</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;DuplicataEscritural">
@@ -2804,6 +2840,7 @@
         <rdfs:label xml:lang="pt-BR">Duplicata Escritural</rdfs:label>
         <skos:definition xml:lang="pt-BR">Duplicata emitida sob forma escritural em sistema eletrônico de escrituração autorizado, representando crédito decorrente de compra e venda mercantil ou prestação de serviço.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 13.775/2018.</rdfs:comment>
+        <dcterms:source>Lei 13.775/2018</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;NotaComercial">
@@ -2812,6 +2849,7 @@
         <rdfs:label xml:lang="pt-BR">Nota Comercial</rdfs:label>
         <skos:definition xml:lang="pt-BR">Título de dívida de curto prazo emitido por sociedade anônima ou limitada para captação de recursos, dispensada a garantia real.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 14.195/2021, que substituiu o antigo regime das notas promissórias comerciais.</rdfs:comment>
+        <dcterms:source>Lei 14.195/2021</dcterms:source>
     </owl:Class>
 
     <owl:ObjectProperty rdf:about="&bfo;emitenteDoTitulo">
@@ -2844,6 +2882,7 @@
         <rdfs:label xml:lang="pt-BR">Oferta Pública de Distribuição</rdfs:label>
         <skos:definition xml:lang="pt-BR">Distribuição de valores mobiliários dirigida ao público investidor, sujeita a registro ou a rito de dispensa perante a CVM.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Resolução CVM 160/2022, que substituiu as Instruções CVM 400 e 476.</rdfs:comment>
+        <dcterms:source>Resolução CVM 160/2022</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;OfertaPublicaInicial">
@@ -2959,6 +2998,7 @@
         <rdfs:label xml:lang="pt-BR">Dividendo</rdfs:label>
         <skos:definition xml:lang="pt-BR">Parcela do lucro líquido distribuída aos acionistas, isenta de imposto de renda na pessoa física no regime vigente.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 6.404/1976, artigos 201 a 205.</rdfs:comment>
+        <dcterms:source>Lei 6.404/1976</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;JurosSobreCapitalProprio">
@@ -2966,6 +3006,7 @@
         <rdfs:label xml:lang="pt-BR">Juros sobre Capital Próprio</rdfs:label>
         <skos:definition xml:lang="pt-BR">JCP: remuneração aos acionistas calculada sobre o patrimônio líquido, dedutível como despesa pela companhia e tributada na fonte a quinze por cento no beneficiário.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 9.249/1995, artigo 9º. Instituto sem equivalente direto na maioria das jurisdições, daí a ausência de contrapartida na FIBO.</rdfs:comment>
+        <dcterms:source>Lei 9.249/1995</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Bonificacao">
@@ -3110,6 +3151,7 @@
         <rdfs:label xml:lang="pt-BR">Comunicação de Operação Suspeita</rdfs:label>
         <skos:definition xml:lang="pt-BR">Reporte encaminhado à unidade de inteligência financeira sobre operação que apresente indícios de lavagem de dinheiro ou financiamento do terrorismo.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Circular BCB 3.978/2020.</rdfs:comment>
+        <dcterms:source>Circular BCB 3.978/2020</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;PessoaExpostaPoliticamente">
@@ -3162,6 +3204,8 @@
         <rdfs:label xml:lang="pt-BR">Contrato de Câmbio</rdfs:label>
         <skos:definition xml:lang="pt-BR">Contrato pelo qual as partes acordam a compra ou venda de moeda estrangeira contra moeda nacional, a uma taxa determinada.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 14.286/2021 e Resolução BCB 277/2022.</rdfs:comment>
+        <dcterms:source>Lei 14.286/2021</dcterms:source>
+        <dcterms:source>Resolução BCB 277/2022</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;CambioPronto">
@@ -3193,6 +3237,7 @@
         <rdfs:label xml:lang="pt-BR">Conta em Moeda Estrangeira</rdfs:label>
         <skos:definition xml:lang="pt-BR">Conta mantida no país denominada em moeda estrangeira, cuja abertura ao público em geral foi autorizada pelo novo marco cambial.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 14.286/2021.</rdfs:comment>
+        <dcterms:source>Lei 14.286/2021</dcterms:source>
     </owl:Class>
 
     <owl:ObjectProperty rdf:about="&bfo;moedaEstrangeiraDaOperacao">
@@ -3241,6 +3286,7 @@
         <rdfs:label xml:lang="pt-BR">Crédito Rural</rdfs:label>
         <skos:definition xml:lang="pt-BR">Financiamento destinado a custeio, investimento ou comercialização da produção agropecuária, sujeito às regras do Manual de Crédito Rural.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 4.829/1965.</rdfs:comment>
+        <dcterms:source>Lei 4.829/1965</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;Microcredito">
@@ -3248,6 +3294,7 @@
         <rdfs:label xml:lang="pt-BR">Microcrédito Produtivo Orientado</rdfs:label>
         <skos:definition xml:lang="pt-BR">Crédito de pequeno valor concedido a empreendedores de baixa renda, com acompanhamento presencial da aplicação dos recursos.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 13.636/2018, que disciplina o PNMPO.</rdfs:comment>
+        <dcterms:source>Lei 13.636/2018</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;CreditoEstudantil">
@@ -3261,6 +3308,7 @@
         <rdfs:label xml:lang="pt-BR">Agência de Classificação de Risco</rdfs:label>
         <skos:definition xml:lang="pt-BR">Entidade registrada na CVM que emite opinião sobre a capacidade de um emissor honrar suas obrigações financeiras.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Resolução CVM 9/2020.</rdfs:comment>
+        <dcterms:source>Resolução CVM 9/2020</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;RatingDeCredito">
@@ -3275,6 +3323,8 @@
         <rdfs:label xml:lang="pt-BR">Fundo de Investimento nas Cadeias Produtivas Agroindustriais</rdfs:label>
         <skos:definition xml:lang="pt-BR">Fiagro: fundo destinado a investir em ativos das cadeias produtivas agroindustriais, inclusive imóveis rurais e direitos creditórios do agronegócio.</skos:definition>
         <rdfs:comment xml:lang="pt-BR">Lei 14.130/2021 e Resolução CVM 175/2022.</rdfs:comment>
+        <dcterms:source>Lei 14.130/2021</dcterms:source>
+        <dcterms:source>Resolução CVM 175/2022</dcterms:source>
     </owl:Class>
 
     <owl:Class rdf:about="&bfo;TituloTematicoSustentavel">

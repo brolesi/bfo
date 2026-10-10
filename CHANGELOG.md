@@ -5,6 +5,20 @@ Todas as mudanças relevantes deste projeto são documentadas neste arquivo.
 O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [Não publicado]
+
+### Adicionado
+
+- `dcterms:source` com a norma de origem em 40 classes (50 referências),
+  extraídas das citações que as próprias definições e comentários já faziam.
+  Permite consultar a ontologia por norma, ex.: todas as classes derivadas
+  da Lei 14.286/2021.
+
+### Corrigido
+
+- `SegmentacaoPrudencial` citava a "Resolução BCB 4.553/2017"; é a Resolução
+  CMN 4.553/2017. O BCB só passou a numerar resoluções próprias em 2020.
+
 ## [2.1.0] - 2026-08-28
 
 Expansão de cobertura: 89 para 184 classes, 23 para 64 object properties, 27

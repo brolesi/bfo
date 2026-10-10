@@ -21,7 +21,10 @@ convenções do projeto.
   - `rdfs:label` com `xml:lang="pt-BR"` (e `en` quando aplicável);
   - `skos:definition` em pt-BR;
   - referência normativa em `rdfs:comment` quando a entidade derivar de
-    lei ou resolução (ex.: "Resolução CVM 175/2022").
+    lei ou resolução (ex.: "Resolução CVM 175/2022"), repetida em
+    `dcterms:source`, uma por norma, no formato `Tipo [Órgão] Número/Ano`
+    (ex.: `<dcterms:source>Resolução CVM 175/2022</dcterms:source>`). O
+    `rdfs:comment` é para gente ler; o `dcterms:source` é para consultas.
 - **Alinhamento externo**: use `rdfs:subClassOf` / `owl:equivalentClass`
   para FIBO e Open Finance Brasil sempre que houver correspondência.
 - **OWL DL**: não faça asserções de propriedades de dados diretamente em
