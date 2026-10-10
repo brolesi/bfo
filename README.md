@@ -164,7 +164,8 @@ Termos publicados nunca são removidos; os superados recebem
 Para lançar uma versão, atualize `owl:versionIRI`/`owl:versionInfo` e o
 CHANGELOG, e faça push de uma tag `vX.Y.Z`.
 [`release.yml`](.github/workflows/release.yml) roda toda a validação,
-publica os arquivos (RDF/XML e Turtle) em `https://brolesi.github.io/bfo/` e
+publica os arquivos (RDF/XML e Turtle) e a documentação HTML em
+`https://brolesi.github.io/bfo/` e
 cria o GitHub Release com eles anexados.
 
 ## Citação

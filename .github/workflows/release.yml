@@ -71,6 +71,16 @@ jobs:
           cp -r ontology examples dist site/
           cp LICENSE site/
 
+      # Documentação navegável na raiz do site. kurra fixado porque o pyLODE
+      # 3.6.0 importa uma função que a kurra 3.0.7+ removeu.
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Documentação HTML (pyLODE)
+        run: |
+          pip install pylode==3.6.0 kurra==3.0.6
+          pylode ontology/bfo-core.owl -o site/index.html
+
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
