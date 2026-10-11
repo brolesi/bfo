@@ -575,5 +575,5 @@ e abra issues ou pull requests no repositório.
 
 ---
 
-**Versão**: 2.1.0
-**Data**: Agosto 2026
+**Versão**: 2.2.0
+**Data**: Outubro 2026

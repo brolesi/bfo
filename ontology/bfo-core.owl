@@ -84,7 +84,7 @@
          ========================================== -->
 
     <owl:Ontology rdf:about="&bfo;">
-        <owl:versionIRI rdf:resource="https://w3id.org/bfo-br/2.1.0" />
+        <owl:versionIRI rdf:resource="https://w3id.org/bfo-br/2.2.0" />
         <rdfs:label xml:lang="pt-BR">Brazilian Financial Ontology (BFO)</rdfs:label>
         <rdfs:label xml:lang="en">Brazilian Financial Ontology (BFO)</rdfs:label>
         <dcterms:title xml:lang="pt-BR">Ontologia Financeira Brasileira</dcterms:title>
@@ -92,8 +92,8 @@
         <dcterms:description xml:lang="en">Formal ontology of the Brazilian financial system, aligned with FIBO (Financial Industry Business Ontology) and integrated with Open Finance Brasil standards and Central Bank of Brazil (BCB) schemas.</dcterms:description>
         <dcterms:creator>Fabio Fogliarini Brolesi</dcterms:creator>
         <dcterms:created rdf:datatype="&xsd;date">2026-01-15</dcterms:created>
-        <dcterms:modified rdf:datatype="&xsd;date">2026-08-28</dcterms:modified>
-        <owl:versionInfo>2.1.0</owl:versionInfo>
+        <dcterms:modified rdf:datatype="&xsd;date">2026-10-11</dcterms:modified>
+        <owl:versionInfo>2.2.0</owl:versionInfo>
         <vann:preferredNamespacePrefix>bfo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/bfo-br#</vann:preferredNamespaceUri>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/" />

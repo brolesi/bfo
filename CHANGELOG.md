@@ -5,7 +5,7 @@ Todas as mudanças relevantes deste projeto são documentadas neste arquivo.
 O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
-## [Não publicado]
+## [2.2.0] - 2026-10-11
 
 ### Adicionado
 
@@ -20,6 +20,10 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
   Das 73 classes restantes, 39 são conceitos genéricos sem norma de origem
   única (`Derivativo`, `Conta`, `Swap`…) e 34 aguardam conferência.
+- Publicação a cada versão: os arquivos em RDF/XML e Turtle e a
+  documentação HTML (pyLODE) em <https://brolesi.github.io/bfo/>, que é o
+  destino do IRI persistente `https://w3id.org/bfo-br`, e um GitHub Release
+  com os arquivos anexados.
 
 ### Corrigido
 
@@ -305,5 +309,8 @@ repontadas. Nenhum termo `bfo:` foi removido ou renomeado.
 - Arquivo de exemplos (`bfo-examples.owl`).
 - Documentação em `docs/README.md`.
 
+[2.2.0]: https://github.com/brolesi/bfo/releases/tag/v2.2.0
+[2.1.0]: https://github.com/brolesi/bfo/releases/tag/v2.1.0
+[2.0.0]: https://github.com/brolesi/bfo/releases/tag/v2.0.0
 [1.1.0]: https://github.com/brolesi/bfo/releases/tag/v1.1.0
 [1.0.0]: https://github.com/brolesi/bfo/releases/tag/v1.0.0

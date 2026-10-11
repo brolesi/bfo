@@ -1,7 +1,7 @@
 # Brazilian Financial Ontology (BFO)
 
 [![Licença: CC BY 4.0](https://img.shields.io/badge/Licen%C3%A7a-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Versão](https://img.shields.io/badge/vers%C3%A3o-2.1.0-blue.svg)](CHANGELOG.md)
+[![Versão](https://img.shields.io/badge/vers%C3%A3o-2.2.0-blue.svg)](CHANGELOG.md)
 [![OWL 2](https://img.shields.io/badge/OWL-2_DL-orange.svg)](https://www.w3.org/TR/owl2-overview/)
 
 Ontologia formal do sistema financeiro brasileiro, em OWL/RDF, para
@@ -179,7 +179,7 @@ Se você usar a BFO, por favor cite (ver [CITATION.cff](CITATION.cff)):
   year         = {2026},
   publisher    = {GitHub},
   url          = {https://github.com/brolesi/bfo},
-  version      = {2.1.0},
+  version      = {2.2.0},
   note         = {Ontologia OWL/RDF alinhada com FIBO e integrada ao Open Finance Brasil e BCB}
 }
 ```
