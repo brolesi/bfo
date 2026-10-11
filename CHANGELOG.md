@@ -9,10 +9,17 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 ### Adicionado
 
-- `dcterms:source` com a norma de origem em 40 classes (50 referências),
-  extraídas das citações que as próprias definições e comentários já faziam.
+- `dcterms:source` com a norma de origem em 111 classes (140 referências).
   Permite consultar a ontologia por norma, ex.: todas as classes derivadas
-  da Lei 14.286/2021.
+  da Lei 14.286/2021. Origem das referências:
+  - 40 classes: normas que as próprias definições e comentários já citavam;
+  - 71 classes: normas conferidas no texto vigente (ex.: Res. CMN 5.060/2023
+    para bancos comerciais e múltiplos, Res. CNSP 463 e 464/2024 para PGBL e
+    VGBL, Res. BCB 521/2025 para stablecoins) ou já usadas como fonte de uma
+    classe vizinha (ex.: Res. CVM 175/2022 para as subclasses de fundo).
+
+  Das 73 classes restantes, 39 são conceitos genéricos sem norma de origem
+  única (`Derivativo`, `Conta`, `Swap`…) e 34 aguardam conferência.
 
 ### Corrigido
 
