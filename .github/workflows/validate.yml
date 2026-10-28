@@ -34,7 +34,7 @@ jobs:
 
       - name: Cache do robot.jar
         id: robot-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: robot.jar
           key: robot-jar-${{ env.ROBOT_VERSION }}-${{ env.ROBOT_SHA256 }}
@@ -116,7 +116,7 @@ jobs:
           distribution: temurin
           java-version: '17'
       - name: Cache do robot.jar
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: robot.jar
           key: robot-jar-${{ env.ROBOT_VERSION }}-${{ env.ROBOT_SHA256 }}
@@ -156,7 +156,7 @@ jobs:
           distribution: temurin
           java-version: '17'
       - name: Cache do robot.jar
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: robot.jar
           key: robot-jar-${{ env.ROBOT_VERSION }}-${{ env.ROBOT_SHA256 }}
