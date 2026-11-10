@@ -301,4 +301,35 @@
         <bfo:prazoLiquidacaoDiasUteis rdf:datatype="&xsd;integer">2</bfo:prazoLiquidacaoDiasUteis>
     </bfo:CambioPronto>
 
+    <!-- ==========================================
+         EXEMPLO 18: LETRA FINANCEIRA (Lei 12.249/2010)
+         ========================================== -->
+
+    <bfo:LetraFinanceira rdf:about="https://example.org/instrumentos/lf-banco-exemplo-2031">
+        <rdfs:label>LF Banco Exemplo CDI + 1,10% 2031</rdfs:label>
+        <bfo:emitidoPor rdf:resource="https://example.org/bancos/banco-exemplo" />
+        <bfo:indexadoPor rdf:resource="&bfo;CDI" />
+        <bfo:taxaJuros rdf:datatype="&xsd;decimal">0.0110</bfo:taxaJuros>
+        <bfo:dataVencimento rdf:datatype="&xsd;dateTime">2031-06-16T00:00:00-03:00</bfo:dataVencimento>
+        <bfo:coberturaFGC rdf:datatype="&xsd;boolean">false</bfo:coberturaFGC>
+        <rdfs:comment>Taxa: CDI + 1,10% a.a.; sem garantia do FGC</rdfs:comment>
+    </bfo:LetraFinanceira>
+
+    <!-- ==========================================
+         EXEMPLO 19: ARRENDAMENTO MERCANTIL (Lei 6.099/1974)
+         ========================================== -->
+
+    <bfo:SociedadeDeArrendamentoMercantil rdf:about="https://example.org/instituicoes/leasing-exemplo">
+        <rdfs:label>Exemplo Arrendamento Mercantil S.A.</rdfs:label>
+        <bfo:cnpj>98765432000110</bfo:cnpj>
+        <bfo:reguladoPor rdf:resource="&bfo;BancoCentralDoBrasil" />
+    </bfo:SociedadeDeArrendamentoMercantil>
+
+    <bfo:ArrendamentoMercantil rdf:about="https://example.org/operacoes/leasing-001">
+        <rdfs:label>Leasing de veículo - João Silva</rdfs:label>
+        <bfo:realizadaPor rdf:resource="https://example.org/clientes/cliente-001" />
+        <bfo:valorBRL rdf:datatype="&xsd;decimal">120000.00</bfo:valorBRL>
+        <bfo:dataOperacao rdf:datatype="&xsd;dateTime">2026-03-10T09:00:00-03:00</bfo:dataOperacao>
+    </bfo:ArrendamentoMercantil>
+
 </rdf:RDF>

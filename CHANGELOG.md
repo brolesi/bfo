@@ -5,6 +5,28 @@ Todas as mudanças relevantes deste projeto são documentadas neste arquivo.
 O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [Unreleased]
+
+### Adicionado
+
+- Conselhos normativos como indivíduos de `OrgaoReguladorBrasileiro`:
+  `ConselhoMonetarioNacional` (Lei 4.595/1964),
+  `ConselhoNacionalDeSegurosPrivados` (Decreto-Lei 73/1966) e
+  `ConselhoNacionalDePrevidenciaComplementar` (Lei 12.154/2009); e o
+  indivíduo `FGCoop`.
+- Instituições: `SociedadeDeCreditoFinanciamentoEInvestimento`,
+  `SociedadeDeArrendamentoMercantil`, `SociedadeDeCreditoAoMicroempreendedor`,
+  `AgenciaDeFomento`, `BancoDeDesenvolvimento` e `CorretoraDeCambio`, todas
+  na partição disjunta de tipos de instituição.
+- Renda fixa bancária: `RDB`, `LetraDeCambio`, `LetraFinanceira`,
+  `LetraImobiliariaGarantida` e `LetraDeCreditoDoDesenvolvimento`, disjuntas
+  entre si e de `CDB`, `LCI` e `LCA`.
+- `ContratoATermo` (na partição de derivativos), `FundoDeInvestimentoEmCotas`,
+  `FIInfra` e `ArrendamentoMercantil`.
+- Indicadores `IGPDI`, `IPCA15`, `TJLP`, `TLP` e `IFIX`; séries SGS 190
+  (IGP-DI) e 256 (TJLP) no mapeamento BCB.
+- Exemplos 18 (letra financeira) e 19 (arrendamento mercantil).
+
 ## [2.2.0] - 2026-10-11
 
 ### Adicionado

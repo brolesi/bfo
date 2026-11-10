@@ -1662,6 +1662,12 @@
             <rdf:Description rdf:about="&bfo;DistribuidoraDeTVM" />
             <rdf:Description rdf:about="&bfo;SociedadeDeCreditoDireto" />
             <rdf:Description rdf:about="&bfo;SociedadeDeEmprestimoEntrePessoas" />
+            <rdf:Description rdf:about="&bfo;SociedadeDeCreditoFinanciamentoEInvestimento" />
+            <rdf:Description rdf:about="&bfo;SociedadeDeArrendamentoMercantil" />
+            <rdf:Description rdf:about="&bfo;SociedadeDeCreditoAoMicroempreendedor" />
+            <rdf:Description rdf:about="&bfo;AgenciaDeFomento" />
+            <rdf:Description rdf:about="&bfo;BancoDeDesenvolvimento" />
+            <rdf:Description rdf:about="&bfo;CorretoraDeCambio" />
         </owl:members>
     </owl:AllDisjointClasses>
 
@@ -1757,6 +1763,7 @@
             <rdf:Description rdf:about="&bfo;Opcao" />
             <rdf:Description rdf:about="&bfo;ContratoFuturo" />
             <rdf:Description rdf:about="&bfo;Swap" />
+            <rdf:Description rdf:about="&bfo;ContratoATermo" />
         </owl:members>
     </owl:AllDisjointClasses>
 
@@ -3543,5 +3550,252 @@
         <skos:definition xml:lang="pt-BR">Retenção na fonte sobre rendimentos de aplicações de renda fixa, segundo tabela regressiva por prazo de permanência.</skos:definition>
     </owl:NamedIndividual>
 
+    <!-- ==========================================
+         PART 23: COMPLEMENTOS
+         Conselhos normativos, tipos de instituição autorizada, letras
+         bancárias, contrato a termo, FIC, FI-Infra, arrendamento
+         mercantil e índices de reajuste que faltavam.
+         ========================================== -->
+
+    <owl:NamedIndividual rdf:about="&bfo;ConselhoMonetarioNacional">
+        <rdf:type rdf:resource="&bfo;OrgaoReguladorBrasileiro" />
+        <rdfs:label xml:lang="pt-BR">Conselho Monetário Nacional</rdfs:label>
+        <rdfs:label xml:lang="en">National Monetary Council</rdfs:label>
+        <skos:altLabel>CMN</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Órgão normativo máximo do Sistema Financeiro Nacional, responsável por formular a política da moeda e do crédito e por expedir as resoluções que regem as instituições financeiras.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Lei 4.595/1964.</rdfs:comment>
+        <dcterms:source>Lei 4.595/1964</dcterms:source>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bfo;ConselhoNacionalDeSegurosPrivados">
+        <rdf:type rdf:resource="&bfo;OrgaoReguladorBrasileiro" />
+        <rdfs:label xml:lang="pt-BR">Conselho Nacional de Seguros Privados</rdfs:label>
+        <rdfs:label xml:lang="en">National Council of Private Insurance</rdfs:label>
+        <skos:altLabel>CNSP</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Órgão normativo dos mercados de seguros privados, resseguro, capitalização e previdência complementar aberta, cujas normas são fiscalizadas pela SUSEP.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Decreto-Lei 73/1966.</rdfs:comment>
+        <dcterms:source>Decreto-Lei 73/1966</dcterms:source>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bfo;ConselhoNacionalDePrevidenciaComplementar">
+        <rdf:type rdf:resource="&bfo;OrgaoReguladorBrasileiro" />
+        <rdfs:label xml:lang="pt-BR">Conselho Nacional de Previdência Complementar</rdfs:label>
+        <rdfs:label xml:lang="en">National Council of Supplementary Pension</rdfs:label>
+        <skos:altLabel>CNPC</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Órgão normativo do regime de previdência complementar operado pelas entidades fechadas, cujas normas são fiscalizadas pela PREVIC.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Lei 12.154/2009.</rdfs:comment>
+        <dcterms:source>Lei 12.154/2009</dcterms:source>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bfo;FGCoop">
+        <rdf:type rdf:resource="&bfo;PessoaJuridica" />
+        <rdfs:label xml:lang="pt-BR">Fundo Garantidor do Cooperativismo de Crédito</rdfs:label>
+        <skos:altLabel>FGCoop</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Associação civil sem fins lucrativos que garante depósitos e créditos mantidos em cooperativas de crédito singulares e bancos cooperativos, nos moldes do FGC.</skos:definition>
+        <rdfs:seeAlso rdf:resource="https://www.fgcoop.coop.br" />
+    </owl:NamedIndividual>
+
+    <owl:Class rdf:about="&bfo;SociedadeDeCreditoFinanciamentoEInvestimento">
+        <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
+        <rdfs:label xml:lang="pt-BR">Sociedade de Crédito, Financiamento e Investimento</rdfs:label>
+        <rdfs:label xml:lang="en">Credit, Financing and Investment Company</rdfs:label>
+        <skos:altLabel>Financeira</skos:altLabel>
+        <skos:altLabel>SCFI</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Instituição financeira especializada em financiamento de bens e serviços e em crédito pessoal, que capta recursos principalmente por meio de letras de câmbio.</skos:definition>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;SociedadeDeArrendamentoMercantil">
+        <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
+        <rdfs:label xml:lang="pt-BR">Sociedade de Arrendamento Mercantil</rdfs:label>
+        <rdfs:label xml:lang="en">Leasing Company</rdfs:label>
+        <skos:definition xml:lang="pt-BR">Instituição autorizada pelo Banco Central do Brasil a realizar operações de arrendamento mercantil (leasing).</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Lei 6.099/1974.</rdfs:comment>
+        <dcterms:source>Lei 6.099/1974</dcterms:source>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;SociedadeDeCreditoAoMicroempreendedor">
+        <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
+        <rdfs:label xml:lang="pt-BR">Sociedade de Crédito ao Microempreendedor e à Empresa de Pequeno Porte</rdfs:label>
+        <rdfs:label xml:lang="en">Microentrepreneur Credit Company</rdfs:label>
+        <skos:altLabel>SCMEPP</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Instituição que concede crédito a pessoas físicas e microempresas para viabilizar empreendimentos de pequeno porte, sem captar depósitos do público.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Lei 10.194/2001.</rdfs:comment>
+        <dcterms:source>Lei 10.194/2001</dcterms:source>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;AgenciaDeFomento">
+        <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
+        <rdfs:label xml:lang="pt-BR">Agência de Fomento</rdfs:label>
+        <rdfs:label xml:lang="en">Development Agency</rdfs:label>
+        <skos:definition xml:lang="pt-BR">Instituição controlada por unidade da Federação que financia projetos de desenvolvimento no respectivo estado, sem captar recursos do público.</skos:definition>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;BancoDeDesenvolvimento">
+        <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
+        <rdfs:label xml:lang="pt-BR">Banco de Desenvolvimento</rdfs:label>
+        <rdfs:label xml:lang="en">Development Bank</rdfs:label>
+        <skos:definition xml:lang="pt-BR">Instituição financeira pública que fornece recursos de médio e longo prazo para programas e projetos de desenvolvimento econômico e social.</skos:definition>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;CorretoraDeCambio">
+        <rdfs:subClassOf rdf:resource="&bfo;InstituicaoFinanceiraBrasileira" />
+        <rdfs:label xml:lang="pt-BR">Sociedade Corretora de Câmbio</rdfs:label>
+        <rdfs:label xml:lang="en">Foreign Exchange Broker</rdfs:label>
+        <skos:definition xml:lang="pt-BR">Instituição autorizada a operar no mercado de câmbio, intermediando operações entre clientes e realizando câmbio pronto dentro dos limites regulamentares.</skos:definition>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;LetraFinanceira">
+        <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
+        <rdfs:label xml:lang="pt-BR">Letra Financeira</rdfs:label>
+        <rdfs:label xml:lang="en">Financial Bill</rdfs:label>
+        <skos:altLabel>LF</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Título de crédito emitido por instituição financeira para captação de longo prazo, com prazo e valor mínimos regulamentados e sem resgate antecipado.</skos:definition>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&bfo;coberturaFGC" />
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="pt-BR">Lei 12.249/2010. Não conta com garantia do FGC.</rdfs:comment>
+        <dcterms:source>Lei 12.249/2010</dcterms:source>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;LetraImobiliariaGarantida">
+        <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
+        <rdfs:label xml:lang="pt-BR">Letra Imobiliária Garantida</rdfs:label>
+        <rdfs:label xml:lang="en">Covered Real Estate Bond</rdfs:label>
+        <skos:altLabel>LIG</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Título emitido por instituição financeira e garantido por carteira de ativos submetida a regime fiduciário, composta majoritariamente por créditos imobiliários.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Lei 13.097/2015.</rdfs:comment>
+        <dcterms:source>Lei 13.097/2015</dcterms:source>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;LetraDeCreditoDoDesenvolvimento">
+        <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
+        <rdfs:label xml:lang="pt-BR">Letra de Crédito do Desenvolvimento</rdfs:label>
+        <rdfs:label xml:lang="en">Development Credit Bill</rdfs:label>
+        <skos:altLabel>LCD</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Título emitido por bancos de desenvolvimento para captar recursos destinados ao financiamento de projetos de desenvolvimento.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Lei 14.937/2024.</rdfs:comment>
+        <dcterms:source>Lei 14.937/2024</dcterms:source>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;LetraDeCambio">
+        <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
+        <rdfs:label xml:lang="pt-BR">Letra de Câmbio</rdfs:label>
+        <rdfs:label xml:lang="en">Bill of Exchange</rdfs:label>
+        <skos:altLabel>LC</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Título de renda fixa emitido por sociedades de crédito, financiamento e investimento para captar recursos destinados ao financiamento de seus clientes.</skos:definition>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&bfo;coberturaFGC" />
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;RDB">
+        <rdfs:subClassOf rdf:resource="&bfo;TituloPrivadoRendaFixa" />
+        <rdfs:label xml:lang="pt-BR">Recibo de Depósito Bancário</rdfs:label>
+        <rdfs:label xml:lang="en">Bank Deposit Receipt</rdfs:label>
+        <skos:altLabel>RDB</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Depósito a prazo emitido por instituição financeira, intransferível e inegociável, diferentemente do CDB.</skos:definition>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&bfo;coberturaFGC" />
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;ContratoATermo">
+        <rdfs:subClassOf rdf:resource="&bfo;Derivativo" />
+        <rdfs:label xml:lang="pt-BR">Contrato a Termo</rdfs:label>
+        <rdfs:label xml:lang="en">Forward Contract</rdfs:label>
+        <skos:definition xml:lang="pt-BR">Derivativo em que as partes se obrigam a comprar e vender um ativo em data futura por preço fixado na contratação, sem ajuste diário e com liquidação no vencimento.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Inclui o NDF (termo de moeda sem entrega física), liquidado pela diferença.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;FundoDeInvestimentoEmCotas">
+        <rdfs:subClassOf rdf:resource="&bfo;FundoDeInvestimento" />
+        <rdfs:label xml:lang="pt-BR">Fundo de Investimento em Cotas</rdfs:label>
+        <rdfs:label xml:lang="en">Fund of Funds</rdfs:label>
+        <skos:altLabel>FIC</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Fundo que aplica a maior parte de seu patrimônio em cotas de outros fundos de investimento.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Não é disjunto das classes por estratégia: um FIC pode ser de renda fixa, de ações ou multimercado.</rdfs:comment>
+        <dcterms:source>Resolução CVM 175/2022</dcterms:source>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;FIInfra">
+        <rdfs:subClassOf rdf:resource="&bfo;FundoDeInvestimento" />
+        <rdfs:label xml:lang="pt-BR">Fundo de Investimento em Infraestrutura</rdfs:label>
+        <rdfs:label xml:lang="en">Infrastructure Investment Fund</rdfs:label>
+        <skos:altLabel>FI-Infra</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Fundo que investe preponderantemente em debêntures incentivadas e outros ativos de projetos de infraestrutura prioritários, com benefício fiscal ao cotista.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Lei 12.431/2011.</rdfs:comment>
+        <dcterms:source>Lei 12.431/2011</dcterms:source>
+    </owl:Class>
+
+    <owl:Class rdf:about="&bfo;ArrendamentoMercantil">
+        <rdfs:subClassOf rdf:resource="&bfo;OperacaoFinanceira" />
+        <rdfs:label xml:lang="pt-BR">Arrendamento Mercantil</rdfs:label>
+        <rdfs:label xml:lang="en">Leasing</rdfs:label>
+        <skos:definition xml:lang="pt-BR">Operação em que a arrendadora adquire um bem escolhido pela arrendatária e lhe cede o uso mediante contraprestações periódicas, com opção de compra, devolução ou renovação ao final do contrato.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Lei 6.099/1974. Não é operação de crédito: o bem permanece de propriedade da arrendadora durante o contrato.</rdfs:comment>
+        <dcterms:source>Lei 6.099/1974</dcterms:source>
+    </owl:Class>
+
+    <owl:NamedIndividual rdf:about="&bfo;IGPDI">
+        <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
+        <rdfs:label xml:lang="pt-BR">IGP-DI</rdfs:label>
+        <skos:altLabel>Índice Geral de Preços - Disponibilidade Interna</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Índice de preços calculado pela FGV com coleta do primeiro ao último dia do mês, usado em reajustes de contratos de longo prazo.</skos:definition>
+        <bfo:codigoBCB>190</bfo:codigoBCB>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bfo;IPCA15">
+        <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
+        <rdfs:label xml:lang="pt-BR">IPCA-15</rdfs:label>
+        <skos:altLabel>Índice Nacional de Preços ao Consumidor Amplo 15</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Prévia do IPCA calculada pelo IBGE com coleta aproximadamente entre o dia 15 do mês anterior e o dia 15 do mês de referência.</skos:definition>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bfo;TJLP">
+        <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
+        <rdfs:label xml:lang="pt-BR">TJLP</rdfs:label>
+        <skos:altLabel>Taxa de Juros de Longo Prazo</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Taxa fixada trimestralmente pelo CMN que remunera contratos de financiamento do BNDES firmados até 2017 e recursos do FAT.</skos:definition>
+        <bfo:codigoBCB>256</bfo:codigoBCB>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bfo;TLP">
+        <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
+        <rdfs:label xml:lang="pt-BR">TLP</rdfs:label>
+        <skos:altLabel>Taxa de Longo Prazo</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Taxa composta pelo IPCA acrescido de juro real derivado das NTN-B, que substituiu a TJLP nos novos contratos do BNDES a partir de 2018.</skos:definition>
+        <rdfs:comment xml:lang="pt-BR">Lei 13.483/2017.</rdfs:comment>
+        <dcterms:source>Lei 13.483/2017</dcterms:source>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bfo;IFIX">
+        <rdf:type rdf:resource="&bfo;IndicadorEconomico" />
+        <rdfs:label xml:lang="pt-BR">IFIX</rdfs:label>
+        <skos:altLabel>Índice de Fundos de Investimentos Imobiliários</skos:altLabel>
+        <skos:definition xml:lang="pt-BR">Índice da B3 que mede o desempenho médio das cotas de fundos imobiliários negociados em bolsa.</skos:definition>
+    </owl:NamedIndividual>
+
+    <!-- Os títulos bancários novos são espécies distintas entre si e das já existentes. -->
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&bfo;CDB" />
+            <rdf:Description rdf:about="&bfo;RDB" />
+            <rdf:Description rdf:about="&bfo;LetraDeCambio" />
+            <rdf:Description rdf:about="&bfo;LetraFinanceira" />
+            <rdf:Description rdf:about="&bfo;LetraImobiliariaGarantida" />
+            <rdf:Description rdf:about="&bfo;LetraDeCreditoDoDesenvolvimento" />
+            <rdf:Description rdf:about="&bfo;LCI" />
+            <rdf:Description rdf:about="&bfo;LCA" />
+        </owl:members>
+    </owl:AllDisjointClasses>
 
 </rdf:RDF>
