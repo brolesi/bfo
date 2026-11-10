@@ -99,6 +99,20 @@
         <owl:sameAs rdf:resource="&bfo;INPC" />
     </owl:NamedIndividual>
 
+    <owl:NamedIndividual rdf:about="&bcb;Serie190">
+        <rdf:type rdf:resource="&bcb;SerieTemporal" />
+        <rdfs:label>IGP-DI - Variação Mensal</rdfs:label>
+        <bcb:codigoSerie rdf:datatype="&xsd;integer">190</bcb:codigoSerie>
+        <owl:sameAs rdf:resource="&bfo;IGPDI" />
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="&bcb;Serie256">
+        <rdf:type rdf:resource="&bcb;SerieTemporal" />
+        <rdfs:label>Taxa de Juros de Longo Prazo (TJLP)</rdfs:label>
+        <bcb:codigoSerie rdf:datatype="&xsd;integer">256</bcb:codigoSerie>
+        <owl:sameAs rdf:resource="&bfo;TJLP" />
+    </owl:NamedIndividual>
+
     <!-- ==========================================
          IF.DATA - DADOS DE INSTITUIÇÕES FINANCEIRAS
          ========================================== -->

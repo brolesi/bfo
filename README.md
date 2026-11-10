@@ -44,6 +44,12 @@ brasileiros (Open Finance Brasil, Banco Central do Brasil).
   comercial, warrant agropecuário
 - **Ofertas públicas** (Resolução CVM 160/2022) e **eventos societários** —
   dividendo, JCP, bonificação, desdobramento, grupamento, subscrição
+- **Conselhos normativos e instituições** — CMN, CNSP, CNPC, FGCoop;
+  financeiras (SCFI), arrendamento mercantil, SCMEPP, agências de fomento,
+  bancos de desenvolvimento, corretoras de câmbio
+- **Captação bancária** — RDB, letra de câmbio, letra financeira, LIG e LCD;
+  contrato a termo/NDF, FIC e FI-Infra; índices IGP-DI, IPCA-15, TJLP, TLP e
+  IFIX
 - **PLD/FT** (Circular BCB 3.978/2020) — COAF, comunicação de operação
   suspeita, PEP, beneficiário final
 - **Anotações bilíngues** (rótulos e definições em pt-BR; en onde aplicável)

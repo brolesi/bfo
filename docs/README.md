@@ -88,9 +88,18 @@ Termos descontinuados no mercado (ex.: `bfo:DOC`) são mantidos com
 | `bfo:SociedadeDeEmprestimoEntrePessoas` | - | SEP - P2P lending (Res. CMN 4.656/2018) |
 | `bfo:PrestadoraDeServicosDeAtivosVirtuais` | `fibo-fbc-pas-fpas:FinancialServiceProvider` | PSAV/VASP (Lei 14.478/2022) |
 | `bfo:InfraestruturaDoMercadoFinanceiro` | - | FMIs, alinhada aos PFMI (CPMI-IOSCO) |
+| `bfo:SociedadeDeCreditoFinanciamentoEInvestimento` | - | Financeira (SCFI), capta por letra de câmbio |
+| `bfo:SociedadeDeArrendamentoMercantil` | - | Leasing (Lei 6.099/1974) |
+| `bfo:SociedadeDeCreditoAoMicroempreendedor` | - | SCMEPP (Lei 10.194/2001) |
+| `bfo:AgenciaDeFomento` / `bfo:BancoDeDesenvolvimento` | - | Fomento estadual e desenvolvimento |
+| `bfo:CorretoraDeCambio` | - | Intermediação no mercado de câmbio |
 
 **Indivíduos de infraestrutura e suporte**: `bfo:B3`, `bfo:TesouroNacional`,
-`bfo:FGC`, `bfo:ANBIMA`.
+`bfo:FGC`, `bfo:FGCoop`, `bfo:ANBIMA`.
+
+**Conselhos normativos** (indivíduos de `bfo:OrgaoReguladorBrasileiro`):
+`bfo:ConselhoMonetarioNacional` (CMN), `bfo:ConselhoNacionalDeSegurosPrivados`
+(CNSP) e `bfo:ConselhoNacionalDePrevidenciaComplementar` (CNPC).
 
 ### 2. Pessoas (Parties)
 
@@ -111,6 +120,10 @@ Termos descontinuados no mercado (ex.: `bfo:DOC`) são mantidos com
 | `bfo:LCI` / `bfo:LCA` | - | Isentos de IR para PF |
 | `bfo:CRI` / `bfo:CRA` | - | Securitização, isentos de IR para PF |
 | `bfo:Debenture` | `fibo-sec-dbt-bnd:CorporateBond` | Sem cobertura FGC |
+| `bfo:RDB` / `bfo:LetraDeCambio` | - | Cobertura FGC; RDB é intransferível |
+| `bfo:LetraFinanceira` | - | LF, longo prazo, sem cobertura FGC (Lei 12.249/2010) |
+| `bfo:LetraImobiliariaGarantida` | - | LIG, carteira em regime fiduciário (Lei 13.097/2015) |
+| `bfo:LetraDeCreditoDoDesenvolvimento` | - | LCD, bancos de desenvolvimento (Lei 14.937/2024) |
 
 #### Renda Variável
 | Classe BFO | Superclasse FIBO | Características |
@@ -131,6 +144,8 @@ Termos descontinuados no mercado (ex.: `bfo:DOC`) são mantidos com
 | `bfo:FundoCambial` | ≥ 80% em variação cambial |
 | `bfo:FIDC` | Direitos creditórios |
 | `bfo:FIP` | Participações (private equity / venture capital) |
+| `bfo:FundoDeInvestimentoEmCotas` | FIC — investe em cotas de outros fundos; não disjunto das classes por estratégia |
+| `bfo:FIInfra` | Infraestrutura, debêntures incentivadas (Lei 12.431/2011) |
 
 Propriedades associadas: `bfo:administradoPor` (administrador fiduciário) e
 `bfo:geridoPor` (gestor de carteira).
@@ -149,7 +164,7 @@ Propriedades associadas: `bfo:administradoPor` (administrador fiduciário) e
 | `bfo:Drex` | Real Digital - piloto do BCB (indivíduo) |
 
 #### Derivativos
-`bfo:Opcao`, `bfo:ContratoFuturo`, `bfo:Swap` — alinhados a `fibo-fbc-fi-fi:DerivativeInstrument`.
+`bfo:Opcao`, `bfo:ContratoFuturo`, `bfo:Swap`, `bfo:ContratoATermo` (inclui NDF) — alinhados a `fibo-fbc-fi-fi:DerivativeInstrument`.
 
 ### 4. Contas
 
@@ -289,7 +304,7 @@ Mapeamentos com dados abertos do Banco Central:
 
 | Sistema BCB | Classes/Propriedades BFO |
 |-------------|-------------------------|
-| **SGS** (Séries Temporais) | IndicadorEconomico (Selic, CDI, IPCA, IGP-M, TR, PTAX, INPC) |
+| **SGS** (Séries Temporais) | IndicadorEconomico (Selic, CDI, IPCA, IGP-M, IGP-DI, TR, TJLP, PTAX, INPC) |
 | **IF.data** | InstituicaoFinanceiraBrasileira, SegmentacaoPrudencial |
 | **SCR** | OperacaoCredito, ClassificacaoRiscoCredito |
 | **DICT** | chavePIX |
@@ -301,7 +316,9 @@ Mapeamentos com dados abertos do Banco Central:
 | 1 | PTAX (dólar, venda) |
 | 188 | INPC |
 | 189 | IGP-M |
+| 190 | IGP-DI |
 | 226 | TR |
+| 256 | TJLP |
 | 433 | IPCA |
 | 4189 | Taxa Selic (meta) |
 | 4391 | CDI |
@@ -435,7 +452,11 @@ foi justamente o que o novo marco cambial autorizou.
 
 Novas operações: `bfo:ChequeEspecial`, `bfo:CapitalDeGiro`,
 `bfo:AntecipacaoDeRecebiveis`, `bfo:CreditoRural`, `bfo:Microcredito`,
-`bfo:CreditoEstudantil`.
+`bfo:CreditoEstudantil`, e `bfo:ArrendamentoMercantil` (leasing), que fica
+fora de `bfo:OperacaoCredito` porque o bem segue sendo da arrendadora.
+
+Indicadores acrescentados: `bfo:IGPDI`, `bfo:IPCA15`, `bfo:TJLP`,
+`bfo:TLP` (Lei 13.483/2017) e `bfo:IFIX`.
 
 `bfo:RatingDeCredito` e `bfo:AgenciaDeClassificacaoDeRisco` representam a
 opinião de agência sobre o emissor — distinta de
@@ -543,6 +564,11 @@ SELECT ?consent ?instituicao ?expira WHERE {
 | Res. CVM 175/2022 | Fundos de investimento | `FundoDeInvestimento` e subclasses |
 | Lei 14.478/2022 | Criptoativos | `AtivoVirtual`, `PrestadoraDeServicosDeAtivosVirtuais` |
 | Lei 13.709/2018 (LGPD) | Proteção de dados | `Consentimento` |
+| Lei 4.595/1964 | Sistema Financeiro Nacional | `ConselhoMonetarioNacional` |
+| Lei 6.099/1974 | Arrendamento mercantil | `ArrendamentoMercantil`, `SociedadeDeArrendamentoMercantil` |
+| Lei 12.249/2010 | Letra financeira | `LetraFinanceira` |
+| Lei 12.431/2011 | Infraestrutura | `FIInfra` |
+| Lei 13.097/2015 | Letra imobiliária garantida | `LetraImobiliariaGarantida` |
 
 ## Ferramentas Recomendadas
 
